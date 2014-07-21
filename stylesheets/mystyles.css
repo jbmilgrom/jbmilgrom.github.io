@@ -1,0 +1,12 @@
+h1 {
+	color: red;
+}
+
+nav li {
+	list-style: none;
+	float: left;
+	display: block;
+	width: 80px;
+	padding: 4px;
+	text-align: center;
+}
