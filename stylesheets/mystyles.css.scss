@@ -3,14 +3,27 @@
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
 
 @import './fonts/texgyreadventorregular.css';
+@import './fonts/opensans_light_macroman.css';
+@import './fonts/opensans_regular_macroman.css';
+@import './fonts/opensans_semibold_macroman.css';
 
 $primary-color: #ecf0f1;
-$nav-width: 500px;
-$nav-padding: 4px;
+
+/*Nav Width Variables*/
+$li-width: 115px;
+$li-padding: 4px;
 $nav-LIs: 4;
+$li-margin: 3px;
 $ul-padding: 4px;
+$nav-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin) + $ul-padding * 2;
+
+/*Nav Height Variables*/
+/*Note that $ul-padding contributes as well*/
+/*Note that at the moment, the ul/nav heights do now have any affect on display, and the li heights adjust to li font size*/
 $ul-height: 30px;
-$li-top-margin: 2px;
+
+
+
 
 body {
 	padding: 8px;
@@ -33,27 +46,28 @@ nav {
 		list-style: none;
 		float: left;
 		display: block;
-		width: ($nav-width - ($nav-LIs * 2)*$nav-padding - $ul-padding * 2) / $nav-LIs;
+		width: $li-width;
+		/*width: ($nav-width - ($nav-LIs * 2)*$li-padding - $ul-padding * 2) / $nav-LIs;*/
 		/*height: ;*/
-		font: aller;
-		padding: $nav-padding;
+		font-family: 'open_sanslight';
+		font-size: $li-width/5;
+		padding: $li-padding;
 		text-align: center;
+		background-color: white;
+		border: 1px solid black;
+		margin: $li-margin;
+
 	}
 
 	ul {
 		display: block;
 		width: $nav-width;
 		height: $ul-height;
-		/*padding: $ul-padding;*/
+		padding: $ul-padding;
 		margin: 0 auto;
-		font-family: 'texgyreadventorregular';
-		background-color: white;
+	
 	}
 
 }
 
 
-
-p {
-	margin: 10px;
-}

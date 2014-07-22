@@ -1,5 +1,8 @@
 /* html5doctor.com Reset v1.6.1 - http://cssreset.com */
 @import url(./fonts/texgyreadventorregular.css);
+@import url(./fonts/opensans_light_macroman.css);
+@import url(./fonts/opensans_regular_macroman.css);
+@import url(./fonts/opensans_semibold_macroman.css);
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -64,6 +67,10 @@ hr {
 input, select {
   vertical-align: middle; }
 
+/*Nav Width Variables*/
+/*Nav Height Variables*/
+/*Note that $ul-padding contributes as well*/
+/*Note that at the moment, the ul/nav heights do now have any affect on display, and the li heights adjust to li font size*/
 body {
   padding: 8px;
   background-color: #ecf0f1; }
@@ -74,25 +81,28 @@ h1 {
 
 nav {
   display: block;
-  width: 500px;
+  width: 524px;
   margin: 0 auto; }
   nav li {
     list-style: none;
     float: left;
     display: block;
     width: 115px;
+    /*width: ($nav-width - ($nav-LIs * 2)*$li-padding - $ul-padding * 2) / $nav-LIs;*/
     /*height: ;*/
-    font: aller;
+    font-family: 'open_sanslight';
+    font-size: 23px;
     padding: 4px;
-    text-align: center; }
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    margin: 3px; }
   nav ul {
     display: block;
-    width: 500px;
+    width: 524px;
     height: 30px;
-    /*padding: $ul-padding;*/
-    margin: 0 auto;
-    font-family: 'texgyreadventorregular';
-    background-color: white; }
+    padding: 4px;
+    margin: 0 auto; }
 
 p {
   margin: 10px; }
