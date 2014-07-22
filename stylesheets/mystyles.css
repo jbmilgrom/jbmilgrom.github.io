@@ -67,21 +67,59 @@ hr {
 input, select {
   vertical-align: middle; }
 
+/*$primary-color: #ecf0f1;*/
+/*$primary-color: #3b434f;*/
 /*Nav Width Variables*/
+/*$li-margin: -1 * 0.1px;*/
 /*Nav Height Variables*/
 /*Note that $ul-padding contributes as well*/
 /*Note that at the moment, the ul/nav heights do now have any affect on display, and the li heights adjust to li font size*/
 body {
   padding: 8px;
-  background-color: #ecf0f1; }
+  background-color: white; }
 
-h1 {
-  color: red;
-  clear: both; }
+a {
+  color: #3b434f; }
+
+a:link {
+  text-decoration: none; }
+
+a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+a:active {
+  text-decoration: underline; }
+
+div#contentContainer {
+  display: block;
+  width: 100%;
+  height: 400px; }
+  div#contentContainer img {
+    /*		position: static;*/
+    max-height: 200px;
+    max-width: 175.79365px;
+    position: relative;
+    top: 100px;
+    left: 50%;
+    margin-left: -87.89683px;
+    display: none; }
+  div#contentContainer ul li {
+    color: #3b434f;
+    font-family: 'open_sansregular';
+    list-style: none;
+    max-height: 200px;
+    max-width: 345px;
+    position: relative;
+    top: 100px;
+    left: 50%;
+    margin-left: -87.89683px; }
 
 nav {
   display: block;
-  width: 524px;
+  width: 539.2px;
   margin: 0 auto; }
   nav li {
     list-style: none;
@@ -90,19 +128,18 @@ nav {
     width: 115px;
     /*width: ($nav-width - ($nav-LIs * 2)*$li-padding - $ul-padding * 2) / $nav-LIs;*/
     /*height: ;*/
-    font-family: 'open_sanslight';
-    font-size: 23px;
+    font-family: 'open_sansregular';
+    font-size: 19.16667px;
     padding: 4px;
     text-align: center;
+    color: #3b434f;
     background-color: white;
-    border: 1px solid black;
-    margin: 3px; }
+    border: 1.9px solid #3b434f;
+    margin: 3px;
+    cursor: pointer; }
   nav ul {
     display: block;
-    width: 524px;
-    height: 30px;
+    width: 539.2px;
+    height: 57.5px;
     padding: 4px;
     margin: 0 auto; }
-
-p {
-  margin: 10px; }

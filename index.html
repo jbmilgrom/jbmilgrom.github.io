@@ -3,11 +3,12 @@
     <title>Jonathan Milgrom</title>
   
     <!-- ************ Assets ************ -->
-    <link rel="stylesheet" type="text/css" href="/assets/fonts/Aller">
 
     <!-- ************ Libraries ************ -->
     <link rel="stylesheet" type="text/css" href="libraries/animate.css" />
     <script type="text/javascript" src="libraries/jquery.js"></script>
+    <script type="text/javascript" src="libraries/underscore.js"></script>
+
 
     <!-- ************ App ************ -->
     <link rel="stylesheet" type="text/css" href="stylesheets/mystyles.css" />
@@ -18,21 +19,38 @@
 
   <body>
 
-    <div>
-
+    <div class="animated lightSpeedIn" id="contentContainer">
+      <img src="./assets/20140710-Capture0289_rect.jpg">
+      <div class="contact" style="display:none">
+        <ul>
+          <!-- make into email prompt -->
+          <li class="animated bounceIn">Email: jbmilgrom@gmail.com</li>
+          <li>GitHub: <a href="http://github.com/jbmilgrom">github.com/jbmilgrom</a></li>
+          <li>LinkdIn:  <a href="http://linkedin.com/in/jonathanmilgrom">linkedin.com/in/jonathanmilgrom</a></li>
+          <li>Twitter: <a href="http://twitter.com/jbmilgrom">twitter.com/jbmilgrom</a></li>
+        </ul>
+      </div>
+      <div class="resume" style="display:none">
+      </div>
+      <div class="projects" style="display:none">
+      </div>
+      <div class="blog" style="display:none">
+      </div>
     </div>
 
 
     <nav>
       <ul>
-        <li class="animated bounceInLeft">Projects</li>
-        <li class="animated bounceInDown">Blog</li>
-        <li class="animated bounceInUp">Contact</li>
-        <li class="animated bounceInRight">Resume</li>
+        <li class="animated bounceInLeft projects">Projects</li>
+        <li class="animated bounceInDown blog">Blog</li>
+        <li class="animated bounceInUp contact">Contact</li>
+        <li class="animated bounceInRight resume">Resume</li>
       </ul>
     </nav>
  
-    
+    <script type="text/template" id="contactTemplate">
+      <h1> Contact Template </h1>
+    </script>
 
 
 

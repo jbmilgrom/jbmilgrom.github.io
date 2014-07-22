@@ -7,20 +7,29 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 @import './fonts/opensans_regular_macroman.css';
 @import './fonts/opensans_semibold_macroman.css';
 
-$primary-color: #ecf0f1;
+$primary-color: white;
+/*$primary-color: #ecf0f1;*/
+/*$primary-color: #3b434f;*/
 
 /*Nav Width Variables*/
 $li-width: 115px;
 $li-padding: 4px;
 $nav-LIs: 4;
+$li-border: 1.9 * 1px;
+/*$li-margin: -1 * 0.1px;*/
 $li-margin: 3px;
 $ul-padding: 4px;
-$nav-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin) + $ul-padding * 2;
+$nav-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin + $li-border) + $ul-padding * 2;
 
 /*Nav Height Variables*/
 /*Note that $ul-padding contributes as well*/
 /*Note that at the moment, the ul/nav heights do now have any affect on display, and the li heights adjust to li font size*/
-$ul-height: 30px;
+$ul-height: $li-width/2;
+
+$container-height: 400px;
+
+$pic-height: $container-height/2;
+$pic-width: (1329/1512) * $pic-height;
 
 
 
@@ -30,9 +39,58 @@ body {
 	background-color: $primary-color;
 }
 
-h1 {
-	color: red;
-	clear: both;
+a {
+	color: #3b434f;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+div#contentContainer {
+
+	display: block;
+	width: 100%;
+	height: $container-height;
+	
+
+	img {
+/*		position: static;*/
+		max-height: $pic-height;
+		max-width: $pic-width;
+		position: relative;
+		top: $container-height/2 - $pic-height/2;
+		left: 50%;	
+		margin-left: -$pic-width/2;
+		display: none;
+	
+	}
+
+	ul li {
+
+		color: #3b434f;
+		font-family: 'open_sansregular';
+		list-style: none;
+		max-height: $pic-height;
+		max-width: $li-width * 3;
+		position: relative;
+		top: $container-height/2 - $pic-height/2;
+		left: 50%;	
+		margin-left: -$pic-width/2;
+	}
+
 }
 
 nav {
@@ -49,13 +107,15 @@ nav {
 		width: $li-width;
 		/*width: ($nav-width - ($nav-LIs * 2)*$li-padding - $ul-padding * 2) / $nav-LIs;*/
 		/*height: ;*/
-		font-family: 'open_sanslight';
-		font-size: $li-width/5;
+		font-family: 'open_sansregular';
+		font-size: $li-width/6;
 		padding: $li-padding;
 		text-align: center;
+		color: #3b434f;
 		background-color: white;
-		border: 1px solid black;
+		border: $li-border solid #3b434f;
 		margin: $li-margin;
+		cursor: pointer;
 
 	}
 
