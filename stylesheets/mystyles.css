@@ -1,4 +1,5 @@
 /* html5doctor.com Reset v1.6.1 - http://cssreset.com */
+@import url(./fonts/texgyreadventorregular.css);
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -81,6 +82,7 @@ nav {
     display: block;
     width: 115px;
     /*height: ;*/
+    font: aller;
     padding: 4px;
     text-align: center; }
   nav ul {
@@ -89,6 +91,7 @@ nav {
     height: 30px;
     /*padding: $ul-padding;*/
     margin: 0 auto;
+    font-family: 'texgyreadventorregular';
     background-color: white; }
 
 p {

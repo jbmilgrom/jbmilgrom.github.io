@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'texgyreadventorregular';
+    src: url('./rawfonts/texgyreadventor-regular-webfont.eot');
+    src: url('./rawfonts/texgyreadventor-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./rawfonts/texgyreadventor-regular-webfont.woff') format('woff'),
+         url('./rawfonts/texgyreadventor-regular-webfont.ttf') format('truetype'),
+         url('./rawfonts/texgyreadventor-regular-webfont.svg#texgyreadventorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
