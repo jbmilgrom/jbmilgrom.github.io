@@ -1,5 +1,7 @@
-var inOrOut = function(){
-
+var inOrOut = function($object){
+	// console.log("child");
+	var $currentValues = $object.css(["background-color", "color"]);
+	$object.css({"background-color": $currentValues["color"], "color": $currentValues["background-color"] });
 }
 
 $(function(){
@@ -11,11 +13,8 @@ $(function(){
 
 	$nav = $("nav");
 
-	$nav.children().children().on("mouseover", function(){
-		console.log("child");
-		var $currentValues = $(this).css(["background-color", "color"]);
-		$(this).css({"background-color": $currentValues["color"], "color": $currentValues["background-color"] });
-	});
+	$nav.children().children().hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
+
 
 	$nav.find($(".projects")).on("click", function(e){
 		e.preventDefault();
