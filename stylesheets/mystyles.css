@@ -71,9 +71,11 @@ input, select {
 /*$primary-color: #3b434f;*/
 /*Nav Width Variables*/
 /*$li-margin: -1 * 0.1px;*/
+/*Having nav-width dependend upon its componants allows for easy responsive design by the touch of $li-width*/
 /*Nav Height Variables*/
 /*Note that $ul-padding contributes as well*/
 /*Note that at the moment, the ul/nav heights do now have any affect on display, and the li heights adjust to li font size*/
+/*aligning contact info with left side of Nav, starting 50% into page (i.e. left: 50%)*/
 body {
   padding: 8px;
   background-color: white; }
@@ -108,40 +110,36 @@ div#contentContainer {
     display: none;
     /*border: $li-border solid #3b434f;*/
     /*border-radius: 6px;*/ }
-  div#contentContainer ul li {
-    color: #3b434f;
-    font-family: 'open_sansregular';
-    list-style: none;
-    max-height: 266.66667px;
-    max-width: 345px;
+  div#contentContainer div.contact {
     position: relative;
-    top: 66.66667px;
+    top: 100px;
     left: 50%;
-    margin-left: -117.19577px; }
+    display: block;
+    margin-left: -255px; }
+    div#contentContainer div.contact li {
+      color: #3b434f;
+      font-family: 'open_sanssemibold';
+      list-style: none;
+      max-height: 266.66667px;
+      /*max-width: $li-width * 3;*/
+      border: 1.9px solid #3b434f;
+      padding: 4px;
+      margin-top: 30px;
+      font-size: 28.75px; }
+    div#contentContainer div.contact span {
+      font-family: 'open_sansregular';
+      font-size: 19.16667px;
+      margin-right: 4px;
+      width: 100px;
+      display: inline-block; }
 
 nav {
   display: block;
-  width: 539.2px;
+  width: 524px;
   margin: 0 auto; }
-  nav li {
-    /*	list-style: none;
-    	float: left;
-    	display: block;
-    	width: $li-width;*/
-    /*height: ;*/
-    /*		font-family: 'open_sansregular';
-    		font-size: $li-width/6;
-    		padding: $li-padding;
-    		text-align: center;
-    		color: #3b434f;
-    		background-color: white;
-    		border: $li-border solid #3b434f;
-    		margin: $li-margin;
-    		cursor: pointer;*/ }
   nav li {
     list-style: none;
     float: left;
-    /*position: fixed;*/
     display: block;
     width: 115px;
     /*height: ;*/
@@ -158,7 +156,6 @@ nav {
     position: absolute;
     top: 400px;
     display: block;
-    width: 539.2px;
+    width: 524px;
     height: 57.5px;
-    padding: 4px;
-    margin: 0 auto; }
+    padding: 4px; }

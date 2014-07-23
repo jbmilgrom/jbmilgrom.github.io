@@ -19,7 +19,10 @@ $li-border: 1.9 * 1px;
 /*$li-margin: -1 * 0.1px;*/
 $li-margin: 3px;
 $ul-padding: 4px;
-$nav-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin + $li-border) + $ul-padding * 2;
+$li-font-size: $li-width/6;
+
+/*Having nav-width dependend upon its componants allows for easy responsive design by the touch of $li-width*/
+$nav-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin) + $ul-padding * 2;
 
 /*Nav Height Variables*/
 /*Note that $ul-padding contributes as well*/
@@ -31,6 +34,8 @@ $container-height: 400px;
 $pic-height: $container-height * (2/3);
 $pic-width: (1329/1512) * $pic-height;
 
+/*aligning contact info with left side of Nav, starting 50% into page (i.e. left: 50%)*/
+$contact-margin-left: -1/2 * ($nav-width) + $ul-padding + $li-margin;
 
 
 
@@ -80,19 +85,35 @@ div#contentContainer {
 	
 	}
 
-	ul li {
+	div.contact {
 
-		color: #3b434f;
-		font-family: 'open_sansregular';
-		list-style: none;
-		max-height: $pic-height;
-		max-width: $li-width * 3;
 		position: relative;
-		top: $container-height/2 - $pic-height/2;
+		top: $container-height/4;
 		left: 50%;	
-		margin-left: -$pic-width/2;
-	}
+		display: block;
+		margin-left: $contact-margin-left;
 
+		li {
+
+			color: #3b434f;
+			font-family: 'open_sanssemibold';
+			list-style: none;
+			max-height: $pic-height;
+			/*max-width: $li-width * 3;*/
+			border: $li-border solid #3b434f;
+			padding: $li-padding;
+			margin-top: $li-margin*10;
+			font-size: $li-font-size * 3/2;
+		}
+
+		span {
+			font-family: 'open_sansregular';
+			font-size: $li-font-size;
+			margin-right: 4px;
+			width: 100px;
+			display: inline-block;
+		}
+	}
 }
 
 nav {
@@ -103,33 +124,13 @@ nav {
 
 
 	li {
-	/*	list-style: none;
-		float: left;
-		display: block;
-		width: $li-width;*/
-		/*height: ;*/
-/*		font-family: 'open_sansregular';
-		font-size: $li-width/6;
-		padding: $li-padding;
-		text-align: center;
-		color: #3b434f;
-		background-color: white;
-		border: $li-border solid #3b434f;
-		margin: $li-margin;
-		cursor: pointer;*/
-
-	}
-
-
-	li {
 		list-style: none;
 		float: left;
-		/*position: fixed;*/
 		display: block;
 		width: $li-width;
 		/*height: ;*/
 		font-family: 'open_sanslight';
-		font-size: $li-width/6;
+		font-size: $li-font-size;
 		padding: $li-padding;
 		text-align: center;
 		color: #3b434f;
@@ -146,9 +147,7 @@ nav {
 		display: block;
 		width: $nav-width;
 		height: $ul-height;
-		padding: $ul-padding;
-		margin: 0 auto;
-	
+		padding: $ul-padding;	
 	}
 
 }

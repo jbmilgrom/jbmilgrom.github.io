@@ -34,10 +34,10 @@ $(function(){
 		});
 	});
 
-	$nav.children().one("click", function(){
-		$(this).animate({
+	$nav.children().children().one("click", function(){
+		$(this).parent().animate({
 			top: "20px"
-		}, 400);
+		}, 300);
 	});
 	
 	$nav.find($(".projects")).on("click", function(e){
