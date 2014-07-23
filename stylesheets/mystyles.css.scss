@@ -28,7 +28,7 @@ $ul-height: $li-width/2;
 
 $container-height: 400px;
 
-$pic-height: $container-height/2;
+$pic-height: $container-height * (2/3);
 $pic-width: (1329/1512) * $pic-height;
 
 
@@ -75,6 +75,8 @@ div#contentContainer {
 		left: 50%;	
 		margin-left: -$pic-width/2;
 		display: none;
+		/*border: $li-border solid #3b434f;*/
+		/*border-radius: 6px;*/
 	
 	}
 
@@ -101,13 +103,32 @@ nav {
 
 
 	li {
-		list-style: none;
+	/*	list-style: none;
 		float: left;
 		display: block;
-		width: $li-width;
-		/*width: ($nav-width - ($nav-LIs * 2)*$li-padding - $ul-padding * 2) / $nav-LIs;*/
+		width: $li-width;*/
 		/*height: ;*/
-		font-family: 'open_sansregular';
+/*		font-family: 'open_sansregular';
+		font-size: $li-width/6;
+		padding: $li-padding;
+		text-align: center;
+		color: #3b434f;
+		background-color: white;
+		border: $li-border solid #3b434f;
+		margin: $li-margin;
+		cursor: pointer;*/
+
+	}
+
+
+	li {
+		list-style: none;
+		float: left;
+		/*position: fixed;*/
+		display: block;
+		width: $li-width;
+		/*height: ;*/
+		font-family: 'open_sanslight';
 		font-size: $li-width/6;
 		padding: $li-padding;
 		text-align: center;
@@ -120,6 +141,8 @@ nav {
 	}
 
 	ul {
+		position: absolute;
+		top: $container-height;
 		display: block;
 		width: $nav-width;
 		height: $ul-height;

@@ -99,36 +99,53 @@ div#contentContainer {
   height: 400px; }
   div#contentContainer img {
     /*		position: static;*/
-    max-height: 200px;
-    max-width: 175.79365px;
+    max-height: 266.66667px;
+    max-width: 234.39153px;
     position: relative;
-    top: 100px;
+    top: 66.66667px;
     left: 50%;
-    margin-left: -87.89683px;
-    display: none; }
+    margin-left: -117.19577px;
+    display: none;
+    /*border: $li-border solid #3b434f;*/
+    /*border-radius: 6px;*/ }
   div#contentContainer ul li {
     color: #3b434f;
     font-family: 'open_sansregular';
     list-style: none;
-    max-height: 200px;
+    max-height: 266.66667px;
     max-width: 345px;
     position: relative;
-    top: 100px;
+    top: 66.66667px;
     left: 50%;
-    margin-left: -87.89683px; }
+    margin-left: -117.19577px; }
 
 nav {
   display: block;
   width: 539.2px;
   margin: 0 auto; }
   nav li {
+    /*	list-style: none;
+    	float: left;
+    	display: block;
+    	width: $li-width;*/
+    /*height: ;*/
+    /*		font-family: 'open_sansregular';
+    		font-size: $li-width/6;
+    		padding: $li-padding;
+    		text-align: center;
+    		color: #3b434f;
+    		background-color: white;
+    		border: $li-border solid #3b434f;
+    		margin: $li-margin;
+    		cursor: pointer;*/ }
+  nav li {
     list-style: none;
     float: left;
+    /*position: fixed;*/
     display: block;
     width: 115px;
-    /*width: ($nav-width - ($nav-LIs * 2)*$li-padding - $ul-padding * 2) / $nav-LIs;*/
     /*height: ;*/
-    font-family: 'open_sansregular';
+    font-family: 'open_sanslight';
     font-size: 19.16667px;
     padding: 4px;
     text-align: center;
@@ -138,6 +155,8 @@ nav {
     margin: 3px;
     cursor: pointer; }
   nav ul {
+    position: absolute;
+    top: 400px;
     display: block;
     width: 539.2px;
     height: 57.5px;

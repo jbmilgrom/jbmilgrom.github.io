@@ -1,7 +1,10 @@
-var inOrOut = function($object){
-	// console.log("child");
+var clicked = function($object){
 	var $currentValues = $object.css(["background-color", "color"]);
 	$object.css({"background-color": $currentValues["color"], "color": $currentValues["background-color"] });
+}
+
+var unclicked = function($object, index){
+	$object.css({"background-color": defaultValues[index]["background-color"], "color": defaultValues[index]["color"] });
 }
 
 $(function(){
@@ -9,13 +12,34 @@ $(function(){
 	console.log("hello");
 
 	$contentContainer = $("#contentContainer");
+	// think about getting rid of this
 	$contentContainer.find($("img")).css({display: "block"});
 
 	$nav = $("nav");
+	defaultValues = [];
+	$nav.children().children().each(function(index){
+		defaultValues.push($(this).css(["background-color", "color"]));
+	})
+	// $nav.children().children().hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
+	
+	$nav.children().children().on("click", function(e){
+		var self = this;
 
-	$nav.children().children().hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
+		$(this).parent().children().each(function(index){
+			if ( this === self ) {
+				clicked($(this));
+			} else {
+				unclicked($(this), index);
+			}
+		});
+	});
 
-
+	$nav.children().one("click", function(){
+		$(this).animate({
+			top: "20px"
+		}, 400);
+	});
+	
 	$nav.find($(".projects")).on("click", function(e){
 		e.preventDefault();
 		console.log(e);
