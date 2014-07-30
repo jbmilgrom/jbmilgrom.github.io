@@ -39,7 +39,7 @@ $(function(){
 	$nav.children().children().one("click", function(){
 
 		$(this).parent().animate({
-			top: "20px"
+			top: "40px"
 		}, 300);
 
 		// ##### TO DO ######
