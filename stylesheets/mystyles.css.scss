@@ -22,7 +22,7 @@ $ul-padding: 4px;
 $li-font-size: $li-width/6;
 
 /*Having nav-width dependend upon its componants allows for easy responsive design by the touch of $li-width*/
-$nav-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin) + $ul-padding * 2;
+$ul-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin) + $ul-padding * 2;
 
 /*Nav Height Variables*/
 /*Note that $ul-padding contributes as well*/
@@ -34,8 +34,13 @@ $container-height: 400px;
 $pic-height: $container-height * (2/3);
 $pic-width: (1329/1512) * $pic-height;
 
+$name-font-size: 38px;
+$name-words-width: 450px;
+$name-slashes-width: $name-words-width/6;
+$name-margin: 40px;
+
 /*aligning contact info with left side of Nav, starting 50% into page (i.e. left: 50%)*/
-$contact-margin-left: -1/2 * ($nav-width) + $ul-padding + $li-margin;
+$contact-margin-left: -1/2 * ($ul-width) + $ul-padding + $li-margin;
 
 
 
@@ -44,25 +49,42 @@ body {
 	background-color: $primary-color;
 }
 
-a {
-	color: #3b434f;
+div#name {
+
+	ul {
+
+		display: block;
+		margin: $name-margin auto 0 auto;
+		width: $name-words-width + $name-slashes-width;
+		height: $name-font-size;
+
+
+		li {
+
+			font-family: 'open_sansregular';
+			font-size: $name-font-size;
+			float: left;
+			display: block;
+			height: $name-font-size;
+			text-align: center;
+		}
+		
+		li#slashes {
+			color: #63aeee;
+			width: $name-slashes-width;
+			font-family: 'open_sanssemibold';
+
+		}
+
+		li#words {
+			color: #3b434f;	
+			width: $name-words-width;
+			/*height: $ul-height;*/
+		}
+
+	}
 }
 
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:active {
-    text-decoration: underline;
-}
 
 div#contentContainer {
 
@@ -106,12 +128,36 @@ div#contentContainer {
 			font-size: $li-font-size * 3/2;
 		}
 
-		span {
+		span.title {
 			font-family: 'open_sansregular';
 			font-size: $li-font-size;
 			margin-right: 4px;
 			width: 100px;
 			display: inline-block;
+		}
+
+		a {
+			color: #63aeee;
+		}
+
+		a:link {
+		    text-decoration: none;
+		}
+
+		a:visited {
+		    text-decoration: none;
+		}
+
+		a:hover {
+		    text-decoration: underline;
+		}
+
+		a:active {
+		    text-decoration: underline;
+		}
+
+		a span {
+			color: #3b434f;		
 		}
 	}
 }
@@ -119,7 +165,9 @@ div#contentContainer {
 nav {
 
 	display: block;
-	width: $nav-width;
+	/*position: relative;*/
+	width: $ul-width + 2 * $ul-padding;
+	height: $ul-height;
 	margin: 0 auto;
 
 
@@ -129,7 +177,7 @@ nav {
 		display: block;
 		width: $li-width;
 		/*height: ;*/
-		font-family: 'open_sanslight';
+		font-family: 'open_sansregular';
 		font-size: $li-font-size;
 		padding: $li-padding;
 		text-align: center;
@@ -143,9 +191,9 @@ nav {
 
 	ul {
 		position: absolute;
-		top: $container-height;
-		display: block;
-		width: $nav-width;
+		top: $container-height + $name-font-size + $name-margin;
+ 		display: block;
+		width: $ul-width;
 		height: $ul-height;
 		padding: $ul-padding;	
 	}

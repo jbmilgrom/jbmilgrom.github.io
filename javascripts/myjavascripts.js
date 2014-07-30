@@ -35,9 +35,15 @@ $(function(){
 	});
 
 	$nav.children().children().one("click", function(){
+
 		$(this).parent().animate({
 			top: "20px"
 		}, 300);
+
+		// ##### TO DO ######
+		// Need to find a way to lift up the Nav with the Ul
+		// Like I'm attempting below 
+		$(this).parent().parent().css({top: "20px"});
 	});
 	
 	$nav.find($(".projects")).on("click", function(e){

@@ -80,20 +80,26 @@ body {
   padding: 8px;
   background-color: white; }
 
-a {
-  color: #3b434f; }
-
-a:link {
-  text-decoration: none; }
-
-a:visited {
-  text-decoration: none; }
-
-a:hover {
-  text-decoration: underline; }
-
-a:active {
-  text-decoration: underline; }
+div#name ul {
+  display: block;
+  margin: 40px auto 0 auto;
+  width: 525px;
+  height: 38px; }
+  div#name ul li {
+    font-family: 'open_sansregular';
+    font-size: 38px;
+    float: left;
+    display: block;
+    height: 38px;
+    text-align: center; }
+  div#name ul li#slashes {
+    color: #63aeee;
+    width: 75px;
+    font-family: 'open_sanssemibold'; }
+  div#name ul li#words {
+    color: #3b434f;
+    width: 450px;
+    /*height: $ul-height;*/ }
 
 div#contentContainer {
   display: block;
@@ -126,16 +132,30 @@ div#contentContainer {
       padding: 4px;
       margin-top: 30px;
       font-size: 28.75px; }
-    div#contentContainer div.contact span {
+    div#contentContainer div.contact span.title {
       font-family: 'open_sansregular';
       font-size: 19.16667px;
       margin-right: 4px;
       width: 100px;
       display: inline-block; }
+    div#contentContainer div.contact a {
+      color: #63aeee; }
+    div#contentContainer div.contact a:link {
+      text-decoration: none; }
+    div#contentContainer div.contact a:visited {
+      text-decoration: none; }
+    div#contentContainer div.contact a:hover {
+      text-decoration: underline; }
+    div#contentContainer div.contact a:active {
+      text-decoration: underline; }
+    div#contentContainer div.contact a span {
+      color: #3b434f; }
 
 nav {
   display: block;
-  width: 524px;
+  /*position: relative;*/
+  width: 532px;
+  height: 57.5px;
   margin: 0 auto; }
   nav li {
     list-style: none;
@@ -143,7 +163,7 @@ nav {
     display: block;
     width: 115px;
     /*height: ;*/
-    font-family: 'open_sanslight';
+    font-family: 'open_sansregular';
     font-size: 19.16667px;
     padding: 4px;
     text-align: center;
@@ -154,7 +174,7 @@ nav {
     cursor: pointer; }
   nav ul {
     position: absolute;
-    top: 400px;
+    top: 478px;
     display: block;
     width: 524px;
     height: 57.5px;
