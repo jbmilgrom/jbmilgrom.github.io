@@ -24,6 +24,7 @@ $(function(){
 	})
 	// $nav.children().children().hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
 	
+	// provides the clicked / unclicked look to the nav buttons
 	$nav.children().children().on("click", function(e){
 		var self = this;
 
@@ -45,24 +46,25 @@ $(function(){
 		// ##### TO DO ######
 		// Need to find a way to lift up the Nav with the Ul
 		// Like I'm attempting below 
-		$(this).parent().parent().css({top: "20px"});
+		// $(this).parent().parent().css({top: "20px"});
 		$nameContainer.css({display: "none"});
 
 	});
 	
-	$nav.find($(".projects")).on("click", function(e){
-		e.preventDefault();
-		console.log(e);
-		console.log("prjects log click");
-		console.log($(this));
-	});
 
-	$nav.find($(".contact")).on("click", function(e){
-		console.log(e);
-		e.preventDefault();
-		$contentContainer.find(".contact").css({display: "block"});
-		$contentContainer.find("img").css({display: "none"});
-	});
+	$nav.children().children().on("click", function(){
+		$button = $(this);
+		$contentContainer.find("#profile_pic").css({display: "none"});
+
+		$(this).parent().children().each(function(index){
+			if ( $(this).html() === $button.html() ) {
+				$contentContainer.find("." + $(this).html()).css({display: "block"});
+			} else {
+				$contentContainer.find("." + $(this).html()).css({display: "none"});
+			}
+		}); 
+
+	})
 	
 
 })

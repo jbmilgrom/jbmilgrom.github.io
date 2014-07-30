@@ -15,7 +15,7 @@ $primary-color: white;
 $li-width: 115px;
 $li-padding: 4px;
 $nav-LIs: 4;
-$li-border: 1.9 * 1px;
+$li-border: 1px;
 /*$li-margin: -1 * 0.1px;*/
 $li-margin: 3px;
 $ul-padding: 4px;
@@ -102,7 +102,7 @@ div#contentContainer {
 		left: 50%;	
 		margin-left: -$pic-width/2;
 		display: none;
-		/*border: $li-border solid #3b434f;*/
+		border: $li-border solid #3b434f;
 		/*border-radius: 6px;*/
 	
 	}

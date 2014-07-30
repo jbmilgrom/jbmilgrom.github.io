@@ -114,7 +114,7 @@ div#contentContainer {
     left: 50%;
     margin-left: -117.19577px;
     display: none;
-    /*border: $li-border solid #3b434f;*/
+    border: 1px solid #3b434f;
     /*border-radius: 6px;*/ }
   div#contentContainer div.contact {
     position: relative;
@@ -128,7 +128,7 @@ div#contentContainer {
       list-style: none;
       max-height: 266.66667px;
       /*max-width: $li-width * 3;*/
-      border: 1.9px solid #3b434f;
+      border: 1px solid #3b434f;
       padding: 4px;
       margin-top: 30px;
       font-size: 28.75px; }
@@ -169,7 +169,7 @@ nav {
     text-align: center;
     color: #3b434f;
     background-color: white;
-    border: 1.9px solid #3b434f;
+    border: 1px solid #3b434f;
     margin: 3px;
     cursor: pointer; }
   nav ul {
