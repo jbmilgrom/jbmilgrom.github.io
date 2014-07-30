@@ -15,6 +15,8 @@ $(function(){
 	// think about getting rid of this
 	$contentContainer.find($("img")).css({display: "block"});
 
+	$nameContainer = $("#name");
+
 	$nav = $("nav");
 	defaultValues = [];
 	$nav.children().children().each(function(index){
@@ -44,6 +46,8 @@ $(function(){
 		// Need to find a way to lift up the Nav with the Ul
 		// Like I'm attempting below 
 		$(this).parent().parent().css({top: "20px"});
+		$nameContainer.css({display: "none"});
+
 	});
 	
 	$nav.find($(".projects")).on("click", function(e){
