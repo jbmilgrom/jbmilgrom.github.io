@@ -75,107 +75,140 @@ input, select {
 /*Nav Height Variables*/
 /*Note that $ul-padding contributes as well*/
 /*Note that at the moment, the ul/nav heights do now have any affect on display, and the li heights adjust to li font size*/
+/*$container-height: 600px;*/
 /*aligning contact info with left side of Nav, starting 50% into page (i.e. left: 50%)*/
 body {
-  padding: 8px;
   background-color: white; }
 
-div#name ul {
-  display: block;
-  margin: 40px auto 0 auto;
-  width: 525px;
-  height: 38px; }
-  div#name ul li {
-    font-family: 'open_sansregular';
-    font-size: 38px;
-    float: left;
-    display: block;
-    height: 38px;
-    text-align: center; }
-  div#name ul li#slashes {
-    color: #63aeee;
-    width: 75px;
-    font-family: 'open_sanssemibold'; }
-  div#name ul li#words {
-    color: #3b434f;
-    width: 450px;
-    /*height: $ul-height;*/ }
-
 div#contentContainer {
-  display: block;
+  /*display: block;*/
+  /*position: absolute;*/
   width: 100%;
-  height: 400px; }
-  div#contentContainer img {
-    /*		position: static;*/
-    max-height: 266.66667px;
-    max-width: 234.39153px;
+  /*height: $container-height;*/
+  margin-top: 71.5px; }
+  div#contentContainer #introduction {
+    height: 600px;
+    width: 100%;
+    margin-top: 71.5px;
+    padding: 1px; }
+    div#contentContainer #introduction #image {
+      /*display: list-item;*/
+      list-style: none;
+      margin: 50px; }
+      div#contentContainer #introduction #image img {
+        max-height: 200px;
+        max-width: 175.79365px;
+        position: relative;
+        /*top: $container-height/4 - $pic-height/2;*/
+        /*			left: 50%;	
+        			margin-left: -$pic-width/2;*/
+        margin: 0 auto;
+        border: 1px solid #424151;
+        /*border-radius: 6px;*/ }
+    div#contentContainer #introduction #name {
+      /*display: list-item;*/
+      list-style: none;
+      margin: 50px; }
+      div#contentContainer #introduction #name ul {
+        display: block;
+        margin: 0 auto;
+        width: 525px;
+        height: 38px; }
+        div#contentContainer #introduction #name ul li {
+          font-family: 'open_sansregular';
+          font-size: 38px;
+          float: left;
+          display: block;
+          height: 38px;
+          text-align: center; }
+        div#contentContainer #introduction #name ul li#slashes {
+          color: #45C2C6;
+          width: 75px;
+          font-family: 'open_sanssemibold'; }
+        div#contentContainer #introduction #name ul li#words {
+          color: #424151;
+          width: 450px;
+          /*height: $ul-height;*/ }
+  div#contentContainer #Projects {
+    height: 900px;
+    width: 100%;
+    padding: 1px;
+    background-color: #ddd6c8; }
+    div#contentContainer #Projects li {
+      list-style: none;
+      margin: 50px; }
+      div#contentContainer #Projects li img {
+        width: 300px;
+        height: 200px; }
+  div#contentContainer div.blog {
     position: relative;
-    top: 66.66667px;
-    left: 50%;
-    margin-left: -117.19577px;
-    display: none;
-    border: 1px solid #3b434f;
-    /*border-radius: 6px;*/ }
-  div#contentContainer div.contact {
-    position: relative;
-    top: 100px;
+    /*top: $container-height/4;*/
     left: 50%;
     display: block;
-    margin-left: -255px; }
-    div#contentContainer div.contact li {
+    margin-top: 20px; }
+  div#contentContainer #contact {
+    height: 600px;
+    width: 100%;
+    padding: 1px; }
+    div#contentContainer #contact li {
       color: #3b434f;
       font-family: 'open_sanssemibold';
       list-style: none;
-      max-height: 266.66667px;
+      max-height: 200px;
       /*max-width: $li-width * 3;*/
       border: 1px solid #3b434f;
       padding: 4px;
       margin-top: 30px;
       font-size: 28.75px; }
-    div#contentContainer div.contact span.title {
+    div#contentContainer #contact span.title {
       font-family: 'open_sansregular';
       font-size: 19.16667px;
       margin-right: 4px;
       width: 100px;
       display: inline-block; }
-    div#contentContainer div.contact a {
+    div#contentContainer #contact a {
       color: #63aeee; }
-    div#contentContainer div.contact a:link {
+    div#contentContainer #contact a:link {
       text-decoration: none; }
-    div#contentContainer div.contact a:visited {
+    div#contentContainer #contact a:visited {
       text-decoration: none; }
-    div#contentContainer div.contact a:hover {
+    div#contentContainer #contact a:hover {
       text-decoration: underline; }
-    div#contentContainer div.contact a:active {
+    div#contentContainer #contact a:active {
       text-decoration: underline; }
-    div#contentContainer div.contact a span {
+    div#contentContainer #contact a span {
       color: #3b434f; }
 
 nav {
   display: block;
-  /*position: relative;*/
-  width: 532px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
   height: 57.5px;
-  margin: 0 auto; }
+  background-color: #EF4B4C;
+  border-bottom: 6px solid #DDD6C8;
+  z-index: 5; }
+  nav ul {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 6px;
+    /*display: block;*/
+    width: 524px;
+    height: 28.75px;
+    padding: 4px; }
   nav li {
     list-style: none;
     float: left;
-    display: block;
+    display: inline;
+    vertical-align: center;
     width: 115px;
     /*height: ;*/
     font-family: 'open_sansregular';
     font-size: 19.16667px;
     padding: 4px;
     text-align: center;
-    color: #3b434f;
-    background-color: white;
-    border: 1px solid #3b434f;
+    color: white;
+    background-color: #EF4B4C;
+    /*border: $li-border solid white;*/
     margin: 3px;
     cursor: pointer; }
-  nav ul {
-    position: absolute;
-    top: 478px;
-    display: block;
-    width: 524px;
-    height: 57.5px;
-    padding: 4px; }

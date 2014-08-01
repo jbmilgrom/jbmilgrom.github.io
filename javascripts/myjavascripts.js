@@ -37,21 +37,21 @@ $(function(){
 		});
 	});
 
-	$nav.children().children().one("click", function(){
+	// $nav.children().children().one("click", function(){
 
-		$(this).parent().animate({
-			top: "40px"
-		}, 300);
+	// 	$(this).parent().animate({
+	// 		top: "40px"
+	// 	}, 300);
 
-		// ##### TO DO ######
-		// Need to find a way to lift up the Nav with the Ul
-		// Like I'm attempting below 
-		// $(this).parent().parent().css({top: "20px"});
-		$nameContainer.css({display: "none"});
+	// 	// ##### TO DO ######
+	// 	// Need to find a way to lift up the Nav with the Ul
+	// 	// Like I'm attempting below 
+	// 	// $(this).parent().parent().css({top: "20px"});
+	// 	$nameContainer.css({display: "none"});
 
-	});
+	// });
 	
-
+	// provides the different views based on which button is clicked
 	$nav.children().children().on("click", function(){
 		$button = $(this);
 		$contentContainer.find("#profile_pic").css({display: "none"});
