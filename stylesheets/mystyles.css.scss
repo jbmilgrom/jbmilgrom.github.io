@@ -11,13 +11,14 @@ $primary-color: white;
 $best-grey-blue: #424151;
 $slashes-color: #45C2C6;
 $great-brown: #DDD6C8;
+$nav-red: #EF4B4C;
 /*$primary-color: #ecf0f1;*/
 /*$primary-color: #3b434f;*/
 
 /*Nav Width Variables*/
 $li-width: 115px;
 $li-padding: 4px;
-$nav-LIs: 4;
+$nav-LIs: 5;
 $li-border: 1px;
 /*$li-margin: -1 * 0.1px;*/
 $li-margin: 3px;
@@ -134,6 +135,7 @@ div#contentContainer {
 		}
 	}
 
+
 	#Projects {
 		height: $intro-height * 3/2;
 		width: 100%;
@@ -166,21 +168,23 @@ div#contentContainer {
 		height: $intro-height;
 		width: 100%;
 		padding: 1px;
+		background-color: $slashes-color;
 
 		li {
 
-			color: #3b434f;
+			color: white;
 			font-family: 'open_sanssemibold';
 			list-style: none;
 			max-height: $pic-height;
 			/*max-width: $li-width * 3;*/
-			border: $li-border solid #3b434f;
+			border: $li-border solid white;
 			padding: $li-padding;
 			margin-top: $li-margin*10;
 			font-size: $li-font-size * 3/2;
 		}
 
 		span.title {
+			color: white;
 			font-family: 'open_sansregular';
 			font-size: $li-font-size;
 			margin-right: 4px;
@@ -189,7 +193,7 @@ div#contentContainer {
 		}
 
 		a {
-			color: #63aeee;
+			color: white;
 		}
 
 		a:link {
@@ -209,7 +213,7 @@ div#contentContainer {
 		}
 
 		a span {
-			color: #3b434f;		
+			color: white;		
 		}
 
 	}
@@ -223,7 +227,7 @@ nav {
 	top: 0px;
 	width: 100%;
 	height: $ul-height;
-	background-color: #EF4B4C;
+	background-color: $nav-red;
 	border-bottom: 6px solid #DDD6C8;	
 	z-index: 5;
 
@@ -235,6 +239,13 @@ nav {
 		width: $ul-width;
 		height: $ul-height/2;
 		padding: $ul-padding;	
+	}
+
+	img {
+/*		width: $pic-height;*/
+		height: $ul-height;
+		margin-top: 63px;
+
 	}
 
 	li {
@@ -254,6 +265,18 @@ nav {
 		margin: $li-margin;
 		cursor: pointer;
 
+	}
+
+	#image {
+		position: relative;
+		padding: 0 0 12px 0;
+		border-radius: 30px;
+		height: $ul-height * 2;
+		width: $li-width * 2/3;
+		background-color: white;
+		margin-top: -70px;
+		margin-right: 10px;
+		border: 3px solid $slashes-color;
 	}
 
 }
