@@ -39,7 +39,7 @@ $ul-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin) 
 $ul-height: $li-width/2;
 
 /*$container-height: 600px;*/
-$intro-height: 600px;
+$intro-height: 550px;
 
 $pic-height: 200px;
 $pic-width: (1329/1512) * $pic-height;
@@ -52,7 +52,9 @@ $name-margin: 40px;
 /*aligning contact info with left side of Nav, starting 50% into page (i.e. left: 50%)*/
 $contact-margin-left: -1/2 * ($ul-width) + $ul-padding + $li-margin;
 
-
+$project-pic-width: 425px;
+$project-pic-height: $project-pic-width * 1/2;
+$project-hor-item-margin: 30px;
 
 body {
 	background-color: $primary-color;
@@ -76,34 +78,14 @@ div#contentContainer {
 		width: 100%;
 		margin-top: $ul-height + 2 * $ul-padding + 6px;
 		padding: 1px;
-
-
-		#image {
-
-			/*display: list-item;*/
-			list-style: none;
-			margin: 50px;
-
-			img {
-				max-height: $pic-height;
-				max-width: $pic-width;
-				position: relative;
-				/*top: $container-height/4 - $pic-height/2;*/
-	/*			left: 50%;	
-				margin-left: -$pic-width/2;*/
-				margin: 0 auto;
-				border: $li-border solid $best-grey-blue;
-				/*border-radius: 6px;*/
-			
-			}
-		}
 	
 
 		#name {
 
 			/*display: list-item;*/
 			list-style: none;
-			margin: 50px;
+			margin: 75px;
+			margin-top: 100px;
 
 			ul {
 
@@ -112,32 +94,39 @@ div#contentContainer {
 				width: $name-words-width + $name-slashes-width;
 				height: $name-font-size;
 
+				#offCenter{
 
-				li {
-
-					font-family: 'open_sansregular';
-					font-size: $name-font-size;
-					float: left;
 					display: block;
+					width: $name-words-width + $name-slashes-width;
 					height: $name-font-size;
-					text-align: center;
-				}
-				
-				li#slashes {
-					color: $slashes-color;
-					width: $name-slashes-width;
-					font-family: 'open_sansregular';
-					font-size: $name-font-size * 4/3;
-					height: $name-font-size * 4/3;
-					margin-right: -20px;
-					margin-top: -5px;
+					margin-left: -25px;
 
-				}
+					li {
 
-				li#words {
-					color: $best-grey-blue;	
-					width: $name-words-width;
-					/*height: $ul-height;*/
+						font-family: 'open_sansregular';
+						font-size: $name-font-size;
+						float: left;
+						display: block;
+						height: $name-font-size;
+						text-align: center;
+					}
+					
+					li#slashes {
+						color: $slashes-color;
+						width: $name-slashes-width;
+						font-family: 'open_sansregular';
+						font-size: $name-font-size * 4/3;
+						height: $name-font-size * 4/3;
+						margin-right: -30px;
+						margin-top: -5px;
+
+					}
+
+					li#words {
+						color: $best-grey-blue;	
+						width: $name-words-width;
+						/*height: $ul-height;*/
+					}
 				}
 
 			}
@@ -158,7 +147,7 @@ div#contentContainer {
 					font-family: 'open_sansregular';
 					color: $best-grey-blue;	
 					text-align: center;
-					margin: 40px;
+					margin: 65px;
 				}
 
 				#title {
@@ -190,7 +179,6 @@ div#contentContainer {
 					}
 
 					span {
-
 					}
 				}
 			}
@@ -199,18 +187,51 @@ div#contentContainer {
 
 
 	#Projects {
+
 		height: $intro-height * 3/2;
 		width: 100%;
 		padding: 1px;
 		background-color: $great-brown;
 
-		li {
-			list-style: none;
-			margin: 50px;
+		ul.projectContainer {
 
-			img {
-				width: 300px;
-				height: 200px;
+			width: 100%;
+			padding: 1px;
+			height: $project-pic-height + 2 * $project-hor-item-margin + 2 * 1px;
+
+			div.centering {
+
+				position: relative;
+				height: $project-pic-height + 2 * $project-hor-item-margin + 2 * 1px;
+				width: 2 * $project-pic-width + 4 * $project-hor-item-margin;
+				margin: 0 auto;
+
+
+				li.image {
+					list-style: none;
+					margin: $project-hor-item-margin;
+					width: $project-pic-width;
+					float: left;
+
+					img {
+						width: $project-pic-width;
+						height: $project-pic-height;
+					}
+				}
+
+				ul {
+
+					list-style: none;
+					margin: $project-hor-item-margin;
+					float: left;
+					width: $project-pic-width;
+
+					li {
+
+						width: $project-pic-width;
+
+					}
+				}
 			}
 		}		
 	}

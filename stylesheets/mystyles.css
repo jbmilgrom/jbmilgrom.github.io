@@ -87,52 +87,44 @@ div#contentContainer {
   /*height: $container-height;*/
   margin-top: 71.5px; }
   div#contentContainer #introduction {
-    height: 600px;
+    height: 550px;
     width: 100%;
     margin-top: 71.5px;
     padding: 1px; }
-    div#contentContainer #introduction #image {
-      /*display: list-item;*/
-      list-style: none;
-      margin: 50px; }
-      div#contentContainer #introduction #image img {
-        max-height: 200px;
-        max-width: 175.79365px;
-        position: relative;
-        /*top: $container-height/4 - $pic-height/2;*/
-        /*			left: 50%;	
-        			margin-left: -$pic-width/2;*/
-        margin: 0 auto;
-        border: 1px solid #424151;
-        /*border-radius: 6px;*/ }
     div#contentContainer #introduction #name {
       /*display: list-item;*/
       list-style: none;
-      margin: 50px; }
+      margin: 75px;
+      margin-top: 100px; }
       div#contentContainer #introduction #name ul {
         display: block;
         margin: 0 auto;
         width: 665px;
         height: 57px; }
-        div#contentContainer #introduction #name ul li {
-          font-family: 'open_sansregular';
-          font-size: 57px;
-          float: left;
+        div#contentContainer #introduction #name ul #offCenter {
           display: block;
+          width: 665px;
           height: 57px;
-          text-align: center; }
-        div#contentContainer #introduction #name ul li#slashes {
-          color: #45c2c6;
-          width: 95px;
-          font-family: 'open_sansregular';
-          font-size: 76px;
-          height: 76px;
-          margin-right: -20px;
-          margin-top: -5px; }
-        div#contentContainer #introduction #name ul li#words {
-          color: #424151;
-          width: 570px;
-          /*height: $ul-height;*/ }
+          margin-left: -25px; }
+          div#contentContainer #introduction #name ul #offCenter li {
+            font-family: 'open_sansregular';
+            font-size: 57px;
+            float: left;
+            display: block;
+            height: 57px;
+            text-align: center; }
+          div#contentContainer #introduction #name ul #offCenter li#slashes {
+            color: #45c2c6;
+            width: 95px;
+            font-family: 'open_sansregular';
+            font-size: 76px;
+            height: 76px;
+            margin-right: -30px;
+            margin-top: -5px; }
+          div#contentContainer #introduction #name ul #offCenter li#words {
+            color: #424151;
+            width: 570px;
+            /*height: $ul-height;*/ }
     div#contentContainer #introduction #description {
       list-style: none; }
       div#contentContainer #introduction #description ul {
@@ -145,7 +137,7 @@ div#contentContainer {
           font-family: 'open_sansregular';
           color: #424151;
           text-align: center;
-          margin: 40px; }
+          margin: 65px; }
         div#contentContainer #introduction #description ul #title {
           font-size: 38px;
           color: #5b5b5b; }
@@ -164,16 +156,34 @@ div#contentContainer {
           div#contentContainer #introduction #description ul #catch a:active {
             text-decoration: underline; }
   div#contentContainer #Projects {
-    height: 900px;
+    height: 825px;
     width: 100%;
     padding: 1px;
     background-color: #ddd6c8; }
-    div#contentContainer #Projects li {
-      list-style: none;
-      margin: 50px; }
-      div#contentContainer #Projects li img {
-        width: 300px;
-        height: 200px; }
+    div#contentContainer #Projects ul.projectContainer {
+      width: 100%;
+      padding: 1px;
+      height: 274.5px; }
+      div#contentContainer #Projects ul.projectContainer div.centering {
+        position: relative;
+        height: 274.5px;
+        width: 970px;
+        margin: 0 auto; }
+        div#contentContainer #Projects ul.projectContainer div.centering li.image {
+          list-style: none;
+          margin: 30px;
+          width: 425px;
+          float: left; }
+          div#contentContainer #Projects ul.projectContainer div.centering li.image img {
+            width: 425px;
+            height: 212.5px; }
+        div#contentContainer #Projects ul.projectContainer div.centering ul {
+          list-style: none;
+          margin: 30px;
+          float: left;
+          width: 425px; }
+          div#contentContainer #Projects ul.projectContainer div.centering ul li {
+            width: 425px; }
   div#contentContainer div.blog {
     position: relative;
     /*top: $container-height/4;*/
@@ -181,7 +191,7 @@ div#contentContainer {
     display: block;
     margin-top: 20px; }
   div#contentContainer #contact {
-    height: 600px;
+    height: 550px;
     width: 100%;
     padding: 1px;
     background-color: #45c2c6; }
