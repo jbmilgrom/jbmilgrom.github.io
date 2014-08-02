@@ -55,9 +55,11 @@ $contact-margin-left: -1/2 * ($ul-width) + $ul-padding + $li-margin;
 $project-pic-width: 425px;
 $project-pic-height: $project-pic-width * 1/2;
 $project-hor-item-margin: 30px;
+$proj-image-border: 4px;
 
 body {
 	background-color: $primary-color;
+	font-family: 'open_sansregular';
 }
 
 
@@ -193,6 +195,29 @@ div#contentContainer {
 		padding: 1px;
 		background-color: $great-brown;
 
+		a:link {
+		    text-decoration: none;
+		    color: $lighter-gray;
+		}
+
+		a:visited {
+		    text-decoration: none;
+		    color: $best-grey-blue;
+
+		}
+
+		a:hover {
+		    text-decoration: underline;
+		    color: $slashes-color;
+
+		}
+
+		a:active {
+		    text-decoration: underline;
+		}
+
+		/*padding: 20px;*/
+
 		ul.projectContainer {
 
 			width: 100%;
@@ -203,19 +228,21 @@ div#contentContainer {
 
 				position: relative;
 				height: $project-pic-height + 2 * $project-hor-item-margin + 2 * 1px;
-				width: 2 * $project-pic-width + 4 * $project-hor-item-margin;
+				width: 2 * $project-pic-width + 4 * $project-hor-item-margin + 2 * $proj-image-border;
 				margin: 0 auto;
 
+				/*PUT IN JAVASCRIPT HOVER Function*/
 
 				li.image {
 					list-style: none;
 					margin: $project-hor-item-margin;
-					width: $project-pic-width;
+					width: $project-pic-width + 2 * $proj-image-border;
 					float: left;
 
 					img {
 						width: $project-pic-width;
 						height: $project-pic-height;
+						border: $proj-image-border solid white;
 					}
 				}
 
@@ -225,12 +252,19 @@ div#contentContainer {
 					margin: $project-hor-item-margin;
 					float: left;
 					width: $project-pic-width;
+					color: $best-grey-blue;
 
-					li {
-
-						width: $project-pic-width;
-
+					li.title {
+						font-size: $name-font-size/2;
+						margin-bottom: 20px;
+						font-family: "open_sanssemibold";
+						/*width: $project-pic-width;*/
 					}
+
+					li.body {
+						line-height: 130%;
+					}
+
 				}
 			}
 		}		
@@ -343,7 +377,6 @@ nav {
 		padding: $li-padding;
 		text-align: center;
 		color: white;
-		background-color: rgba(255,255,255,0);
 		/*border: $li-border solid white;*/
 		margin: $li-margin;
 		cursor: pointer;
@@ -372,6 +405,28 @@ nav {
 		margin-top: -70px;
 		margin-right: 10px;
 		border: 3px solid $slashes-color;
+	}
+
+	a {
+		color: white;
+	}
+
+	a:link {
+	    text-decoration: none;
+	    /*color: white;*/
+	}
+
+	a:visited {
+	    text-decoration: none;
+	    /*color: white;*/
+	}
+
+	a:hover {
+	    text-decoration: underline;
+	}
+
+	a:active {
+	    text-decoration: none;
 	}
 
 }

@@ -7,35 +7,71 @@ var unclicked = function($object, index){
 	$object.css({"background-color": defaultValues[index]["background-color"], "color": defaultValues[index]["color"] });
 }
 
+var changeAttribute = function($object, attribute, newValue){
+	var obj = {};
+	obj[attribute] = newValue; 
+	$object.css(obj);
+}
+
+var switcheroo = function($object, attribute, valueOne, valueTwo){
+	var currentValue = $object.css(attribute);
+
+	if (currentValue === valueOne) {
+		changeAttribute($object, attribute, valueTwo);
+	} else {
+		changeAttribute($object, attribute, valueOne);
+	}
+
+}
+
+
 $(function(){
 
-	console.log("hello");
-
-	$contentContainer = $("#contentContainer");
-	// think about getting rid of this
-	$contentContainer.find($("img")).css({display: "block"});
-
-	$nameContainer = $("#name");
 
 	$nav = $("nav");
+
+
+	var navBackColor = $nav.children().last().children().first().css("background-color");
+	var navFontColor = $nav.children().last().children().first().css("color");
+	var navBackColorNew = "#45C2C6";
+	var navFontColorNew = navBackColor;
+
+	var headBackColor = $nav.children().first().find("li.image").css("background-color");
+
 	defaultValues = [];
-	$nav.children().children().each(function(index){
+	$nav.children().last().children().each(function(index){
 		defaultValues.push($(this).css(["background-color", "color"]));
 	})
+
 	// $nav.children().children().hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
 	
 	// provides the clicked / unclicked look to the nav buttons
-	$nav.children().children().on("click", function(e){
+	$nav.children().last().children().on("click", function(e){
 		var self = this;
 
 		$(this).parent().children().each(function(index){
 			if ( this === self ) {
-				clicked($(this));
+				changeAttribute($(this), "background-color", navBackColorNew);
 			} else {
-				unclicked($(this), index);
+				changeAttribute($(this), "background-color", navBackColor);
 			}
 		});
 	});
+
+	// $nav.children().first().find("li.image").on("click", function(e){
+	// 	switcheroo($(this), "background-color", headBackColor, navBackColorNew);
+	// });
+
+	$nav.children().first().find("li.image").hover(
+		function(){
+			switcheroo($(this), "background-color", headBackColor, navBackColorNew);
+		}, 
+		function(){
+			switcheroo($(this), "background-color", headBackColor, navBackColorNew);
+		}
+	);
+
+
 
 	// $nav.children().children().one("click", function(){
 
@@ -52,19 +88,6 @@ $(function(){
 	// });
 	
 	// provides the different views based on which button is clicked
-	$nav.children().children().on("click", function(){
-		$button = $(this);
-		$contentContainer.find("#profile_pic").css({display: "none"});
-
-		$(this).parent().children().each(function(index){
-			if ( $(this).html() === $button.html() ) {
-				$contentContainer.find("." + $(this).html()).css({display: "block"});
-			} else {
-				$contentContainer.find("." + $(this).html()).css({display: "none"});
-			}
-		}); 
-
-	})
 	
 
 })

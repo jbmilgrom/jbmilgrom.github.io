@@ -78,7 +78,8 @@ input, select {
 /*$container-height: 600px;*/
 /*aligning contact info with left side of Nav, starting 50% into page (i.e. left: 50%)*/
 body {
-  background-color: white; }
+  background-color: white;
+  font-family: 'open_sansregular'; }
 
 div#contentContainer {
   /*display: block;*/
@@ -159,7 +160,19 @@ div#contentContainer {
     height: 825px;
     width: 100%;
     padding: 1px;
-    background-color: #ddd6c8; }
+    background-color: #ddd6c8;
+    /*padding: 20px;*/ }
+    div#contentContainer #Projects a:link {
+      text-decoration: none;
+      color: #5b5b5b; }
+    div#contentContainer #Projects a:visited {
+      text-decoration: none;
+      color: #424151; }
+    div#contentContainer #Projects a:hover {
+      text-decoration: underline;
+      color: #45c2c6; }
+    div#contentContainer #Projects a:active {
+      text-decoration: underline; }
     div#contentContainer #Projects ul.projectContainer {
       width: 100%;
       padding: 1px;
@@ -167,23 +180,31 @@ div#contentContainer {
       div#contentContainer #Projects ul.projectContainer div.centering {
         position: relative;
         height: 274.5px;
-        width: 970px;
-        margin: 0 auto; }
+        width: 978px;
+        margin: 0 auto;
+        /*PUT IN JAVASCRIPT HOVER Function*/ }
         div#contentContainer #Projects ul.projectContainer div.centering li.image {
           list-style: none;
           margin: 30px;
-          width: 425px;
+          width: 433px;
           float: left; }
           div#contentContainer #Projects ul.projectContainer div.centering li.image img {
             width: 425px;
-            height: 212.5px; }
+            height: 212.5px;
+            border: 4px solid white; }
         div#contentContainer #Projects ul.projectContainer div.centering ul {
           list-style: none;
           margin: 30px;
           float: left;
-          width: 425px; }
-          div#contentContainer #Projects ul.projectContainer div.centering ul li {
-            width: 425px; }
+          width: 425px;
+          color: #424151; }
+          div#contentContainer #Projects ul.projectContainer div.centering ul li.title {
+            font-size: 28.5px;
+            margin-bottom: 20px;
+            font-family: "open_sanssemibold";
+            /*width: $project-pic-width;*/ }
+          div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
+            line-height: 130%; }
   div#contentContainer div.blog {
     position: relative;
     /*top: $container-height/4;*/
@@ -258,7 +279,6 @@ nav {
     padding: 4px;
     text-align: center;
     color: white;
-    background-color: rgba(255, 255, 255, 0);
     /*border: $li-border solid white;*/
     margin: 3px;
     cursor: pointer;
@@ -280,3 +300,15 @@ nav {
     margin-top: -70px;
     margin-right: 10px;
     border: 3px solid #45c2c6; }
+  nav a {
+    color: white; }
+  nav a:link {
+    text-decoration: none;
+    /*color: white;*/ }
+  nav a:visited {
+    text-decoration: none;
+    /*color: white;*/ }
+  nav a:hover {
+    text-decoration: underline; }
+  nav a:active {
+    text-decoration: none; }
