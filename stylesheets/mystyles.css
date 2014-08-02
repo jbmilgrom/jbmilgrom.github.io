@@ -112,23 +112,57 @@ div#contentContainer {
       div#contentContainer #introduction #name ul {
         display: block;
         margin: 0 auto;
-        width: 525px;
-        height: 38px; }
+        width: 665px;
+        height: 57px; }
         div#contentContainer #introduction #name ul li {
           font-family: 'open_sansregular';
-          font-size: 38px;
+          font-size: 57px;
           float: left;
           display: block;
-          height: 38px;
+          height: 57px;
           text-align: center; }
         div#contentContainer #introduction #name ul li#slashes {
           color: #45c2c6;
-          width: 75px;
-          font-family: 'open_sanssemibold'; }
+          width: 95px;
+          font-family: 'open_sansregular';
+          font-size: 76px;
+          height: 76px;
+          margin-right: -20px;
+          margin-top: -5px; }
         div#contentContainer #introduction #name ul li#words {
           color: #424151;
-          width: 450px;
+          width: 570px;
           /*height: $ul-height;*/ }
+    div#contentContainer #introduction #description {
+      list-style: none; }
+      div#contentContainer #introduction #description ul {
+        display: block;
+        margin: 0 auto;
+        width: 665px;
+        height: 57px;
+        list-style: none; }
+        div#contentContainer #introduction #description ul li {
+          font-family: 'open_sansregular';
+          color: #424151;
+          text-align: center;
+          margin: 40px; }
+        div#contentContainer #introduction #description ul #title {
+          font-size: 38px;
+          color: #5b5b5b; }
+        div#contentContainer #introduction #description ul #catch {
+          font-size: 22.8px;
+          color: #acacac; }
+          div#contentContainer #introduction #description ul #catch a:link {
+            text-decoration: none;
+            color: #acacac;
+            font-size: 38px; }
+          div#contentContainer #introduction #description ul #catch a:visited {
+            text-decoration: none; }
+          div#contentContainer #introduction #description ul #catch a:hover {
+            text-decoration: underline;
+            color: #45c2c6; }
+          div#contentContainer #introduction #description ul #catch a:active {
+            text-decoration: underline; }
   div#contentContainer #Projects {
     height: 900px;
     width: 100%;
@@ -150,7 +184,7 @@ div#contentContainer {
     height: 600px;
     width: 100%;
     padding: 1px;
-    background-color: #4e989c; }
+    background-color: #45c2c6; }
     div#contentContainer #contact li {
       color: white;
       font-family: 'open_sanssemibold';
@@ -160,11 +194,11 @@ div#contentContainer {
       border: 1px solid white;
       padding: 4px;
       margin-top: 30px;
-      font-size: 28.75px; }
+      font-size: 34.5px; }
     div#contentContainer #contact span.title {
       color: white;
       font-family: 'open_sansregular';
-      font-size: 19.16667px;
+      font-size: 23px;
       margin-right: 4px;
       width: 100px;
       display: inline-block; }
@@ -187,15 +221,15 @@ nav {
   top: 0px;
   width: 100%;
   height: 57.5px;
-  background-color: #cf3620;
+  background-color: #ec4137;
   border-bottom: 6px solid #DDD6C8;
-  z-index: 5; }
+  z-index: 4; }
   nav ul {
     position: relative;
     margin: 0 auto;
     margin-top: 6px;
     /*display: block;*/
-    width: 653px;
+    width: 524px;
     height: 28.75px;
     padding: 4px; }
   nav img {
@@ -210,15 +244,20 @@ nav {
     width: 115px;
     /*height: ;*/
     font-family: 'open_sansregular';
-    font-size: 19.16667px;
+    font-size: 23px;
     padding: 4px;
     text-align: center;
     color: white;
-    background-color: #cf3620;
+    background-color: rgba(255, 255, 255, 0);
     /*border: $li-border solid white;*/
     margin: 3px;
     cursor: pointer; }
-  nav #image {
+  nav ul.image {
+    position: absolute;
+    height: 115px;
+    width: 76.66667px;
+    left: 100px; }
+  nav li.image {
     position: relative;
     padding: 0 0 12px 0;
     border-radius: 30px;

@@ -9,10 +9,13 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 
 $primary-color: white;
 $best-grey-blue: #424151;
+$lighter-gray: #5B5B5B;
+$even-lighter-gray: #ACACAC;
 $slashes-color: #45C2C6;
 $great-brown: #DDD6C8;
 $nav-red: #EF4B4C;
 $darker-red: #CF3620;
+$organgish-red: #EC4137;
 $vintage-blue: #4E989C;
 /*$primary-color: #ecf0f1;*/
 /*$primary-color: #3b434f;*/
@@ -20,12 +23,12 @@ $vintage-blue: #4E989C;
 /*Nav Width Variables*/
 $li-width: 115px;
 $li-padding: 4px;
-$nav-LIs: 5;
+$nav-LIs: 4;
 $li-border: 1px;
 /*$li-margin: -1 * 0.1px;*/
 $li-margin: 3px;
 $ul-padding: 4px;
-$li-font-size: $li-width/6;
+$li-font-size: $li-width/5;
 
 /*Having nav-width dependend upon its componants allows for easy responsive design by the touch of $li-width*/
 $ul-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin) + $ul-padding * 2;
@@ -41,8 +44,8 @@ $intro-height: 600px;
 $pic-height: 200px;
 $pic-width: (1329/1512) * $pic-height;
 
-$name-font-size: 38px;
-$name-words-width: 450px;
+$name-font-size: 38px * 3/2;
+$name-words-width: 380px * 3/2;
 $name-slashes-width: $name-words-width/6;
 $name-margin: 40px;
 
@@ -123,7 +126,11 @@ div#contentContainer {
 				li#slashes {
 					color: $slashes-color;
 					width: $name-slashes-width;
-					font-family: 'open_sanssemibold';
+					font-family: 'open_sansregular';
+					font-size: $name-font-size * 4/3;
+					height: $name-font-size * 4/3;
+					margin-right: -20px;
+					margin-top: -5px;
 
 				}
 
@@ -133,6 +140,59 @@ div#contentContainer {
 					/*height: $ul-height;*/
 				}
 
+			}
+		}
+
+		#description {
+
+			list-style: none;
+
+			ul {
+				display: block;
+				margin: 0 auto;
+				width: $name-words-width + $name-slashes-width;
+				height: $name-font-size;
+				list-style: none;
+
+				li {
+					font-family: 'open_sansregular';
+					color: $best-grey-blue;	
+					text-align: center;
+					margin: 40px;
+				}
+
+				#title {
+					font-size: $name-font-size * 2/3;
+					color: $lighter-gray;
+				}
+
+				#catch {
+					font-size: $name-font-size * 2/5;
+					color: $even-lighter-gray;
+					
+					a:link {
+					    text-decoration: none;
+					    color: $even-lighter-gray;
+					    font-size: $name-font-size * 2/3;
+					}
+
+					a:visited {
+					    text-decoration: none;
+					}
+
+					a:hover {
+					    text-decoration: underline;
+					    color: $slashes-color;
+					}
+
+					a:active {
+					    text-decoration: underline;
+					}
+
+					span {
+
+					}
+				}
 			}
 		}
 	}
@@ -170,7 +230,7 @@ div#contentContainer {
 		height: $intro-height;
 		width: 100%;
 		padding: 1px;
-		background-color: $vintage-blue;
+		background-color: $slashes-color;
 
 		li {
 
@@ -229,9 +289,9 @@ nav {
 	top: 0px;
 	width: 100%;
 	height: $ul-height;
-	background-color: $darker-red;
+	background-color: $organgish-red;
 	border-bottom: 6px solid #DDD6C8;	
-	z-index: 5;
+	z-index: 4;
 
 	ul {
 		position: relative;
@@ -262,14 +322,23 @@ nav {
 		padding: $li-padding;
 		text-align: center;
 		color: white;
-		background-color: $darker-red;
+		background-color: rgba(255,255,255,0);
 		/*border: $li-border solid white;*/
 		margin: $li-margin;
 		cursor: pointer;
 
 	}
 
-	#image {
+	ul.image {
+
+		position: absolute;
+		height: $ul-height * 2;
+		width: $li-width * 2/3;
+		left: 100px;
+
+	}
+
+	li.image {
 		position: relative;
 		padding: 0 0 12px 0;
 		border-radius: 30px;
