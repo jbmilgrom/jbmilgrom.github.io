@@ -12,6 +12,8 @@ $best-grey-blue: #424151;
 $slashes-color: #45C2C6;
 $great-brown: #DDD6C8;
 $nav-red: #EF4B4C;
+$darker-red: #CF3620;
+$vintage-blue: #4E989C;
 /*$primary-color: #ecf0f1;*/
 /*$primary-color: #3b434f;*/
 
@@ -119,7 +121,7 @@ div#contentContainer {
 				}
 				
 				li#slashes {
-					color: #45C2C6;
+					color: $slashes-color;
 					width: $name-slashes-width;
 					font-family: 'open_sanssemibold';
 
@@ -168,7 +170,7 @@ div#contentContainer {
 		height: $intro-height;
 		width: 100%;
 		padding: 1px;
-		background-color: $slashes-color;
+		background-color: $vintage-blue;
 
 		li {
 
@@ -227,7 +229,7 @@ nav {
 	top: 0px;
 	width: 100%;
 	height: $ul-height;
-	background-color: $nav-red;
+	background-color: $darker-red;
 	border-bottom: 6px solid #DDD6C8;	
 	z-index: 5;
 
@@ -260,7 +262,7 @@ nav {
 		padding: $li-padding;
 		text-align: center;
 		color: white;
-		background-color: #EF4B4C;
+		background-color: $darker-red;
 		/*border: $li-border solid white;*/
 		margin: $li-margin;
 		cursor: pointer;

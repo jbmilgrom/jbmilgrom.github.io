@@ -122,7 +122,7 @@ div#contentContainer {
           height: 38px;
           text-align: center; }
         div#contentContainer #introduction #name ul li#slashes {
-          color: #45C2C6;
+          color: #45c2c6;
           width: 75px;
           font-family: 'open_sanssemibold'; }
         div#contentContainer #introduction #name ul li#words {
@@ -150,7 +150,7 @@ div#contentContainer {
     height: 600px;
     width: 100%;
     padding: 1px;
-    background-color: #45c2c6; }
+    background-color: #4e989c; }
     div#contentContainer #contact li {
       color: white;
       font-family: 'open_sanssemibold';
@@ -187,7 +187,7 @@ nav {
   top: 0px;
   width: 100%;
   height: 57.5px;
-  background-color: #ef4b4c;
+  background-color: #cf3620;
   border-bottom: 6px solid #DDD6C8;
   z-index: 5; }
   nav ul {
@@ -214,7 +214,7 @@ nav {
     padding: 4px;
     text-align: center;
     color: white;
-    background-color: #EF4B4C;
+    background-color: #cf3620;
     /*border: $li-border solid white;*/
     margin: 3px;
     cursor: pointer; }
