@@ -230,7 +230,7 @@ nav {
     margin-top: 6px;
     /*display: block;*/
     width: 524px;
-    height: 28.75px;
+    height: 49.5px;
     padding: 4px; }
   nav img {
     /*		width: $pic-height;*/
@@ -242,7 +242,7 @@ nav {
     display: inline;
     vertical-align: center;
     width: 115px;
-    /*height: ;*/
+    height: 41.5px;
     font-family: 'open_sansregular';
     font-size: 23px;
     padding: 4px;
@@ -251,7 +251,10 @@ nav {
     background-color: rgba(255, 255, 255, 0);
     /*border: $li-border solid white;*/
     margin: 3px;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-top: -12px;
+    padding-top: 15px;
+    /*border: 1px solid black;*/ }
   nav ul.image {
     position: absolute;
     height: 115px;

@@ -299,7 +299,7 @@ nav {
 		margin-top: 6px;
  		/*display: block;*/
 		width: $ul-width;
-		height: $ul-height/2;
+		height: $ul-height - 2 * $ul-padding;
 		padding: $ul-padding;	
 	}
 
@@ -316,7 +316,7 @@ nav {
 		display: inline;
 		vertical-align: center;
 		width: $li-width;
-		/*height: ;*/
+		height: $ul-height - 2 * $ul-padding - 2 * $li-padding;
 		font-family: 'open_sansregular';
 		font-size: $li-font-size;
 		padding: $li-padding;
@@ -326,6 +326,9 @@ nav {
 		/*border: $li-border solid white;*/
 		margin: $li-margin;
 		cursor: pointer;
+		margin-top: -12px;
+		padding-top: 15px;
+		/*border: 1px solid black;*/
 
 	}
 
