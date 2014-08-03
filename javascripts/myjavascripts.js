@@ -24,35 +24,46 @@ var switcheroo = function($object, attribute, valueOne, valueTwo){
 
 }
 
-var scrollToAnim = function(text){
+var domPosition = function(idText){
+	return $("#" + idText).offset().top - $intro.offset().top;
+}
+
+var scrollToAnim = function(idText){
 	$('html, body').animate({
-		scrollTop: $("#" + text).offset().top - $intro.offset().top
+		scrollTop: domPosition(idText)
 	}, 1000);
 }
 
+
+// var scrollRange = function($scrollObject, $object){
+// 	return ( $scrollObject === $object.scrollTop() || $scrollObject === ($object.scrollTop() + $object.innerHeight()) )
+// }
+
 $(function(){
 
-
+	// jQuery elements
 	$nav = $("nav");
+	$navButtons = $nav.children().last().children();
+	$meIcon = $nav.children().first().find("li.image");
 	$intro = $("#introduction");
+	sections = [$("#Projects"), $("#Contact"), $("#Blog")];
 
-
+	// colors
 	var navBackColor = $nav.children().last().children().first().css("background-color");
 	var navFontColor = $nav.children().last().children().first().css("color");
 	var navBackColorNew = "#45C2C6";
 	var navFontColorNew = navBackColor;
-
 	var headBackColor = $nav.children().first().find("li.image").css("background-color");
 
-	defaultValues = [];
-	$nav.children().last().children().each(function(index){
-		defaultValues.push($(this).css(["background-color", "color"]));
-	})
+	// defaultValues = [];
+	// $nav.children().last().children().each(function(index){
+	// 	defaultValues.push($(this).css(["background-color", "color"]));
+	// })
 
 	// $nav.children().children().hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
 	
 	// provides the clicked / unclicked look to the nav buttons
-	$nav.children().last().children().on("click", function(e){
+	$navButtons.on("click", function(e){
 		var self = this;
 		var $self = $(this);
 
@@ -70,7 +81,7 @@ $(function(){
 	// 	switcheroo($(this), "background-color", headBackColor, navBackColorNew);
 	// });
 	
-	$meIcon = $nav.children().first().find("li.image");
+
 
 	$meIcon.hover(
 		function(){
@@ -83,25 +94,25 @@ $(function(){
 
 	$meIcon.on("click", function(e){
 		scrollToAnim($intro.attr("id"));
+		$navButtons.each(function(index){
+			changeAttribute($(this), "background-color", navBackColor);
+		})
 	})
 
 
+	// $(window).scroll(function(){
+	// 	$navButtons.each(function(index){
+	// 		changeAttribute($(this), "background-color", navBackColor);
+	// 	}) 
+	// })	
 
-	// $nav.children().children().one("click", function(){
+	// $(window).scroll(function(){
+	// 	$self = $(this);
 
-	// 	$(this).parent().animate({
-	// 		top: "40px"
-	// 	}, 300);
-
-	// 	// ##### TO DO ######
-	// 	// Need to find a way to lift up the Nav with the Ul
-	// 	// Like I'm attempting below 
-	// 	// $(this).parent().parent().css({top: "20px"});
-	// 	$nameContainer.css({display: "none"});
-
-	// });
-	
-	// provides the different views based on which button is clicked
-	
+	// 	if ($(this).scrollTop() > domPosition($("#Projects").attr("id"))) {
+	// 		changeAttribute($navButtons.first(), "background-color", navBackColorNew);	
+	// 	} 
+	 
+	// })	
 
 })
