@@ -7,6 +7,11 @@ var unclicked = function($object, index){
 	$object.css({"background-color": defaultValues[index]["background-color"], "color": defaultValues[index]["color"] });
 }
 
+var inOrOut = function($object){
+	var $currentValues = $object.css(["background-color", "color"]);
+	$object.css({"background-color": $currentValues["color"], "color": $currentValues["background-color"] });
+}
+
 var changeAttribute = function($object, attribute, newValue){
 	var obj = {};
 	obj[attribute] = newValue; 
@@ -31,7 +36,7 @@ var domPosition = function(idText){
 var scrollToAnim = function(idText){
 	$('html, body').animate({
 		scrollTop: domPosition(idText)
-	}, 1000);
+	}, 800);
 }
 
 
@@ -46,6 +51,8 @@ $(function(){
 	$navButtons = $nav.children().last().children();
 	$meIcon = $nav.children().first().find("li.image");
 	$intro = $("#introduction");
+	$contact = $("#Contact");
+	$contactButtons = $contact.children().first().children();
 	sections = [$("#Projects"), $("#Contact"), $("#Blog")];
 
 	// colors
@@ -99,6 +106,7 @@ $(function(){
 		})
 	})
 
+	$contactButtons.hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
 
 	// $(window).scroll(function(){
 	// 	$navButtons.each(function(index){

@@ -1,8 +1,8 @@
 /* html5doctor.com Reset v1.6.1 - http://cssreset.com */
-@import url(./fonts/texgyreadventorregular.css);
 @import url(./fonts/opensans_light_macroman.css);
 @import url(./fonts/opensans_regular_macroman.css);
 @import url(./fonts/opensans_semibold_macroman.css);
+@import url(./fonts/learningcurvepro_regular_macroman.css);
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -67,14 +67,18 @@ hr {
 input, select {
   vertical-align: middle; }
 
+/*@import './fonts/texgyreadventorregular.css';
+*/
 /*$primary-color: #ecf0f1;*/
 /*$primary-color: #3b434f;*/
 /*Nav Width Variables*/
 /*$li-margin: -1 * 0.1px;*/
 /*Having nav-width dependend upon its componants allows for easy responsive design by the touch of $li-width*/
+/*Contact width Variables*/
+/*$li-margin: -1 * 0.1px;*/
 /*Nav Height Variables*/
 /*Note that $ul-padding contributes as well*/
-/*Note that at the moment, the ul/nav heights do now have any affect on display, and the li heights adjust to li font size*/
+/*Note that at the moment, the ul/nav heights do not have any affect on display, and the li heights adjust to li font size*/
 /*$container-height: 600px;*/
 /*aligning contact info with left side of Nav, starting 50% into page (i.e. left: 50%)*/
 body {
@@ -219,40 +223,52 @@ div#contentContainer {
     left: 50%;
     display: block;
     margin-top: 20px; }
-  div#contentContainer #contact {
-    height: 550px;
+  div#contentContainer div#contact {
+    /*		height: $intro-height;*/
     width: 100%;
     padding: 1px;
-    background-color: #45c2c6; }
-    div#contentContainer #contact li {
-      color: white;
-      font-family: 'open_sanssemibold';
-      list-style: none;
-      max-height: 200px;
-      /*max-width: $li-width * 3;*/
-      border: 1px solid white;
-      padding: 4px;
-      margin-top: 30px;
-      font-size: 34.5px; }
-    div#contentContainer #contact span.title {
-      color: white;
-      font-family: 'open_sansregular';
-      font-size: 23px;
-      margin-right: 4px;
-      width: 100px;
-      display: inline-block; }
-    div#contentContainer #contact a {
-      color: white; }
-    div#contentContainer #contact a:link {
-      text-decoration: none; }
-    div#contentContainer #contact a:visited {
-      text-decoration: none; }
-    div#contentContainer #contact a:hover {
-      text-decoration: underline; }
-    div#contentContainer #contact a:active {
-      text-decoration: underline; }
-    div#contentContainer #contact a span {
-      color: white; }
+    padding-top: 30px;
+    background-color: #45c2c6;
+    height: 595px; }
+    div#contentContainer div#contact ul {
+      position: relative;
+      width: 852.75px;
+      height: 200px;
+      margin: 20px auto;
+      padding: 4px; }
+      div#contentContainer div#contact ul a {
+        display: list-item;
+        color: white;
+        width: 143.75px;
+        float: left;
+        font-family: 'open_sanssemibold';
+        list-style: none;
+        /*		max-height: $pic-height;*/
+        /*max-width: $li-width * 3;*/
+        border: 1px solid white;
+        padding: 4px;
+        margin: 8px;
+        font-size: 28.75px;
+        text-align: center;
+        background-color: #45c2c6; }
+      div#contentContainer div#contact ul a:link {
+        text-decoration: none; }
+      div#contentContainer div#contact ul a:visited {
+        text-decoration: none; }
+      div#contentContainer div#contact ul a:hover {
+        text-decoration: none; }
+      div#contentContainer div#contact ul a:active {
+        text-decoration: underline; }
+    div#contentContainer div#contact ul#thisPage {
+      width: 380px;
+      padding-top: 50px; }
+      div#contentContainer div#contact ul#thisPage a {
+        width: inherit;
+        border: none;
+        font-family: 'learning_curve_proregular';
+        font-size: 57.5px; }
+      div#contentContainer div#contact ul#thisPage a:hover {
+        text-decoration: underline; }
 
 nav {
   display: block;
@@ -271,7 +287,7 @@ nav {
     margin: 0 auto;
     margin-top: 6px;
     /*display: block;*/
-    width: 524px;
+    width: 395px;
     height: 49.5px;
     padding: 4px; }
   nav img {

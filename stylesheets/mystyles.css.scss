@@ -2,10 +2,12 @@
 /* html5doctor.com Reset v1.6.1 - http://cssreset.com */
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
 
-@import './fonts/texgyreadventorregular.css';
+/*@import './fonts/texgyreadventorregular.css';
+*/
 @import './fonts/opensans_light_macroman.css';
 @import './fonts/opensans_regular_macroman.css';
 @import './fonts/opensans_semibold_macroman.css';
+@import './fonts/learningcurvepro_regular_macroman.css';
 
 $primary-color: white;
 $best-grey-blue: #424151;
@@ -23,7 +25,7 @@ $vintage-blue: #4E989C;
 /*Nav Width Variables*/
 $li-width: 115px;
 $li-padding: 4px;
-$nav-LIs: 4;
+$nav-LIs: 3;
 $li-border: 1px;
 /*$li-margin: -1 * 0.1px;*/
 $li-margin: 3px;
@@ -33,9 +35,20 @@ $li-font-size: $li-width/5;
 /*Having nav-width dependend upon its componants allows for easy responsive design by the touch of $li-width*/
 $ul-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin) + $ul-padding * 2;
 
-/*Nav Height Variables*/
+/*Contact width Variables*/
+$c-li-width: $li-width * 5/4;
+$c-li-padding: 4px;
+$c-LIs: 5;
+$c-li-border: 1px;
+/*$li-margin: -1 * 0.1px;*/
+$c-li-margin: 8px;
+$c-ul-padding: 4px;
+$c-li-font-size: $li-width * 25/100;
+$c-ul-width: ($c-li-width * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-margin + $c-li-border) + $c-ul-padding;
+
+/*Nav Height Variables*/	
 /*Note that $ul-padding contributes as well*/
-/*Note that at the moment, the ul/nav heights do now have any affect on display, and the li heights adjust to li font size*/
+/*Note that at the moment, the ul/nav heights do not have any affect on display, and the li heights adjust to li font size*/
 $ul-height: $li-width/2;
 
 /*$container-height: 600px;*/
@@ -291,57 +304,73 @@ div#contentContainer {
 
 	}
 
-	#contact {
+	div#contact {
 
-		height: $intro-height;
+/*		height: $intro-height;*/
 		width: 100%;
 		padding: 1px;
+		padding-top: 30px;
 		background-color: $slashes-color;
+		height: 595px;
 
-		li {
+		ul {
 
-			color: white;
-			font-family: 'open_sanssemibold';
-			list-style: none;
-			max-height: $pic-height;
-			/*max-width: $li-width * 3;*/
-			border: $li-border solid white;
-			padding: $li-padding;
-			margin-top: $li-margin*10;
-			font-size: $li-font-size * 3/2;
+			position: relative;
+			width: $c-ul-width;
+			height: 200px;
+			margin: 20px auto;
+			padding: $c-ul-padding;
+
+			a {
+				display: list-item;
+				color: white;
+				width: $c-li-width;
+				float: left;
+				font-family: 'open_sanssemibold';
+				list-style: none;
+		/*		max-height: $pic-height;*/
+				/*max-width: $li-width * 3;*/
+				border: $c-li-border solid white;
+				padding: $c-li-padding;
+				margin: $c-li-margin;
+				font-size: $c-li-font-size;
+				text-align: center;
+				background-color: $slashes-color;
+			}
+
+			a:link {
+			    text-decoration: none;
+			}
+
+			a:visited {
+			    text-decoration: none;
+			}
+
+			a:hover {
+			    text-decoration: none;
+			}
+
+			a:active {
+			    text-decoration: underline;
+			}
 		}
 
-		span.title {
-			color: white;
-			font-family: 'open_sansregular';
-			font-size: $li-font-size;
-			margin-right: 4px;
-			width: 100px;
-			display: inline-block;
-		}
+		ul#thisPage {
+			width: 380px;
+			padding-top: 50px;
 
-		a {
-			color: white;
-		}
+			a {
+				width: inherit;
+				border: none;
+				font-family: 'learning_curve_proregular';
+				font-size: $c-li-font-size * 2;
 
-		a:link {
-		    text-decoration: none;
-		}
+			}
 
-		a:visited {
-		    text-decoration: none;
-		}
+			a:hover {
+			    text-decoration: underline;
 
-		a:hover {
-		    text-decoration: underline;
-		}
-
-		a:active {
-		    text-decoration: underline;
-		}
-
-		a span {
-			color: white;		
+			}
 		}
 
 	}
