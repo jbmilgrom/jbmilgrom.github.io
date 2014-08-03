@@ -190,10 +190,21 @@ div#contentContainer {
 
 	#Projects {
 
-		height: $intro-height * 3/2;
+		/*height: $intro-height * 8/5;*/
 		width: 100%;
 		padding: 1px;
 		background-color: $great-brown;
+
+		div#innerProjects {
+			position: relative;
+			margin-top: 20px;
+			margin-bottom: 30px;
+
+/*			height: $intro-height * 8/5;*/
+			width: 100%;
+			padding: 1px;
+			background-color: $great-brown;	
+		}
 
 		a:link {
 		    text-decoration: none;
@@ -421,9 +432,9 @@ nav {
 	    /*color: white;*/
 	}
 
-	a:hover {
+/*	a:hover {
 	    text-decoration: underline;
-	}
+	}*/
 
 	a:active {
 	    text-decoration: none;

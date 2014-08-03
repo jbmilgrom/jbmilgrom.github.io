@@ -157,11 +157,19 @@ div#contentContainer {
           div#contentContainer #introduction #description ul #catch a:active {
             text-decoration: underline; }
   div#contentContainer #Projects {
-    height: 825px;
+    /*height: $intro-height * 8/5;*/
     width: 100%;
     padding: 1px;
     background-color: #ddd6c8;
     /*padding: 20px;*/ }
+    div#contentContainer #Projects div#innerProjects {
+      position: relative;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      /*			height: $intro-height * 8/5;*/
+      width: 100%;
+      padding: 1px;
+      background-color: #ddd6c8; }
     div#contentContainer #Projects a:link {
       text-decoration: none;
       color: #5b5b5b; }
@@ -254,7 +262,10 @@ nav {
   height: 57.5px;
   background-color: #ec4137;
   border-bottom: 6px solid #DDD6C8;
-  z-index: 4; }
+  z-index: 4;
+  /*	a:hover {
+  	    text-decoration: underline;
+  	}*/ }
   nav ul {
     position: relative;
     margin: 0 auto;
@@ -308,7 +319,5 @@ nav {
   nav a:visited {
     text-decoration: none;
     /*color: white;*/ }
-  nav a:hover {
-    text-decoration: underline; }
   nav a:active {
     text-decoration: none; }

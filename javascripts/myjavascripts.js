@@ -48,10 +48,14 @@ $(function(){
 	// provides the clicked / unclicked look to the nav buttons
 	$nav.children().last().children().on("click", function(e){
 		var self = this;
+		var $self = $(this);
 
 		$(this).parent().children().each(function(index){
 			if ( this === self ) {
 				changeAttribute($(this), "background-color", navBackColorNew);
+				$('html, body').animate({
+    				scrollTop: $("#" + $self.text()).offset().top
+				}, 1000);
 			} else {
 				changeAttribute($(this), "background-color", navBackColor);
 			}
