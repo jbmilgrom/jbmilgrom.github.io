@@ -24,11 +24,17 @@ var switcheroo = function($object, attribute, valueOne, valueTwo){
 
 }
 
+var scrollToAnim = function(text){
+	$('html, body').animate({
+		scrollTop: $("#" + text).offset().top - $intro.offset().top
+	}, 1000);
+}
 
 $(function(){
 
 
 	$nav = $("nav");
+	$intro = $("#introduction");
 
 
 	var navBackColor = $nav.children().last().children().first().css("background-color");
@@ -53,9 +59,7 @@ $(function(){
 		$(this).parent().children().each(function(index){
 			if ( this === self ) {
 				changeAttribute($(this), "background-color", navBackColorNew);
-				$('html, body').animate({
-    				scrollTop: $("#" + $self.text()).offset().top
-				}, 1000);
+				scrollToAnim($self.text());
 			} else {
 				changeAttribute($(this), "background-color", navBackColor);
 			}
@@ -65,8 +69,10 @@ $(function(){
 	// $nav.children().first().find("li.image").on("click", function(e){
 	// 	switcheroo($(this), "background-color", headBackColor, navBackColorNew);
 	// });
+	
+	$meIcon = $nav.children().first().find("li.image");
 
-	$nav.children().first().find("li.image").hover(
+	$meIcon.hover(
 		function(){
 			switcheroo($(this), "background-color", headBackColor, navBackColorNew);
 		}, 
@@ -74,6 +80,10 @@ $(function(){
 			switcheroo($(this), "background-color", headBackColor, navBackColorNew);
 		}
 	);
+
+	$meIcon.on("click", function(e){
+		scrollToAnim($intro.attr("id"));
+	})
 
 
 
