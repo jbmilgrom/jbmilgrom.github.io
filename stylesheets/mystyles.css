@@ -289,7 +289,8 @@ div#contentContainer {
             line-height: 140%;
             color: #acacac; }
     div#contentContainer #Blog a:link {
-      text-decoration: none; }
+      text-decoration: none;
+      color: white; }
     div#contentContainer #Blog a:visited {
       text-decoration: none;
       color: white; }
