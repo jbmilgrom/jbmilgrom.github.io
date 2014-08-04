@@ -53,6 +53,7 @@ $(function(){
 	$intro = $("#introduction");
 	$contact = $("#Contact");
 	$contactButtons = $contact.children().first().children();
+	$seeCodeButton = $contact.children().last().children();
 	sections = [$("#Projects"), $("#Contact"), $("#Blog")];
 
 	// colors
@@ -69,7 +70,7 @@ $(function(){
 
 	// $nav.children().children().hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
 	
-	// provides the clicked / unclicked look to the nav buttons
+	// clicked / unclicked for the nav buttons
 	$navButtons.on("click", function(e){
 		var self = this;
 		var $self = $(this);
@@ -89,7 +90,7 @@ $(function(){
 	// });
 	
 
-
+	// hover fuctionality for "Me" Icon
 	$meIcon.hover(
 		function(){
 			switcheroo($(this), "background-color", headBackColor, navBackColorNew);
@@ -99,6 +100,7 @@ $(function(){
 		}
 	);
 
+	// automatic scroll for "Me" Icon
 	$meIcon.on("click", function(e){
 		scrollToAnim($intro.attr("id"));
 		$navButtons.each(function(index){
@@ -106,8 +108,10 @@ $(function(){
 		})
 	})
 
+	// hover functionality for contact buttons
 	$contactButtons.hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
-
+	// $seeCodeButton.hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
+	
 	// $(window).scroll(function(){
 	// 	$navButtons.each(function(index){
 	// 		changeAttribute($(this), "background-color", navBackColor);

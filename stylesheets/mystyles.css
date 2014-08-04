@@ -69,18 +69,28 @@ input, select {
 
 /*@import './fonts/texgyreadventorregular.css';
 */
+/******** colors ********/
+/************************/
 /*$primary-color: #ecf0f1;*/
 /*$primary-color: #3b434f;*/
-/*Nav Width Variables*/
+/******* NAV ********/
+/*********************/
 /*$li-margin: -1 * 0.1px;*/
 /*Having nav-width dependend upon its componants allows for easy responsive design by the touch of $li-width*/
-/*Contact width Variables*/
-/*$li-margin: -1 * 0.1px;*/
 /*Nav Height Variables*/
 /*Note that $ul-padding contributes as well*/
 /*Note that at the moment, the ul/nav heights do not have any affect on display, and the li heights adjust to li font size*/
-/*$container-height: 600px;*/
-/*aligning contact info with left side of Nav, starting 50% into page (i.e. left: 50%)*/
+/******** Contact *********/
+/**************************/
+/*$li-margin: -1 * 0.1px;*/
+/******* Intro ***********/
+/*************************/
+/******* Project *********/
+/*************************/
+/******** Blog ***********/
+/*************************/
+/*remove height when you have enough blog entries to fill blog section*/
+/*$blog-container-width: 400px; */
 body {
   background-color: white;
   font-family: 'open_sansregular'; }
@@ -174,17 +184,6 @@ div#contentContainer {
       width: 100%;
       padding: 1px;
       background-color: #ddd6c8; }
-    div#contentContainer #Projects a:link {
-      text-decoration: none;
-      color: #5b5b5b; }
-    div#contentContainer #Projects a:visited {
-      text-decoration: none;
-      color: #424151; }
-    div#contentContainer #Projects a:hover {
-      text-decoration: underline;
-      color: #45c2c6; }
-    div#contentContainer #Projects a:active {
-      text-decoration: underline; }
     div#contentContainer #Projects ul.projectContainer {
       width: 100%;
       padding: 1px;
@@ -217,12 +216,76 @@ div#contentContainer {
             /*width: $project-pic-width;*/ }
           div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
             line-height: 130%; }
-  div#contentContainer div.blog {
-    position: relative;
-    /*top: $container-height/4;*/
-    left: 50%;
-    display: block;
-    margin-top: 20px; }
+    div#contentContainer #Projects a:link {
+      text-decoration: none;
+      color: #5b5b5b; }
+    div#contentContainer #Projects a:visited {
+      text-decoration: none;
+      color: #424151; }
+    div#contentContainer #Projects a:hover {
+      text-decoration: underline;
+      color: #45c2c6; }
+    div#contentContainer #Projects a:active {
+      text-decoration: underline; }
+  div#contentContainer #Blog {
+    width: 100%;
+    padding: 1px;
+    background-color: #424151;
+    /*color: #557FA7;*/
+    /*color: #2FABE1;*/
+    /*color: $slashes-color;*/
+    /*		color: white;
+    */
+    /*border: 5px solid white;*/ }
+    div#contentContainer #Blog div#innerBlog {
+      position: relative;
+      margin: 1px;
+      width: 100%;
+      height: 550px;
+      padding: 1px; }
+    div#contentContainer #Blog ul.blogContainer {
+      width: 100%;
+      height: 179.5px; }
+      div#contentContainer #Blog ul.blogContainer div.blogCentering {
+        position: relative;
+        height: 430.5px;
+        width: 829.33333px;
+        margin: 20px auto; }
+        div#contentContainer #Blog ul.blogContainer div.blogCentering ul {
+          list-style: none;
+          display: list-item;
+          margin: 20px;
+          float: left;
+          font-size: 28.5px;
+          font-family: "open_sansregular"; }
+        div#contentContainer #Blog ul.blogContainer div.blogCentering ul.date {
+          text-align: right;
+          font-size: 19px;
+          padding: 8px;
+          color: white;
+          width: 183.33333px;
+          height: 137.5px;
+          /*margin-right: 50px;*/
+          /*border-right: 2px solid white;*/ }
+        div#contentContainer #Blog ul.blogContainer div.blogCentering ul.title {
+          text-align: left;
+          color: white;
+          width: 550px;
+          height: 137.5px; }
+          div#contentContainer #Blog ul.blogContainer div.blogCentering ul.title li.header {
+            line-height: 130%; }
+          div#contentContainer #Blog ul.blogContainer div.blogCentering ul.title li.subheader {
+            font-size: 19px; }
+    div#contentContainer #Blog a:link {
+      text-decoration: none; }
+    div#contentContainer #Blog a:visited {
+      text-decoration: none;
+      color: white; }
+    div#contentContainer #Blog a:hover {
+      text-decoration: underline;
+      color: #45c2c6; }
+    div#contentContainer #Blog a:active {
+      text-decoration: underline; }
   div#contentContainer div#contact {
     /*		height: $intro-height;*/
     width: 100%;
@@ -266,7 +329,8 @@ div#contentContainer {
         width: inherit;
         border: none;
         font-family: 'learning_curve_proregular';
-        font-size: 57.5px; }
+        font-size: 100.625px;
+        padding: 1px; }
       div#contentContainer div#contact ul#thisPage a:hover {
         text-decoration: underline; }
 

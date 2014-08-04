@@ -9,6 +9,8 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 @import './fonts/opensans_semibold_macroman.css';
 @import './fonts/learningcurvepro_regular_macroman.css';
 
+/******** colors ********/
+/************************/
 $primary-color: white;
 $best-grey-blue: #424151;
 $lighter-gray: #5B5B5B;
@@ -22,7 +24,8 @@ $vintage-blue: #4E989C;
 /*$primary-color: #ecf0f1;*/
 /*$primary-color: #3b434f;*/
 
-/*Nav Width Variables*/
+/******* NAV ********/
+/*********************/
 $li-width: 115px;
 $li-padding: 4px;
 $nav-LIs: 3;
@@ -35,7 +38,14 @@ $li-font-size: $li-width/5;
 /*Having nav-width dependend upon its componants allows for easy responsive design by the touch of $li-width*/
 $ul-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin) + $ul-padding * 2;
 
-/*Contact width Variables*/
+/*Nav Height Variables*/	
+/*Note that $ul-padding contributes as well*/
+/*Note that at the moment, the ul/nav heights do not have any affect on display, and the li heights adjust to li font size*/
+$ul-height: $li-width/2;
+
+
+/******** Contact *********/
+/**************************/
 $c-li-width: $li-width * 5/4;
 $c-li-padding: 4px;
 $c-LIs: 5;
@@ -46,12 +56,9 @@ $c-ul-padding: 4px;
 $c-li-font-size: $li-width * 25/100;
 $c-ul-width: ($c-li-width * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-margin + $c-li-border) + $c-ul-padding;
 
-/*Nav Height Variables*/	
-/*Note that $ul-padding contributes as well*/
-/*Note that at the moment, the ul/nav heights do not have any affect on display, and the li heights adjust to li font size*/
-$ul-height: $li-width/2;
 
-/*$container-height: 600px;*/
+/******* Intro ***********/
+/*************************/
 $intro-height: 550px;
 
 $pic-height: 200px;
@@ -62,20 +69,31 @@ $name-words-width: 380px * 3/2;
 $name-slashes-width: $name-words-width/6;
 $name-margin: 40px;
 
-/*aligning contact info with left side of Nav, starting 50% into page (i.e. left: 50%)*/
-$contact-margin-left: -1/2 * ($ul-width) + $ul-padding + $li-margin;
 
+/******* Project *********/
+/*************************/
 $project-pic-width: 425px;
 $project-pic-height: $project-pic-width * 1/2;
 $project-hor-item-margin: 30px;
 $proj-image-border: 4px;
 
+/******** Blog ***********/
+/*************************/
+/*remove height when you have enough blog entries to fill blog section*/
+$blog-height: $intro-height;
+/*$blog-container-width: 400px; */
+$blog-title-width: 550px;
+$blog-date-width: $blog-title-width/3;
+$blog-item-height: $blog-title-width * 1/4;
+$blog-item-margin: 20px;
+$blog-date-padding: 8px;
+
+
+
 body {
 	background-color: $primary-color;
 	font-family: 'open_sansregular';
 }
-
-
 
 
 div#contentContainer {
@@ -219,27 +237,6 @@ div#contentContainer {
 			background-color: $great-brown;	
 		}
 
-		a:link {
-		    text-decoration: none;
-		    color: $lighter-gray;
-		}
-
-		a:visited {
-		    text-decoration: none;
-		    color: $best-grey-blue;
-
-		}
-
-		a:hover {
-		    text-decoration: underline;
-		    color: $slashes-color;
-
-		}
-
-		a:active {
-		    text-decoration: underline;
-		}
-
 		/*padding: 20px;*/
 
 		ul.projectContainer {
@@ -291,16 +288,127 @@ div#contentContainer {
 
 				}
 			}
+		}
+
+		a:link {
+		    text-decoration: none;
+		    color: $lighter-gray;
+		}
+
+		a:visited {
+		    text-decoration: none;
+		    color: $best-grey-blue;
+
+		}
+
+		a:hover {
+		    text-decoration: underline;
+		    color: $slashes-color;
+
+		}
+
+		a:active {
+		    text-decoration: underline;
 		}		
 	}
 
-	div.blog{
+	#Blog{
 
-		position: relative;
-		/*top: $container-height/4;*/
-		left: 50%;	
-		display: block;
-		margin-top:  20px;
+		width: 100%;
+		padding: 1px;
+		background-color: $best-grey-blue;
+		/*color: #557FA7;*/
+		/*color: #2FABE1;*/
+		/*color: $slashes-color;*/
+/*		color: white;
+*/		/*border: 5px solid white;*/
+
+		div#innerBlog {
+			position: relative;
+ 			margin: 1px;
+			width: 100%;
+			height: 550px;	
+			padding: 1px;
+		}
+
+
+		ul.blogContainer {
+
+		width: 100%;
+		height: $blog-item-height + 2 * $blog-item-margin + 2 * 1px;
+
+			div.blogCentering {
+
+				position: relative;
+				height: $blog-item-height + 2 * ($blog-item-height + $blog-date-padding) + 2 * 1px;
+				width: $blog-title-width + $blog-date-width + 4 * $blog-item-margin + 2 * $blog-date-padding;
+				margin: 20px auto;	
+
+				ul {
+
+					list-style: none;
+					display: list-item;
+					margin: $blog-item-margin;
+					float: left;
+					font-size: $name-font-size/2;
+					font-family: "open_sansregular";
+
+				}
+
+				ul.date {
+					text-align: right;
+					font-size: $name-font-size/3;
+					padding: $blog-date-padding;
+					color: white;
+					width: $blog-date-width;
+					height: $blog-item-height;
+					/*margin-right: 50px;*/
+					/*border-right: 2px solid white;*/
+
+				}
+
+				ul.title {
+					text-align: left;
+					color: white;
+					width: $blog-title-width;
+					height: $blog-item-height;
+
+					li {
+						
+					}
+
+					li.header {
+						line-height: 130%;
+					}
+
+					li.subheader {
+						font-size: $name-font-size/3;
+					}
+				}
+			}
+
+		}
+
+		a:link {
+		    text-decoration: none;
+		}
+
+		a:visited {
+		    text-decoration: none;
+		    color: white;
+
+		}
+
+		a:hover {
+		    text-decoration: underline;
+		    color: $slashes-color;
+
+		}
+
+		a:active {
+		    text-decoration: underline;
+		}	
+		
 
 	}
 
@@ -363,7 +471,8 @@ div#contentContainer {
 				width: inherit;
 				border: none;
 				font-family: 'learning_curve_proregular';
-				font-size: $c-li-font-size * 2;
+				font-size: $c-li-font-size * 3.5;
+				padding: 1px;
 
 			}
 
