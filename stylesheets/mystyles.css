@@ -242,47 +242,58 @@ div#contentContainer {
       margin: 1px;
       width: 100%;
       height: 550px;
-      padding: 1px; }
-    div#contentContainer #Blog ul.blogContainer {
-      width: 100%;
-      height: 179.5px; }
-      div#contentContainer #Blog ul.blogContainer div.blogCentering {
-        position: relative;
-        height: 430.5px;
-        width: 829.33333px;
-        margin: 20px auto; }
-        div#contentContainer #Blog ul.blogContainer div.blogCentering ul {
+      padding: 1px;
+      margin-top: 20px; }
+    div#contentContainer #Blog div.blogCentering {
+      position: relative;
+      height: 213.5px;
+      width: 848.33333px;
+      margin: 20px auto; }
+      div#contentContainer #Blog div.blogCentering ul.blogContainer {
+        width: 100%;
+        height: 179.5px; }
+        div#contentContainer #Blog div.blogCentering ul.blogContainer ul {
           list-style: none;
           display: list-item;
           margin: 20px;
           float: left;
-          font-size: 28.5px;
+          font-size: 38px;
           font-family: "open_sansregular"; }
-        div#contentContainer #Blog ul.blogContainer div.blogCentering ul.date {
+        div#contentContainer #Blog div.blogCentering ul.blogContainer ul.date {
           text-align: right;
-          font-size: 19px;
-          padding: 8px;
+          font-size: 14.25px;
+          padding: 17px;
+          /*color: #9BCDE0;*/
+          /*color: #1EDAFA;*/
           color: white;
           width: 183.33333px;
-          height: 137.5px;
+          min-height: 137.5px;
+          /*color: $even-lighter-gray;*/
+          /*					color: $great-brown;
+          */
           /*margin-right: 50px;*/
-          /*border-right: 2px solid white;*/ }
-        div#contentContainer #Blog ul.blogContainer div.blogCentering ul.title {
+          /*border-right: 2px solid white;*/
+          border-right: 1px solid white; }
+        div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title {
           text-align: left;
           color: white;
           width: 550px;
-          height: 137.5px; }
-          div#contentContainer #Blog ul.blogContainer div.blogCentering ul.title li.header {
-            line-height: 130%; }
-          div#contentContainer #Blog ul.blogContainer div.blogCentering ul.title li.subheader {
-            font-size: 19px; }
+          min-height: 137.5px; }
+          div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title li.header {
+            line-height: 130%;
+            font-family: "open_sanssemibold";
+            color: white; }
+          div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title li.subheader {
+            margin-top: 10px;
+            font-size: 19px;
+            line-height: 140%;
+            color: #acacac; }
     div#contentContainer #Blog a:link {
       text-decoration: none; }
     div#contentContainer #Blog a:visited {
       text-decoration: none;
       color: white; }
     div#contentContainer #Blog a:hover {
-      text-decoration: underline;
       color: #45c2c6; }
     div#contentContainer #Blog a:active {
       text-decoration: underline; }

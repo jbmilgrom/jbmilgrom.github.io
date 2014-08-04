@@ -86,7 +86,8 @@ $blog-title-width: 550px;
 $blog-date-width: $blog-title-width/3;
 $blog-item-height: $blog-title-width * 1/4;
 $blog-item-margin: 20px;
-$blog-date-padding: 8px;
+$blog-date-padding: 17px;
+$blog-date-border: 1px;
 
 
 
@@ -329,20 +330,23 @@ div#contentContainer {
 			width: 100%;
 			height: 550px;	
 			padding: 1px;
+			margin-top: 20px;
 		}
 
 
-		ul.blogContainer {
 
-		width: 100%;
-		height: $blog-item-height + 2 * $blog-item-margin + 2 * 1px;
 
-			div.blogCentering {
+		div.blogCentering {
 
-				position: relative;
-				height: $blog-item-height + 2 * ($blog-item-height + $blog-date-padding) + 2 * 1px;
-				width: $blog-title-width + $blog-date-width + 4 * $blog-item-margin + 2 * $blog-date-padding;
-				margin: 20px auto;	
+			position: relative;
+			height: $blog-item-height + 2 * $blog-date-padding + 2 * $blog-item-margin + 2 * 1px;
+			width: $blog-title-width + $blog-date-width + 4 * $blog-item-margin + 2 * $blog-date-padding + $blog-date-border;
+			margin: 20px auto;	
+
+			ul.blogContainer {
+
+				width: 100%;
+				height: $blog-item-height + 2 * $blog-item-margin + 2 * 1px;
 
 				ul {
 
@@ -350,20 +354,25 @@ div#contentContainer {
 					display: list-item;
 					margin: $blog-item-margin;
 					float: left;
-					font-size: $name-font-size/2;
+					font-size: $name-font-size *2/3;
 					font-family: "open_sansregular";
 
 				}
 
 				ul.date {
 					text-align: right;
-					font-size: $name-font-size/3;
+					font-size: $name-font-size/4;
 					padding: $blog-date-padding;
+					/*color: #9BCDE0;*/
+					/*color: #1EDAFA;*/
 					color: white;
 					width: $blog-date-width;
-					height: $blog-item-height;
-					/*margin-right: 50px;*/
+					min-height: $blog-item-height;
+					/*color: $even-lighter-gray;*/
+	/*					color: $great-brown;
+	*/					/*margin-right: 50px;*/
 					/*border-right: 2px solid white;*/
+					border-right: $blog-date-border solid white;
 
 				}
 
@@ -371,18 +380,26 @@ div#contentContainer {
 					text-align: left;
 					color: white;
 					width: $blog-title-width;
-					height: $blog-item-height;
+					min-height: $blog-item-height;
 
 					li {
-						
+
+
+
 					}
 
 					li.header {
 						line-height: 130%;
+						font-family: "open_sanssemibold";
+						color: white;
 					}
 
 					li.subheader {
+						margin-top: 10px;
 						font-size: $name-font-size/3;
+						line-height: 140%;
+						color: $even-lighter-gray;
+
 					}
 				}
 			}
@@ -400,7 +417,6 @@ div#contentContainer {
 		}
 
 		a:hover {
-		    text-decoration: underline;
 		    color: $slashes-color;
 
 		}
