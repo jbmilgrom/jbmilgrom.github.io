@@ -36,7 +36,7 @@ var domPosition = function(idText){
 var scrollToAnim = function(idText){
 	$('html, body').animate({
 		scrollTop: domPosition(idText)
-	}, 800);
+	}, 700);
 }
 
 
