@@ -6,22 +6,22 @@ This site was built from scratch using sass and javascript.
 
 Here of some of the javascript highlights:
 
-var switcheroo = function($object, attribute, valueOne, valueTwo){
-	var currentValue = $object.css(attribute);
-	if (currentValue === valueOne) {
-		changeAttribute($object, attribute, valueTwo);
-	} else {
-		changeAttribute($object, attribute, valueOne);
+	var switcheroo = function($object, attribute, valueOne, valueTwo){
+		var currentValue = $object.css(attribute);
+		if (currentValue === valueOne) {
+			changeAttribute($object, attribute, valueTwo);
+		} else {
+			changeAttribute($object, attribute, valueOne);
+		}
 	}
-}
 
 This function abstracts out any "switcheroo" functionality that you might like on a css attribute.  It works in conjunction with changeAttribute: 
 
-var changeAttribute = function($object, attribute, newValue){
-	var obj = {};
-	obj[attribute] = newValue; 
-	$object.css(obj);
-}
+	var changeAttribute = function($object, attribute, newValue){
+		var obj = {};
+		obj[attribute] = newValue; 
+		$object.css(obj);
+	}
 
 In this app, switcheroo functions were applied in the following way: 
 
@@ -49,12 +49,12 @@ Notice that the order of the "color"s doesn't matter.  Switcheroo checks the cur
 	
 Another way of providing similar functionality is with inOrOut.  Here, I hard coded some of the css since it is a common pattern: 
 
-var inOrOut = function($object){
-	var $currentValues = $object.css(["background-color", "color"]);
-	$object.css({"background-color": $currentValues["color"], "color": $currentValues["background-color"] });
-}
+	var inOrOut = function($object){
+		var $currentValues = $object.css(["background-color", "color"]);
+		$object.css({"background-color": $currentValues["color"], "color": 	$currentValues["background-color"] });
+	}
 
 and applied it on a hover function as well:
 
-$contactButtons.hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
+	$contactButtons.hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
 
