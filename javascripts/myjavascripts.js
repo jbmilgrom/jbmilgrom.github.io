@@ -63,12 +63,7 @@ $(function(){
 	var navFontColorNew = navBackColor;
 	var headBackColor = $nav.children().first().find("li.image").css("background-color");
 
-	// defaultValues = [];
-	// $nav.children().last().children().each(function(index){
-	// 	defaultValues.push($(this).css(["background-color", "color"]));
-	// })
-
-	// $nav.children().children().hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
+	
 	
 	// clicked / unclicked for the nav buttons
 	$navButtons.on("click", function(e){
@@ -84,10 +79,6 @@ $(function(){
 			}
 		});
 	});
-
-	// $nav.children().first().find("li.image").on("click", function(e){
-	// 	switcheroo($(this), "background-color", headBackColor, navBackColorNew);
-	// });
 	
 
 	// hover fuctionality for "Me" Icon
@@ -103,6 +94,7 @@ $(function(){
 	// automatic scroll for "Me" Icon
 	$meIcon.on("click", function(e){
 		scrollToAnim($intro.attr("id"));
+		// turn "off" nav buttons
 		$navButtons.each(function(index){
 			changeAttribute($(this), "background-color", navBackColor);
 		})
@@ -110,7 +102,6 @@ $(function(){
 
 	// hover functionality for contact buttons
 	$contactButtons.hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
-	// $seeCodeButton.hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
 	
 	// $(window).scroll(function(){
 	// 	$navButtons.each(function(index){
