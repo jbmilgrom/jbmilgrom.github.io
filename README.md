@@ -4,7 +4,7 @@ jbmilgrom.github.io
 
 This site was built from scratch using sass and javascript.
 
-Here of some of the javascript highlights:
+Here are some of the javascript highlights:
 
 	var switcheroo = function($object, attribute, valueOne, valueTwo){
 		var currentValue = $object.css(attribute);
