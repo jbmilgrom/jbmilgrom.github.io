@@ -36,7 +36,7 @@ var domPosition = function(idText){
 var scrollToAnim = function(idText){
 	$('html, body').animate({
 		scrollTop: domPosition(idText)
-	}, 700);
+	}, 800);
 }
 
 
@@ -74,6 +74,12 @@ $(function(){
 			if ( this === self ) {
 				changeAttribute($(this), "background-color", navBackColorNew);
 				scrollToAnim($self.text());
+				
+				// change stored data value of meIcon so that meIcon 
+				// knows that we've scrolled to Contact already
+				if ($self.text() === "Contact") {
+					$meIcon.attr({data: "down"});
+				}
 			} else {
 				changeAttribute($(this), "background-color", navBackColor);
 			}
@@ -93,8 +99,17 @@ $(function(){
 
 	// automatic scroll for "Me" Icon
 	$meIcon.on("click", function(e){
-		scrollToAnim($intro.attr("id"));
-		// turn "off" nav buttons
+		var data = $(this).attr("data")
+		
+		// switch data value so meIcon is aware of its position
+		if (data === "down") {
+			scrollToAnim($intro.attr("id"));
+			$(this).attr({data: "up"});
+		} else {
+			scrollToAnim("Contact");
+			$(this).attr({data: "down"});	
+		}
+		// turn "off" nav buttons```
 		$navButtons.each(function(index){
 			changeAttribute($(this), "background-color", navBackColor);
 		})
@@ -102,20 +117,6 @@ $(function(){
 
 	// hover functionality for contact buttons
 	$contactButtons.hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
-	
-	// $(window).scroll(function(){
-	// 	$navButtons.each(function(index){
-	// 		changeAttribute($(this), "background-color", navBackColor);
-	// 	}) 
-	// })	
-
-	// $(window).scroll(function(){
-	// 	$self = $(this);
-
-	// 	if ($(this).scrollTop() > domPosition($("#Projects").attr("id"))) {
-	// 		changeAttribute($navButtons.first(), "background-color", navBackColorNew);	
-	// 	} 
-	 
-	// })	
+		
 
 })
