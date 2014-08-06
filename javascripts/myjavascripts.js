@@ -105,14 +105,22 @@ $(function(){
 		if (data === "down") {
 			scrollToAnim($intro.attr("id"));
 			$(this).attr({data: "up"});
+
+			// turn "off" nav buttons
+			$navButtons.each(function(index){
+				changeAttribute($(this), "background-color", navBackColor);
+			})
 		} else {
 			scrollToAnim("Contact");
-			$(this).attr({data: "down"});	
+			$(this).attr({data: "down"});
+
+			// turn "off" nav buttons
+			$navButtons.each(function(index){
+				changeAttribute($(this), "background-color", navBackColor);
+			})
+			// turn "on" contact button 
+			changeAttribute($navButtons.last(), "background-color", navBackColorNew);
 		}
-		// turn "off" nav buttons```
-		$navButtons.each(function(index){
-			changeAttribute($(this), "background-color", navBackColor);
-		})
 	})
 
 	// hover functionality for contact buttons
