@@ -4,7 +4,7 @@ jbmilgrom.github.io
 
 This site was built from scratch using sass and javascript.
 
-Here of some of the javascript highlights:
+Here are some of the javascript highlights:
 
 	var switcheroo = function($object, attribute, valueOne, valueTwo){
 		var currentValue = $object.css(attribute);
@@ -34,7 +34,7 @@ In this app, switcheroo functions were applied in the following way:
 		}
 	);
 	
-But the nice part is they are generally applicable for any css attribute.  The code application of the functions could have easily looked like:
+But the nice part is they are generally applicable for any css attribute.  The application of the functions could have easily looked like:
 
 	$meIcon.hover(
 		function(){
@@ -45,9 +45,9 @@ But the nice part is they are generally applicable for any css attribute.  The c
 		}
 	);
 	
-Notice that the order of the "color"s doesn't matter.  Switcheroo checks the current value and acts accordingly.  The fact that switcheroo is called twice is only a function of the jQuery hover function. 
+Notice that the order of the colors doesn't matter.  Switcheroo checks the current value and acts accordingly.  The fact that switcheroo is called twice is only a function of the jQuery hover function. 
 	
-Another way of providing similar functionality is with inOrOut.  Here, I hard coded some of the css since it is a common pattern: 
+Another way of providing similar functionality is with inOrOut.  Here, I hard-coded some of the css since it is a common pattern: 
 
 	var inOrOut = function($object){
 		var $currentValues = $object.css(["background-color", "color"]);
