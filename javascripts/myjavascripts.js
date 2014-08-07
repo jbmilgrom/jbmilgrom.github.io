@@ -1,11 +1,11 @@
-var clicked = function($object){
-	var $currentValues = $object.css(["background-color", "color"]);
-	$object.css({"background-color": $currentValues["color"], "color": $currentValues["background-color"] });
-}
+// var clicked = function($object){
+// 	var $currentValues = $object.css(["background-color", "color"]);
+// 	$object.css({"background-color": $currentValues["color"], "color": $currentValues["background-color"] });
+// }
 
-var unclicked = function($object, index){
-	$object.css({"background-color": defaultValues[index]["background-color"], "color": defaultValues[index]["color"] });
-}
+// var unclicked = function($object, index){
+// 	$object.css({"background-color": defaultValues[index]["background-color"], "color": defaultValues[index]["color"] });
+// }
 
 var inOrOut = function($object){
 	var $currentValues = $object.css(["background-color", "color"]);
@@ -62,6 +62,8 @@ $(function(){
 	var navBackColorNew = "#45C2C6";
 	var navFontColorNew = navBackColor;
 	var headBackColor = $nav.children().first().find("li.image").css("background-color");
+	var picBorder = $('#Projects').find('img').css("border");
+	var picBorderNew = "4px solid " + navBackColorNew;
 
 	
 	
@@ -125,6 +127,16 @@ $(function(){
 
 	// hover functionality for contact buttons
 	$contactButtons.hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
+
+	// hover functionality for project pics	
+	$('#Projects').find('img').hover(
+		function(){
+			switcheroo($(this), "border", picBorder, picBorderNew);
+		}, 
+		function(){
+			switcheroo($(this), "border", picBorder, picBorderNew);
+		}
+	);
 		
 
 })
