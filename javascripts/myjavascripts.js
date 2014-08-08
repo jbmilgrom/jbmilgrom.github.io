@@ -54,6 +54,7 @@ $(function(){
 	$contact = $("#Contact");
 	$contactButtons = $contact.children().first().children();
 	$seeCodeButton = $contact.children().last().children();
+	$projects = $('#Projects');
 	sections = [$("#Projects"), $("#Contact"), $("#Blog")];
 
 	// colors
@@ -123,20 +124,23 @@ $(function(){
 			// turn "on" contact button 
 			changeAttribute($navButtons.last(), "background-color", navBackColorNew);
 		}
-	})
+	});
 
 	// hover functionality for contact buttons
 	$contactButtons.hover(function(){inOrOut($(this))}, function(){inOrOut($(this))});
 
+	// can be used to switch on gif
+	$picAndGif = $projects.find('#leaf').find('.image');
+
 	// hover functionality for project pics	
-	$('#Projects').find('img').hover(
+	$projects.find('img').hover(
 		function(){
 			switcheroo($(this), "border", picBorder, picBorderNew);
 		}, 
 		function(){
 			switcheroo($(this), "border", picBorder, picBorderNew);
 		}
-	);
+	);	
 		
 
 })
