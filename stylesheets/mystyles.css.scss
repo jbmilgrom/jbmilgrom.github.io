@@ -33,7 +33,8 @@ $li-border: 1px;
 /*$li-margin: -1 * 0.1px;*/
 $li-margin: 3px;
 $ul-padding: 4px;
-$li-font-size: $li-width/5;
+$li-font-size: $li-width * 22/100;
+/*$li-font-size: $*/
 
 /*Having nav-width dependend upon its componants allows for easy responsive design by the touch of $li-width*/
 $ul-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin) + $ul-padding * 2;
@@ -68,6 +69,7 @@ $name-font-size: 38px * 3/2;
 $name-words-width: 380px * 3/2;
 $name-slashes-width: $name-words-width/6;
 $name-margin: 40px;
+$title-font-size: $name-font-size * 2/3;
 
 
 /******* Project *********/
@@ -185,7 +187,7 @@ div#contentContainer {
 				}
 
 				#title {
-					font-size: $name-font-size * 2/3;
+					font-size: $title-font-size;
 					color: $lighter-gray;
 				}
 
@@ -196,7 +198,7 @@ div#contentContainer {
 					a:link {
 					    text-decoration: none;
 					    color: $even-lighter-gray;
-					    font-size: $name-font-size * 2/3;
+					    font-size: $title-font-size;
 					}
 
 					a:visited {
@@ -354,14 +356,14 @@ div#contentContainer {
 					display: list-item;
 					margin: $blog-item-margin;
 					float: left;
-					font-size: $name-font-size *2/3;
+					font-size: $title-font-size;
 					font-family: "open_sansregular";
 
 				}
 
 				ul.date {
 					text-align: right;
-					font-size: $name-font-size/4;
+					font-size: $title-font-size * 3/8;
 					padding: $blog-date-padding;
 					/*color: #9BCDE0;*/
 					/*color: #1EDAFA;*/
@@ -396,7 +398,7 @@ div#contentContainer {
 
 					li.subheader {
 						margin-top: 10px;
-						font-size: $name-font-size/3;
+						font-size: $title-font-size/2;
 						line-height: 140%;
 						color: $even-lighter-gray;
 
@@ -588,9 +590,9 @@ nav {
 	}
 
 /*	a:hover {
-	    text-decoration: underline;
-	}*/
-
+	    font-family: 'open_sanssemibold';
+	}
+*/
 	a:active {
 	    text-decoration: none;
 	}

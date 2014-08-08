@@ -76,6 +76,7 @@ input, select {
 /******* NAV ********/
 /*********************/
 /*$li-margin: -1 * 0.1px;*/
+/*$li-font-size: $*/
 /*Having nav-width dependend upon its componants allows for easy responsive design by the touch of $li-width*/
 /*Nav Height Variables*/
 /*Note that $ul-padding contributes as well*/
@@ -356,8 +357,9 @@ nav {
   border-bottom: 6px solid #DDD6C8;
   z-index: 4;
   /*	a:hover {
-  	    text-decoration: underline;
-  	}*/ }
+  	    font-family: 'open_sanssemibold';
+  	}
+  */ }
   nav ul {
     position: relative;
     margin: 0 auto;
@@ -378,7 +380,7 @@ nav {
     width: 115px;
     height: 41.5px;
     font-family: 'open_sansregular';
-    font-size: 23px;
+    font-size: 25.3px;
     padding: 4px;
     text-align: center;
     color: white;
