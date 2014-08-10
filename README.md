@@ -2,9 +2,9 @@ jbmilgrom.github.io
 ===================
 
 
-This site was built from scratch using sass and javascript.
+This site was built from scratch using sass and jQuery.
 
-Here are some of the javascript highlights:
+Here are some of the javascript/jQuery highlights:
 
 	var switcheroo = function($object, attribute, valueOne, valueTwo){
 		var currentValue = $object.css(attribute);
