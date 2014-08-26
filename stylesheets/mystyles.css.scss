@@ -31,11 +31,9 @@ $li-width: 115px;
 $li-padding: 4px;
 $nav-LIs: 3;
 $li-border: 1px;
-/*$li-margin: -1 * 0.1px;*/
 $li-margin: 3px;
 $ul-padding: 4px;
 $li-font-size: $li-width * 22/100;
-/*$li-font-size: $*/
 
 /*Having nav-width dependend upon its componants allows for easy responsive design by the touch of $li-width*/
 $ul-width: ($li-width * $nav-LIs) + ($nav-LIs * 2) * ($li-padding + $li-margin) + $ul-padding * 2;
@@ -82,7 +80,6 @@ $proj-image-border: 4px;
 /*************************/
 /*remove height when you have enough blog entries to fill blog section*/
 $blog-height: $intro-height;
-/*$blog-container-width: 400px; */
 $blog-title-width: 550px;
 $blog-date-width: $blog-title-width/3;
 $blog-item-height: $blog-title-width * 1/4;
@@ -513,7 +510,6 @@ nav {
 		position: relative;
 		margin: 0 auto;
 		margin-top: 6px;
- 		/*display: block;*/
 		width: $ul-width;
 		height: $ul-height - 2 * $ul-padding;
 		padding: $ul-padding;	
@@ -537,12 +533,10 @@ nav {
 		padding: $li-padding;
 		text-align: center;
 		color: white;
-		/*border: $li-border solid white;*/
 		margin: $li-margin;
 		cursor: pointer;
 		margin-top: -12px;
 		padding-top: 15px;
-		/*border: 1px solid black;*/
 
 	}
 
@@ -573,18 +567,12 @@ nav {
 
 	a:link {
 	    text-decoration: none;
-	    /*color: white;*/
 	}
 
 	a:visited {
 	    text-decoration: none;
-	    /*color: white;*/
 	}
 
-/*	a:hover {
-	    font-family: 'open_sanssemibold';
-	}
-*/
 	a:active {
 	    text-decoration: none;
 	}
@@ -592,7 +580,7 @@ nav {
 }
 
 /******* @Media (max-width: 850px) ***********/
-/************************************/
+/*********************************************/
 
 
 	/******* Intro ***********/
@@ -606,6 +594,8 @@ nav {
 	$title-font-size: $name-font-size * 2/3;
 
 
+	/******** media query *********/
+	/******************************/
 	@media (max-width: 850px) {
 
 		div#contentContainer {
@@ -673,6 +663,15 @@ nav {
 						}
 					}
 				}
+			}
+		}
+
+		nav {
+
+			ul.image {	
+
+				left: 10px;
+
 			}
 		}
 	}
