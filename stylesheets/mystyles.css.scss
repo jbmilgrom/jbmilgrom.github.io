@@ -63,9 +63,6 @@ $c-ul-width: ($c-li-width * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-marg
 /*************************/
 $intro-height: 550px;
 
-$pic-height: 200px;
-$pic-width: (1329/1512) * $pic-height;
-
 $name-font-size: 38px * 3/2;
 $name-words-width: 380px * 3/2;
 $name-slashes-width: $name-words-width/6;
@@ -456,7 +453,6 @@ div#contentContainer {
 				float: left;
 				font-family: 'open_sanssemibold';
 				list-style: none;
-		/*		max-height: $pic-height;*/
 				/*max-width: $li-width * 3;*/
 				border: $c-li-border solid white;
 				padding: $c-li-padding;
@@ -528,7 +524,6 @@ nav {
 	}
 
 	img {
-/*		width: $pic-height;*/
 		height: $ul-height;
 		margin-top: 63px;
 
@@ -599,6 +594,92 @@ nav {
 	}
 
 }
+
+/******* @Media (max-width: 850px) ***********/
+/************************************/
+
+
+	/******* Intro ***********/
+	/*************************/
+	$intro-height: 550px;
+
+	$name-font-size: $name-font-size * 4/5;
+	$name-words-width: $name-words-width * 4/5;
+	$name-slashes-width: $name-words-width/6;
+	$name-margin: 40px;
+	$title-font-size: $name-font-size * 2/3;
+
+
+	@media (max-width: 850px) {
+
+		div#contentContainer {
+
+			#introduction {
+				
+				#name {
+
+					ul {
+
+						width: $name-words-width + $name-slashes-width;
+						height: $name-font-size;
+
+						#offCenter{
+
+							width: $name-words-width + $name-slashes-width;
+							height: $name-font-size;
+							margin-left: -25px;
+
+							li {
+
+								font-size: $name-font-size;
+								height: $name-font-size;
+
+							}
+							
+							li#slashes {
+								width: $name-slashes-width;
+								font-size: $name-font-size * 4/3;
+								height: $name-font-size * 4/3;
+								margin-right: -15px;
+								margin-top: -5px;
+
+							}
+
+							li#words {
+								width: $name-words-width;
+							}
+						}
+
+					}
+				}
+
+				#description {
+
+					ul {
+						width: $name-words-width + $name-slashes-width;
+						height: $name-font-size;
+						list-style: none;
+
+						li {
+							margin: 65px;
+						}
+
+						#title {
+							font-size: $title-font-size;
+						}
+
+						#catch {
+							font-size: $name-font-size * 2/5;
+							
+							a:link {
+							    font-size: $title-font-size;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
 
 
