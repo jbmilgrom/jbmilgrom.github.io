@@ -172,16 +172,13 @@ div#contentContainer {
           div#contentContainer #introduction #description ul #catch a:active {
             text-decoration: underline; }
   div#contentContainer #Projects {
-    /*height: $intro-height * 8/5;*/
     width: 100%;
     padding: 1px;
-    background-color: #ddd6c8;
-    /*padding: 20px;*/ }
+    background-color: #ddd6c8; }
     div#contentContainer #Projects div#innerProjects {
       position: relative;
       margin-top: 20px;
       margin-bottom: 30px;
-      /*			height: $intro-height * 8/5;*/
       width: 100%;
       padding: 1px;
       background-color: #ddd6c8; }
@@ -193,8 +190,7 @@ div#contentContainer {
         position: relative;
         height: 274.5px;
         width: 978px;
-        margin: 0 auto;
-        /*PUT IN JAVASCRIPT HOVER Function*/ }
+        margin: 0 auto; }
         div#contentContainer #Projects ul.projectContainer div.centering li.image {
           list-style: none;
           margin: 30px;
@@ -213,8 +209,7 @@ div#contentContainer {
           div#contentContainer #Projects ul.projectContainer div.centering ul li.title {
             font-size: 28.5px;
             margin-bottom: 20px;
-            font-family: "open_sanssemibold";
-            /*width: $project-pic-width;*/ }
+            font-family: "open_sanssemibold"; }
           div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
             line-height: 130%; }
     div#contentContainer #Projects a:link {
@@ -449,3 +444,32 @@ nav {
       font-size: 18.24px; }
       div#contentContainer #introduction #description ul #catch a:link {
         font-size: 30.4px; } }
+/******* Project *********/
+/*************************/
+@media (max-width: 1000px) {
+  div#contentContainer #Projects div#innerProjects {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 30px; }
+  div#contentContainer #Projects ul.projectContainer {
+    height: 212px; }
+    div#contentContainer #Projects ul.projectContainer div.centering {
+      height: 212px;
+      width: 640.5px; }
+      div#contentContainer #Projects ul.projectContainer div.centering li.image {
+        margin: 20px;
+        width: 348px; }
+        div#contentContainer #Projects ul.projectContainer div.centering li.image img {
+          width: 340px;
+          height: 170px;
+          border: 4px solid white; }
+      div#contentContainer #Projects ul.projectContainer div.centering ul {
+        margin: 20px;
+        width: 212.5px; }
+        div#contentContainer #Projects ul.projectContainer div.centering ul li.title {
+          font-size: 22.8px;
+          margin-bottom: 20px; }
+        div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
+          line-height: 130%;
+          font-size: 15.2px;
+          color: #5b5b5b; } }

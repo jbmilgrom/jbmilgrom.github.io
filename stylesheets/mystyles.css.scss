@@ -73,6 +73,7 @@ $title-font-size: $name-font-size * 2/3;
 /******* Project *********/
 /*************************/
 $project-pic-width: 425px;
+$project-hor-item-width: $project-pic-width; 
 $project-pic-height: $project-pic-width * 1/2;
 $project-hor-item-margin: 30px;
 $proj-image-border: 4px;
@@ -222,7 +223,6 @@ div#contentContainer {
 
 	#Projects {
 
-		/*height: $intro-height * 8/5;*/
 		width: 100%;
 		padding: 1px;
 		background-color: $great-brown;
@@ -232,13 +232,11 @@ div#contentContainer {
 			margin-top: 20px;
 			margin-bottom: 30px;
 
-/*			height: $intro-height * 8/5;*/
 			width: 100%;
 			padding: 1px;
 			background-color: $great-brown;	
 		}
 
-		/*padding: 20px;*/
 
 		ul.projectContainer {
 
@@ -250,10 +248,9 @@ div#contentContainer {
 
 				position: relative;
 				height: $project-pic-height + 2 * $project-hor-item-margin + 2 * 1px;
-				width: 2 * $project-pic-width + 4 * $project-hor-item-margin + 2 * $proj-image-border;
+				width: $project-pic-width + $project-hor-item-width + 4 * $project-hor-item-margin + 2 * $proj-image-border;
 				margin: 0 auto;
 
-				/*PUT IN JAVASCRIPT HOVER Function*/
 
 				li.image {
 					list-style: none;
@@ -273,14 +270,13 @@ div#contentContainer {
 					list-style: none;
 					margin: $project-hor-item-margin;
 					float: left;
-					width: $project-pic-width;
+					width: $project-hor-item-width;
 					color: $best-grey-blue;
 
 					li.title {
 						font-size: $name-font-size/2;
 						margin-bottom: 20px;
 						font-family: "open_sanssemibold";
-						/*width: $project-pic-width;*/
 					}
 
 					li.body {
@@ -680,6 +676,71 @@ nav {
 			}
 		}
 	}
+
+	/******* Project *********/
+	/*************************/
+	$project-pic-width: $project-pic-width * 4/5;
+	$project-hor-item-width: $project-hor-item-width/2; 
+	$project-pic-height: $project-pic-width * 1/2;
+	$project-hor-item-margin: $project-hor-item-margin * 2/3;
+	$proj-image-border: 4px;
+
+	@media (max-width: 1000px) {
+
+		div#contentContainer {
+
+			#Projects {
+
+				div#innerProjects {
+					position: relative;
+					margin-top: 20px;
+					margin-bottom: 30px;
+				}
+
+
+				ul.projectContainer {
+
+					height: $project-pic-height + 2 * $project-hor-item-margin + 2 * 1px;
+
+					div.centering {
+
+						height: $project-pic-height + 2 * $project-hor-item-margin + 2 * 1px;
+						width: $project-pic-width + $project-hor-item-width + 4 * $project-hor-item-margin + 2 * $proj-image-border;
+
+						li.image {
+							margin: $project-hor-item-margin;
+							width: $project-pic-width + 2 * $proj-image-border;
+
+							img {
+								width: $project-pic-width;
+								height: $project-pic-height;
+								border: $proj-image-border solid white;
+							}
+						}
+
+						ul {
+
+							margin: $project-hor-item-margin;
+							width: $project-hor-item-width;
+
+							li.title {
+								font-size: $name-font-size/2;
+								margin-bottom: 20px;
+							}
+
+							li.body {
+								line-height: 130%;
+								font-size: $name-font-size/3;
+								color: $lighter-gray;
+							}
+
+						}
+					}
+				}
+	
+			}
+		}
+	} 
 
 
 
