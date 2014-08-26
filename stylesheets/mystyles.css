@@ -89,7 +89,6 @@ input, select {
 /******** Blog ***********/
 /*************************/
 /*remove height when you have enough blog entries to fill blog section*/
-/*$blog-container-width: 400px; */
 body {
   background-color: white;
   font-family: 'open_sansregular'; }
@@ -240,8 +239,8 @@ div#contentContainer {
       margin-top: 20px; }
     div#contentContainer #Blog div.blogCentering {
       position: relative;
-      height: 213.5px;
-      width: 848.33333px;
+      height: 223.5px;
+      width: 858.33333px;
       margin: 20px auto; }
       div#contentContainer #Blog div.blogCentering ul.blogContainer {
         width: 100%;
@@ -256,7 +255,7 @@ div#contentContainer {
         div#contentContainer #Blog div.blogCentering ul.blogContainer ul.date {
           text-align: right;
           font-size: 14.25px;
-          padding: 17px;
+          padding: 22px;
           /*color: #9BCDE0;*/
           /*color: #1EDAFA;*/
           color: white;
@@ -440,6 +439,9 @@ nav {
     left: 10px; } }
 /******* Project *********/
 /*************************/
+/******** Blog ***********/
+/*************************/
+/*remove height when you have enough blog entries to fill blog section*/
 @media (max-width: 1000px) {
   div#contentContainer #Projects div#innerProjects {
     position: relative;
@@ -466,4 +468,23 @@ nav {
         div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
           line-height: 130%;
           font-size: 15.2px;
-          color: #5b5b5b; } }
+          color: #5b5b5b; }
+  div#contentContainer #Blog div#innerBlog {
+    height: 500px; }
+  div#contentContainer #Blog div.blogCentering {
+    height: 206px;
+    width: 731.66667px; }
+    div#contentContainer #Blog div.blogCentering ul.blogContainer {
+      height: 162px; }
+      div#contentContainer #Blog div.blogCentering ul.blogContainer ul {
+        margin: 25px;
+        font-size: 30.4px; }
+      div#contentContainer #Blog div.blogCentering ul.blogContainer ul.date {
+        font-size: 15.2px;
+        width: 146.66667px;
+        min-height: 110px; }
+      div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title {
+        width: 440px;
+        min-height: 110px; }
+        div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title li.subheader {
+          font-size: 15.2px; } }

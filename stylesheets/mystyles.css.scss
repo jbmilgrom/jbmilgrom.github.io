@@ -81,10 +81,13 @@ $proj-image-border: 4px;
 /*remove height when you have enough blog entries to fill blog section*/
 $blog-height: $intro-height;
 $blog-title-width: 550px;
+$blog-title-font-size: $title-font-size;
+$blog-subheader-font-size: $blog-title-font-size / 2;
+$blog-date-font-size: $blog-title-font-size * 3/8;
 $blog-date-width: $blog-title-width/3;
 $blog-item-height: $blog-title-width * 1/4;
 $blog-item-margin: 20px;
-$blog-date-padding: 17px;
+$blog-date-padding: 22px;
 $blog-date-border: 1px;
 
 
@@ -347,14 +350,14 @@ div#contentContainer {
 					display: list-item;
 					margin: $blog-item-margin;
 					float: left;
-					font-size: $title-font-size;
+					font-size: $blog-title-font-size;
 					font-family: "open_sansregular";
 
 				}
 
 				ul.date {
 					text-align: right;
-					font-size: $title-font-size * 3/8;
+					font-size: $blog-date-font-size;
 					padding: $blog-date-padding;
 					/*color: #9BCDE0;*/
 					/*color: #1EDAFA;*/
@@ -389,7 +392,7 @@ div#contentContainer {
 
 					li.subheader {
 						margin-top: 10px;
-						font-size: $title-font-size/2;
+						font-size: $blog-subheader-font-size;
 						line-height: 140%;
 						color: $even-lighter-gray;
 
@@ -684,6 +687,18 @@ nav {
 	$project-hor-item-margin: $project-hor-item-margin * 2/3;
 	$proj-image-border: 4px;
 
+	/******** Blog ***********/
+	/*************************/
+	/*remove height when you have enough blog entries to fill blog section*/
+	$blog-height: $intro-height;
+	$blog-title-width: $blog-title-width * 4/5;
+	$blog-title-font-size: $blog-title-font-size * 4/5;
+	$blog-subheader-font-size: $blog-title-font-size / 2;
+	$blog-date-font-size: $blog-title-font-size / 2;
+	$blog-date-width: $blog-title-width/3;
+	$blog-item-height: $blog-title-width * 1/4;
+	$blog-item-margin: 25px;
+
 	@media (max-width: 1000px) {
 
 		div#contentContainer {
@@ -737,6 +752,50 @@ nav {
 					}
 				}
 	
+			}
+
+		#Blog{
+
+
+				div#innerBlog {
+					height: 500px;	
+				}
+
+				div.blogCentering {
+
+					height: $blog-item-height + 2 * $blog-date-padding + 2 * $blog-item-margin + 2 * 1px;
+					width: $blog-title-width + $blog-date-width + 4 * $blog-item-margin + 2 * $blog-date-padding + $blog-date-border;
+
+					ul.blogContainer {
+
+						height: $blog-item-height + 2 * $blog-item-margin + 2 * 1px;
+
+						ul {
+
+							margin: $blog-item-margin;
+							font-size: $blog-title-font-size;
+						}
+
+						ul.date {
+							font-size: $blog-date-font-size;
+							width: $blog-date-width;
+							min-height: $blog-item-height;
+
+						}
+
+						ul.title {
+							width: $blog-title-width;
+							min-height: $blog-item-height;
+
+							li.header {
+							}
+
+							li.subheader {
+								font-size: $blog-subheader-font-size;
+							}
+						}
+					}
+				}		
 			}
 		}
 	} 
