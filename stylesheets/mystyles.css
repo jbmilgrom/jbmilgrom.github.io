@@ -81,7 +81,6 @@ input, select {
 /*Note that at the moment, the ul/nav heights do not have any affect on display, and the li heights adjust to li font size*/
 /******** Contact *********/
 /**************************/
-/*$li-margin: -1 * 0.1px;*/
 /******* Intro ***********/
 /*************************/
 /******* Project *********/
@@ -208,7 +207,8 @@ div#contentContainer {
             margin-bottom: 20px;
             font-family: "open_sanssemibold"; }
           div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
-            line-height: 130%; }
+            line-height: 130%;
+            font-size: 15.96px; }
     div#contentContainer #Projects a:link {
       text-decoration: none;
       color: #5b5b5b; }
@@ -223,13 +223,7 @@ div#contentContainer {
   div#contentContainer #Blog {
     width: 100%;
     padding: 1px;
-    background-color: #424151;
-    /*color: #557FA7;*/
-    /*color: #2FABE1;*/
-    /*color: $slashes-color;*/
-    /*		color: white;
-    */
-    /*border: 5px solid white;*/ }
+    background-color: #424151; }
     div#contentContainer #Blog div#innerBlog {
       position: relative;
       margin: 1px;
@@ -256,16 +250,9 @@ div#contentContainer {
           text-align: right;
           font-size: 14.25px;
           padding: 22px;
-          /*color: #9BCDE0;*/
-          /*color: #1EDAFA;*/
           color: white;
           width: 183.33333px;
           min-height: 137.5px;
-          /*color: $even-lighter-gray;*/
-          /*					color: $great-brown;
-          */
-          /*margin-right: 50px;*/
-          /*border-right: 2px solid white;*/
           border-right: 1px solid white; }
         div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title {
           text-align: left;
@@ -291,51 +278,49 @@ div#contentContainer {
       color: #45c2c6; }
     div#contentContainer #Blog a:active {
       text-decoration: underline; }
-  div#contentContainer div#contact {
-    /*		height: $intro-height;*/
+  div#contentContainer #contact {
     width: 100%;
     padding: 1px;
     padding-top: 30px;
     background-color: #45c2c6;
     height: 595px; }
-    div#contentContainer div#contact ul {
+    div#contentContainer #contact ul {
       position: relative;
       width: 852.75px;
       height: 200px;
       margin: 20px auto;
       padding: 4px; }
-      div#contentContainer div#contact ul a {
+      div#contentContainer #contact ul a {
         display: list-item;
         color: white;
         width: 143.75px;
         float: left;
         font-family: 'open_sanssemibold';
         list-style: none;
-        /*max-width: $li-width * 3;*/
         border: 1px solid white;
         padding: 4px;
         margin: 8px;
         font-size: 28.75px;
         text-align: center;
         background-color: #45c2c6; }
-      div#contentContainer div#contact ul a:link {
+      div#contentContainer #contact ul a:link {
         text-decoration: none; }
-      div#contentContainer div#contact ul a:visited {
+      div#contentContainer #contact ul a:visited {
         text-decoration: none; }
-      div#contentContainer div#contact ul a:hover {
+      div#contentContainer #contact ul a:hover {
         text-decoration: none; }
-      div#contentContainer div#contact ul a:active {
+      div#contentContainer #contact ul a:active {
         text-decoration: underline; }
-    div#contentContainer div#contact ul#thisPage {
+    div#contentContainer #contact ul#thisPage {
       width: 380px;
       padding-top: 50px; }
-      div#contentContainer div#contact ul#thisPage a {
+      div#contentContainer #contact ul#thisPage a {
         width: inherit;
         border: none;
         font-family: 'learning_curve_proregular';
         font-size: 100.625px;
         padding: 1px; }
-      div#contentContainer div#contact ul#thisPage a:hover {
+      div#contentContainer #contact ul#thisPage a:hover {
         text-decoration: underline; }
 
 nav {
@@ -397,8 +382,11 @@ nav {
   nav a:active {
     text-decoration: none; }
 
+/******* @Media (max-width: 1000px) ***********/
+/*********************************************/
 /******* Project *********/
 /*************************/
+/*	$proj-desc-font-size: $proj-desc-font-size *4/5;*/
 /******** Blog ***********/
 /*************************/
 /*remove height when you have enough blog entries to fill blog section*/
@@ -427,7 +415,7 @@ nav {
           margin-bottom: 20px; }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
           line-height: 130%;
-          font-size: 19px;
+          font-size: 15.96px;
           color: #424151; }
   div#contentContainer #Blog div#innerBlog {
     height: 500px; }
@@ -447,7 +435,19 @@ nav {
         width: 440px;
         min-height: 110px; }
         div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title li.subheader {
-          font-size: 15.2px; } }
+          font-size: 17.1px; } }
+/******* @Media (max-width: 900px) ***********/
+/*********************************************/
+/******** Contact *********/
+/**************************/
+@media (max-width: 900px) {
+  div#contentContainer #contact ul {
+    width: 709px; }
+    div#contentContainer #contact ul a {
+      width: 115px;
+      font-size: 23px; }
+  div#contentContainer #contact ul#thisPage a {
+    width: inherit; } }
 /******* @Media (max-width: 850px) ***********/
 /*********************************************/
 /******* Intro ***********/
@@ -488,6 +488,8 @@ nav {
 
   nav ul.image {
     left: 10px; } }
+/******* @Media (max-width: 800px) ***********/
+/*********************************************/
 /******* Project *********/
 /*************************/
 /******** media query *********/
@@ -498,20 +500,20 @@ nav {
     margin-top: 20px;
     margin-bottom: 30px; }
   div#contentContainer #Projects ul.projectContainer {
-    height: 198.66667px; }
+    height: 170.33333px; }
     div#contentContainer #Projects ul.projectContainer div.centering {
-      height: 198.66667px;
-      width: 605.33333px; }
+      height: 170.33333px;
+      width: 616.66667px; }
       div#contentContainer #Projects ul.projectContainer div.centering li.image {
         margin: 13.33333px;
-        width: 348px; }
+        width: 291.33333px; }
         div#contentContainer #Projects ul.projectContainer div.centering li.image img {
-          width: 340px;
-          height: 170px;
+          width: 283.33333px;
+          height: 141.66667px;
           border: 4px solid white; }
       div#contentContainer #Projects ul.projectContainer div.centering ul {
         margin: 13.33333px;
-        width: 204px; }
+        width: 272px; }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.title {
           font-size: 22.8px;
           margin-bottom: 20px; }
@@ -519,3 +521,45 @@ nav {
           line-height: 130%;
           font-size: 15.2px;
           color: #5b5b5b; } }
+/******* @Media (max-width: 750px) ***********/
+/*********************************************/
+/******** Contact *********/
+/**************************/
+/******** Blog ***********/
+/*************************/
+/*remove height when you have enough blog entries to fill blog section*/
+@media (max-width: 750px) {
+  div#contentContainer #Blog div#innerBlog {
+    height: 500px; }
+  div#contentContainer #Blog div.blogCentering {
+    height: 184px;
+    width: 614.33333px; }
+    div#contentContainer #Blog div.blogCentering ul.blogContainer {
+      height: 140px; }
+      div#contentContainer #Blog div.blogCentering ul.blogContainer ul {
+        margin: 25px;
+        font-size: 25.33333px; }
+      div#contentContainer #Blog div.blogCentering ul.blogContainer ul.date {
+        font-size: 15.2px;
+        width: 117.33333px;
+        min-height: 88px; }
+      div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title {
+        width: 352px;
+        min-height: 88px; }
+        div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title li.subheader {
+          font-size: 15.96px;
+          line-height: 130%; }
+  div#contentContainer #contact ul {
+    width: 573.16667px; }
+    div#contentContainer #contact ul a {
+      width: 95.83333px;
+      font-size: 19.16667px;
+      font-family: 'open_sansregular';
+      margin: 4px; }
+  div#contentContainer #contact ul#thisPage a {
+    width: inherit; } }
+/******* @Media (max-width: 700px) ***********/
+/*********************************************/
+@media (max-width: 700px) {
+  nav ul.image {
+    display: none; } }

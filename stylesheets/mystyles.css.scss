@@ -50,12 +50,11 @@ $c-li-width: $li-width * 5/4;
 $c-li-padding: 4px;
 $c-LIs: 5;
 $c-li-border: 1px;
-/*$li-margin: -1 * 0.1px;*/
 $c-li-margin: 8px;
 $c-ul-padding: 4px;
 $c-li-font-size: $li-width * 25/100;
 $c-ul-width: ($c-li-width * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-margin + $c-li-border) + $c-ul-padding;
-
+$c-this-page-font-size: $c-li-font-size * 3.5; 
 
 /******* Intro ***********/
 /*************************/
@@ -75,6 +74,7 @@ $project-hor-item-width: $project-pic-width;
 $project-pic-height: $project-pic-width * 1/2;
 $project-hor-item-margin: 30px;
 $proj-image-border: 4px;
+$proj-desc-font-size: $name-font-size * 28/100;
 
 /******** Blog ***********/
 /*************************/
@@ -281,6 +281,7 @@ div#contentContainer {
 
 					li.body {
 						line-height: 130%;
+						font-size: $proj-desc-font-size;
 					}
 
 				}
@@ -314,11 +315,6 @@ div#contentContainer {
 		width: 100%;
 		padding: 1px;
 		background-color: $best-grey-blue;
-		/*color: #557FA7;*/
-		/*color: #2FABE1;*/
-		/*color: $slashes-color;*/
-/*		color: white;
-*/		/*border: 5px solid white;*/
 
 		div#innerBlog {
 			position: relative;
@@ -359,15 +355,9 @@ div#contentContainer {
 					text-align: right;
 					font-size: $blog-date-font-size;
 					padding: $blog-date-padding;
-					/*color: #9BCDE0;*/
-					/*color: #1EDAFA;*/
 					color: white;
 					width: $blog-date-width;
 					min-height: $blog-item-height;
-					/*color: $even-lighter-gray;*/
-	/*					color: $great-brown;
-	*/					/*margin-right: 50px;*/
-					/*border-right: 2px solid white;*/
 					border-right: $blog-date-border solid white;
 
 				}
@@ -425,9 +415,8 @@ div#contentContainer {
 
 	}
 
-	div#contact {
+	#contact {
 
-/*		height: $intro-height;*/
 		width: 100%;
 		padding: 1px;
 		padding-top: 30px;
@@ -449,7 +438,6 @@ div#contentContainer {
 				float: left;
 				font-family: 'open_sanssemibold';
 				list-style: none;
-				/*max-width: $li-width * 3;*/
 				border: $c-li-border solid white;
 				padding: $c-li-padding;
 				margin: $c-li-margin;
@@ -483,7 +471,7 @@ div#contentContainer {
 				width: inherit;
 				border: none;
 				font-family: 'learning_curve_proregular';
-				font-size: $c-li-font-size * 3.5;
+				font-size: $c-this-page-font-size;
 				padding: 1px;
 
 			}
@@ -592,6 +580,7 @@ nav {
 	$project-pic-height: $project-pic-width * 1/2;
 	$project-hor-item-margin: $project-hor-item-margin * 2/3;
 	$proj-image-border: 4px;
+/*	$proj-desc-font-size: $proj-desc-font-size *4/5;*/
 
 	/******** Blog ***********/
 	/*************************/
@@ -599,7 +588,7 @@ nav {
 	$blog-height: $intro-height;
 	$blog-title-width: $blog-title-width * 4/5;
 	$blog-title-font-size: $blog-title-font-size * 4/5;
-	$blog-subheader-font-size: $blog-title-font-size / 2;
+	$blog-subheader-font-size: $blog-subheader-font-size * 9/10;
 	$blog-date-font-size: $blog-title-font-size / 2;
 	$blog-date-width: $blog-title-width/3;
 	$blog-item-height: $blog-title-width * 1/4;
@@ -650,7 +639,7 @@ nav {
 
 							li.body {
 								line-height: 130%;
-								font-size: $name-font-size/3;
+								font-size: $proj-desc-font-size;
 								color: $best-grey-blue;
 							}
 						}
@@ -703,6 +692,43 @@ nav {
 			}
 		}
 	} 
+
+/******* @Media (max-width: 900px) ***********/
+/*********************************************/
+
+	/******** Contact *********/
+	/**************************/
+	$c-li-width: $c-li-width * 4/5;
+	$c-li-font-size: $c-li-font-size * 4/5;
+	$c-ul-width: ($c-li-width * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-margin + $c-li-border) + $c-ul-padding;
+
+	@media (max-width: 900px) {
+
+		div#contentContainer {
+
+			#contact {
+
+
+				ul {
+
+					width: $c-ul-width;
+
+					a {
+						width: $c-li-width;
+						font-size: $c-li-font-size;
+					}
+				}
+
+				ul#thisPage {
+
+					a {
+						width: inherit;
+					}
+				}
+			}
+		}
+	}
+
 
 /******* @Media (max-width: 850px) ***********/
 /*********************************************/
@@ -805,8 +831,8 @@ nav {
 
 	/******* Project *********/
 	/*************************/
-	$project-pic-width: $project-pic-width;
-	$project-hor-item-width: $project-hor-item-width * 3/5; 
+	$project-pic-width: $project-pic-width * 5/6;
+	$project-hor-item-width: $project-hor-item-width * 4/5; 
 	$project-pic-height: $project-pic-width * 1/2;
 	$project-hor-item-margin: $project-hor-item-margin * 2/3;
 	$proj-image-border: 4px;
@@ -868,5 +894,117 @@ nav {
 		}
 	}
 
+/******* @Media (max-width: 750px) ***********/
+/*********************************************/
 
+	/******** Contact *********/
+	/**************************/
+	$c-li-width: $c-li-width * 5/6;
+	$c-li-font-size: $c-li-font-size * 5/6;
+	$c-li-margin: $c-li-margin / 2;
+	$c-ul-width: ($c-li-width * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-margin + $c-li-border) + $c-ul-padding;
 
+	/******** Blog ***********/
+	/*************************/
+	/*remove height when you have enough blog entries to fill blog section*/
+	$blog-height: $intro-height;
+	$blog-title-width: $blog-title-width * 4/5;
+	$blog-title-font-size: $blog-title-font-size * 5/6;
+	$blog-subheader-font-size: $blog-subheader-font-size * 14/15;
+	$blog-date-font-size: $blog-date-font-size;
+	$blog-date-width: $blog-title-width/3;
+	$blog-item-height: $blog-title-width * 1/4;
+	$blog-item-margin: 25px;
+
+	@media (max-width: 750px) {
+
+		div#contentContainer {
+
+			#Blog{
+
+				div#innerBlog {
+					height: 500px;	
+				}
+
+				div.blogCentering {
+
+					height: $blog-item-height + 2 * $blog-date-padding + 2 * $blog-item-margin + 2 * 1px;
+					width: $blog-title-width + $blog-date-width + 4 * $blog-item-margin + 2 * $blog-date-padding + $blog-date-border;
+
+					ul.blogContainer {
+
+						height: $blog-item-height + 2 * $blog-item-margin + 2 * 1px;
+
+						ul {
+
+							margin: $blog-item-margin;
+							font-size: $blog-title-font-size;
+						}
+
+						ul.date {
+							font-size: $blog-date-font-size;
+							width: $blog-date-width;
+							min-height: $blog-item-height;
+
+						}
+
+						ul.title {
+							width: $blog-title-width;
+							min-height: $blog-item-height;
+
+							li.header {
+							}
+
+							li.subheader {
+								font-size: $blog-subheader-font-size;
+								line-height: 130%;
+
+							}
+						}
+					}
+				}		
+			}
+
+			#contact {
+
+				ul {
+
+					width: $c-ul-width;
+
+					a {
+						width: $c-li-width;
+						font-size: $c-li-font-size;
+						font-family: 'open_sansregular';
+						margin: $c-li-margin;
+					}
+				}
+
+				ul#thisPage {
+
+					a {
+						width: inherit;
+					}
+				}
+			}
+		}
+	}
+
+/******* @Media (max-width: 700px) ***********/
+/*********************************************/
+
+	@media (max-width: 700px) {
+
+		nav {
+
+			ul.image {
+		 		display: none;
+			}
+		}
+	}
+
+/******* @Media (max-width: 650px) ***********/
+/*********************************************/
+
+	@media (max-width: 650px) {
+
+	}
