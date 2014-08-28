@@ -149,38 +149,25 @@ $(function(){
 	);	
 		
 	// supplementing css @media query (max-width: 650px)
-	// doing this way to avail myself of jQuery children(), so can access each project identically 
+	// doing this to avail myself of jQuery children(), so can access each project in identical way 
 	$(window).resize(function(){
-
 		// if window width is less than 650px
 		if ( $(this).width() < 650 ) {
-			$projectImages.each(function(index){
 
+			$projectImages.each(function(index){
 				// taking sibling image and making it background image of each "ul"
 				var $element = $(this).parent().parent().parent().find("ul");
 				changeAttribute($element, "background", "url(" + $(this).attr("src") + ")");
 				changeAttribute($element, "background-size", $element.css("width") + " " + $element.css("height"));	
-				// changing text color
-				// changeAttribute($element, "color", "white"); 
-
-				// using inner div to create opacity look;
-				// var $backgroundDiv = $element.find(".background");
-				// changeAttribute($backgroundDiv, "background-color", "rgba(91,91,91,0.5)");
 			})
 		}
-
 		// reversing the above changes to background back after resize  
 		if ( $(this).width() > 650 ) {
+
 			$projectImages.each(function(index){
 				// removing image
 				var $element = $(this).parent().parent().parent().find("ul");
 				changeAttribute($element, "background", "none");
-				// changing back text color
-				// changeAttribute($element, "color", bestGrayBlue);
-
-				// clearing opacity 
-				// var $backgroundDiv = $element.find(".background");
-				// changeAttribute($backgroundDiv, "background-color", "rgba(0,0,0,0)");
 			})
 		}
 	})

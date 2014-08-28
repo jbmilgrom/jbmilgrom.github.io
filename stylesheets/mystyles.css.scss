@@ -1026,13 +1026,14 @@ nav {
 
 	/******* Project *********/
 	/*************************/
-	$project-pic-width: $project-hor-item-width * 3/2;
-	$project-hor-item-width: $project-hor-item-width * 3/2; 
+	$project-pic-width: $project-hor-item-width * 13/8;
+	$project-hor-item-width: $project-hor-item-width * 13/8; 
 	$project-pic-height: $project-pic-width * 1/2;
 	$project-hor-item-margin: $project-hor-item-margin * 2/3;
 	$proj-image-border: 4px;
 	$proj-centering-height: $project-pic-height + 2 * $project-hor-item-margin + 2 * 1px;
 	$proj-text-block-height: $proj-centering-height / 3;
+	$proj-filler-height: $project-pic-height * 3/5;
 
 
 	/******** media query *********/
@@ -1075,25 +1076,33 @@ nav {
 							div.background {
 								width: $project-hor-item-width;
 								height: $project-pic-height;
-								background-color: rgba(66,65,81,0.6);
+								background-color: rgba(255,255,255,0.6);
 							}
 
 
 							li.title {
 								font-size: $name-font-size/2;
 								margin-bottom: 20px;
-								padding: 20px 20px 0 20px;
-								height: $proj-text-block-height;
+								padding: 5px 5px 5px 10px;
 								margin-bottom: 0;
-								/*text-height: bottom;*/
+  								width: $project-hor-item-width * 1/2;
+   								margin-left: 5px;
+ 								background: rgb(0, 0, 0); /* fallback color */
+   								background: rgb(66, 65, 81);
+
 							}
 
 							li.body {
-								line-height: 130%;
+								/*line-height: 160%;*/
 								font-size: $name-font-size * 3/10;
-								padding: 0 20px 20px 20px;
-								height: $proj-text-block-height;
-								/*text-height: bottom;*/
+								/*position: relative;*/
+								padding: 5px 5px 5px 10px;
+								/*height: $proj-text-block-height * 1/2;*/
+								width: $project-hor-item-width * 2/3;
+   								/*margin-right: -100px;*/
+   								margin-left: 5px;
+								background: rgb(0, 0, 0); /* fallback color */
+   								background: rgb(66, 65, 81);   								
 							}
 
 							a:visited {
@@ -1104,6 +1113,10 @@ nav {
 							a:hover {
 		    					text-decoration: underline;
 		    					color: $slashes-color;
+							}
+
+							li.filler {
+								height: $proj-filler-height;
 							}
 						}
 					}

@@ -587,38 +587,49 @@ nav {
     margin-top: 20px;
     margin-bottom: 30px; }
   div#contentContainer #Projects ul.projectContainer {
-    height: 223.77778px; }
+    height: 240.77778px; }
     div#contentContainer #Projects ul.projectContainer div.centering {
-      height: 223.77778px;
-      width: 433.77778px; }
+      height: 240.77778px;
+      width: 467.77778px; }
       div#contentContainer #Projects ul.projectContainer div.centering li.image {
         display: none; }
       div#contentContainer #Projects ul.projectContainer div.centering ul {
         margin: 8.88889px;
-        width: 408px;
-        height: 204px;
+        width: 442px;
+        height: 221px;
         color: white;
         border: 4px solid white; }
         div#contentContainer #Projects ul.projectContainer div.centering ul div.background {
-          width: 408px;
-          height: 204px;
-          background-color: rgba(66, 65, 81, 0.6); }
+          width: 442px;
+          height: 221px;
+          background-color: rgba(255, 255, 255, 0.6); }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.title {
           font-size: 22.8px;
           margin-bottom: 20px;
-          padding: 20px 20px 0 20px;
-          height: 74.59259px;
+          padding: 5px 5px 5px 10px;
           margin-bottom: 0;
-          /*text-height: bottom;*/ }
+          width: 221px;
+          margin-left: 5px;
+          background: black;
+          /* fallback color */
+          background: #424151; }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
-          line-height: 130%;
+          /*line-height: 160%;*/
           font-size: 13.68px;
-          padding: 0 20px 20px 20px;
-          height: 74.59259px;
-          /*text-height: bottom;*/ }
+          /*position: relative;*/
+          padding: 5px 5px 5px 10px;
+          /*height: $proj-text-block-height * 1/2;*/
+          width: 294.66667px;
+          /*margin-right: -100px;*/
+          margin-left: 5px;
+          background: black;
+          /* fallback color */
+          background: #424151; }
         div#contentContainer #Projects ul.projectContainer div.centering ul a:visited {
           text-decoration: none;
           color: white; }
         div#contentContainer #Projects ul.projectContainer div.centering ul a:hover {
           text-decoration: underline;
-          color: #45c2c6; } }
+          color: #45c2c6; }
+        div#contentContainer #Projects ul.projectContainer div.centering ul li.filler {
+          height: 132.6px; } }
