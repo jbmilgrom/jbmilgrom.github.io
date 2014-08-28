@@ -39,6 +39,10 @@ var scrollToAnim = function(idText){
 	}, 800);
 }
 
+var whichParent = function($object, num){
+	// write function that appends ".parent()" calls
+}
+
 
 // var scrollRange = function($scrollObject, $object){
 // 	return ( $scrollObject === $object.scrollTop() || $scrollObject === ($object.scrollTop() + $object.innerHeight()) )
@@ -55,6 +59,7 @@ $(function(){
 	$contactButtons = $contact.children().first().children();
 	$seeCodeButton = $contact.children().last().children();
 	$projects = $('#Projects');
+	$projectImages = $projects.find('img');
 	sections = [$("#Projects"), $("#Contact"), $("#Blog")];
 
 	// colors
@@ -65,6 +70,7 @@ $(function(){
 	var headBackColor = $nav.children().first().find("li.image").css("background-color");
 	var picBorder = $('#Projects').find('img').css("border");
 	var picBorderNew = "4px solid " + navBackColorNew;
+	var bestGrayBlue = "#424151";
 
 	
 	
@@ -133,7 +139,7 @@ $(function(){
 	$picAndGif = $projects.find('#leaf').find('.image');
 
 	// hover functionality for project pics	
-	$projects.find('img').hover(
+	$projectImages.hover(
 		function(){
 			switcheroo($(this), "border", picBorder, picBorderNew);
 		}, 
@@ -142,5 +148,41 @@ $(function(){
 		}
 	);	
 		
+	// supplementing css @media query (max-width: 650px)
+	// doing this way to avail myself of jQuery children(), so can access each project identically 
+	$(window).resize(function(){
+
+		// if window width is less than 650px
+		if ( $(this).width() < 650 ) {
+			$projectImages.each(function(index){
+
+				// taking sibling image and making it background image of each "ul"
+				var $element = $(this).parent().parent().parent().find("ul");
+				changeAttribute($element, "background", "url(" + $(this).attr("src") + ")");
+				changeAttribute($element, "background-size", $element.css("width") + " " + $element.css("height"));	
+				// changing text color
+				// changeAttribute($element, "color", "white"); 
+
+				// using inner div to create opacity look;
+				// var $backgroundDiv = $element.find(".background");
+				// changeAttribute($backgroundDiv, "background-color", "rgba(91,91,91,0.5)");
+			})
+		}
+
+		// reversing the above changes to background back after resize  
+		if ( $(this).width() > 650 ) {
+			$projectImages.each(function(index){
+				// removing image
+				var $element = $(this).parent().parent().parent().find("ul");
+				changeAttribute($element, "background", "none");
+				// changing back text color
+				// changeAttribute($element, "color", bestGrayBlue);
+
+				// clearing opacity 
+				// var $backgroundDiv = $element.find(".background");
+				// changeAttribute($backgroundDiv, "background-color", "rgba(0,0,0,0)");
+			})
+		}
+	})
 
 })

@@ -201,7 +201,14 @@ div#contentContainer {
           margin: 30px;
           float: left;
           width: 425px;
-          color: #424151; }
+          height: 212.5px;
+          color: #424151;
+          /*					background: url("./../assets/leaf/one.png");
+          					background-size: $project-pic-width $project-pic-height;*/
+          /* this is purely for styling the background image upon mobile resize*/ }
+          div#contentContainer #Projects ul.projectContainer div.centering ul div.background {
+            width: 425px;
+            height: 212.5px; }
           div#contentContainer #Projects ul.projectContainer div.centering ul li.title {
             font-size: 28.5px;
             margin-bottom: 20px;
@@ -210,8 +217,7 @@ div#contentContainer {
             line-height: 130%;
             font-size: 15.96px; }
     div#contentContainer #Projects a:link {
-      text-decoration: none;
-      color: #5b5b5b; }
+      text-decoration: none; }
     div#contentContainer #Projects a:visited {
       text-decoration: none;
       color: #424151; }
@@ -409,14 +415,17 @@ nav {
           border: 4px solid white; }
       div#contentContainer #Projects ul.projectContainer div.centering ul {
         margin: 20px;
-        width: 340px; }
+        width: 340px;
+        height: 170px; }
+        div#contentContainer #Projects ul.projectContainer div.centering ul div.background {
+          width: 340px;
+          height: 170px; }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.title {
           font-size: 28.5px;
           margin-bottom: 20px; }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
           line-height: 130%;
-          font-size: 15.96px;
-          color: #424151; }
+          font-size: 15.96px; }
   div#contentContainer #Blog div#innerBlog {
     height: 500px; }
   div#contentContainer #Blog div.blogCentering {
@@ -513,14 +522,17 @@ nav {
           border: 4px solid white; }
       div#contentContainer #Projects ul.projectContainer div.centering ul {
         margin: 13.33333px;
-        width: 272px; }
+        width: 272px;
+        height: 141.66667px; }
+        div#contentContainer #Projects ul.projectContainer div.centering ul div.background {
+          width: 272px;
+          height: 141.66667px; }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.title {
           font-size: 22.8px;
           margin-bottom: 20px; }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
           line-height: 130%;
-          font-size: 15.2px;
-          color: #5b5b5b; } }
+          font-size: 15.2px; } }
 /******* @Media (max-width: 750px) ***********/
 /*********************************************/
 /******** Contact *********/
@@ -563,3 +575,50 @@ nav {
 @media (max-width: 700px) {
   nav ul.image {
     display: none; } }
+/******* @Media (max-width: 650px) ***********/
+/*********************************************/
+/******* Project *********/
+/*************************/
+/******** media query *********/
+/******************************/
+@media (max-width: 650px) {
+  div#contentContainer #Projects div#innerProjects {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 30px; }
+  div#contentContainer #Projects ul.projectContainer {
+    height: 223.77778px; }
+    div#contentContainer #Projects ul.projectContainer div.centering {
+      height: 223.77778px;
+      width: 433.77778px; }
+      div#contentContainer #Projects ul.projectContainer div.centering li.image {
+        display: none; }
+      div#contentContainer #Projects ul.projectContainer div.centering ul {
+        margin: 8.88889px;
+        width: 408px;
+        height: 204px;
+        color: white;
+        border: 4px solid white; }
+        div#contentContainer #Projects ul.projectContainer div.centering ul div.background {
+          width: 408px;
+          height: 204px;
+          background-color: rgba(66, 65, 81, 0.6); }
+        div#contentContainer #Projects ul.projectContainer div.centering ul li.title {
+          font-size: 22.8px;
+          margin-bottom: 20px;
+          padding: 20px 20px 0 20px;
+          height: 74.59259px;
+          margin-bottom: 0;
+          /*text-height: bottom;*/ }
+        div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
+          line-height: 130%;
+          font-size: 13.68px;
+          padding: 0 20px 20px 20px;
+          height: 74.59259px;
+          /*text-height: bottom;*/ }
+        div#contentContainer #Projects ul.projectContainer div.centering ul a:visited {
+          text-decoration: none;
+          color: white; }
+        div#contentContainer #Projects ul.projectContainer div.centering ul a:hover {
+          text-decoration: underline;
+          color: #45c2c6; } }
