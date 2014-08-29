@@ -152,7 +152,7 @@ $(function(){
 	// doing this to avail myself of jQuery children(), so can access each project in identical way 
 	$(window).resize(function(){
 		
-		// if window width is less than 650px
+		// if window width is resixed to less than 650px
 		if ( $(this).width() < 650 ) {
 
 			$projectImages.each(function(index){
@@ -164,7 +164,7 @@ $(function(){
 			})
 		}
 		
-		// reversing the above changes to background back after resize  
+		// if window is resized to greater than 650px  
 		if ( $(this).width() > 650 ) {
 
 			$projectImages.each(function(index){
@@ -173,6 +173,18 @@ $(function(){
 				changeAttribute($element, "background", "none");
 			})
 		}
-	})
+	});
+
+	// if window width is less than 650px
+	if ( $(window).width() < 650 ) {
+
+		$projectImages.each(function(index){
+			// taking sibling image and making it background image of each "ul"
+			var $element = $(this).parent().parent().parent().find("ul");
+
+			changeAttribute($element, "background", "url(" + $(this).attr("src") + ")");
+			changeAttribute($element, "background-size", $element.css("width") + " " + $element.css("height"));	
+		})
+	}
 
 })
