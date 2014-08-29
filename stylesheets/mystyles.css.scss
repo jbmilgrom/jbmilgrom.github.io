@@ -920,6 +920,11 @@ nav {
 								font-size: $proj-body-font-size;
 
 							}
+
+							a:link {
+								color: $best-grey-blue;
+							}
+							
 							a:visited {
 							    text-decoration: none;
 							    color: $best-grey-blue;
