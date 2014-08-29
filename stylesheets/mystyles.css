@@ -620,6 +620,9 @@ nav {
 /******** Blog ***********/
 /*************************/
 /*remove height when you have enough blog entries to fill blog section*/
+/******** Contact *********/
+/**************************/
+/*$c-ul-width: ($c-li-width * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-margin + $c-li-border) + $c-ul-padding;*/
 /******** media query *********/
 /******************************/
 @media (max-width: 650px) {
@@ -698,7 +701,61 @@ nav {
           border-bottom: 1px solid white; }
         div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title li.subheader {
           font-size: 15.96px;
-          line-height: 130%; } }
+          line-height: 130%; }
+  div#contentContainer #contact {
+    /*				width: 100%;
+    				padding: 1px;
+    				padding-top: 30px;
+    				background-color: $slashes-color;*/
+    height: 550px; }
+    div#contentContainer #contact ul#info {
+      position: relative;
+      width: 227.66667px;
+      height: 339.66667px;
+      margin: 10px auto;
+      padding: 4px;
+      /*
+      					a:link {
+      					    text-decoration: none;
+      					}
+      
+      					a:visited {
+      					    text-decoration: none;
+      					}
+      
+      					a:hover {
+      					    text-decoration: none;
+      					}
+      
+      					a:active {
+      					    text-decoration: underline;
+      					}*/ }
+      div#contentContainer #contact ul#info a {
+        /*						display: list-item;
+        						color: white;*/
+        width: 191.66667px;
+        /*height: $c-li-height;*/
+        /*float: left;*/
+        /*font-family: 'open_sanssemibold';*/
+        /*list-style: none;*/
+        border: 2px solid white;
+        padding: 4px;
+        margin: 8px;
+        font-size: 38.33333px;
+        /*text-align: center;*/
+        /*background-color: $slashes-color;*/ }
+    div#contentContainer #contact ul#thisPage {
+      width: 380px;
+      padding-top: 20px;
+      height: 100px; }
+      div#contentContainer #contact ul#thisPage a {
+        width: inherit;
+        border: none;
+        font-family: 'learning_curve_proregular';
+        font-size: 100.625px;
+        padding: 1px; }
+      div#contentContainer #contact ul#thisPage a:hover {
+        text-decoration: underline; } }
 /******* @Media (max-width: 600px) ***********/
 /*********************************************/
 /******* Intro ***********/

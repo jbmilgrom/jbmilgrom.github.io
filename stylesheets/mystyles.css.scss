@@ -1131,6 +1131,17 @@ nav {
 	$blog-item-height: $blog-title-width * 1/4;
 	$blog-item-margin: 25px;
 
+	/******** Contact *********/
+	/**************************/
+	$c-li-width: $c-li-width * 4/2;
+	$c-li-font-size: $c-li-font-size * 4/2;
+	$c-li-height: $c-li-font-size;
+	$c-li-margin: $c-li-margin * 2;
+	$c-li-border: 2px;
+	$c-ul-width: $c-li-width + 2 * ( $c-li-padding + $c-li-margin + $c-li-border + $c-ul-padding ); 
+	$c-ul-height: ($c-li-height * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-margin + $c-li-border) + 2 * $c-ul-padding;
+	/*$c-ul-width: ($c-li-width * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-margin + $c-li-border) + $c-ul-padding;*/
+
 
 	/******** media query *********/
 	/******************************/
@@ -1271,6 +1282,76 @@ nav {
 					}
 				}		
 			}
+
+			#contact {
+
+/*				width: 100%;
+				padding: 1px;
+				padding-top: 30px;
+				background-color: $slashes-color;*/
+				height: 550px;
+
+				ul#info {
+
+					position: relative;
+					width: $c-ul-width;
+					height: $c-ul-height;
+					margin: 10px auto;
+					padding: $c-ul-padding;
+
+					a {
+/*						display: list-item;
+						color: white;*/
+						width: $c-li-width;
+						/*height: $c-li-height;*/
+						/*float: left;*/
+						/*font-family: 'open_sanssemibold';*/
+						/*list-style: none;*/
+						border: $c-li-border solid white;
+						padding: $c-li-padding;
+						margin: $c-li-margin;
+						font-size: $c-li-font-size;
+						/*text-align: center;*/
+						/*background-color: $slashes-color;*/
+					}
+/*
+					a:link {
+					    text-decoration: none;
+					}
+
+					a:visited {
+					    text-decoration: none;
+					}
+
+					a:hover {
+					    text-decoration: none;
+					}
+
+					a:active {
+					    text-decoration: underline;
+					}*/
+				}
+
+				ul#thisPage {
+					width: 380px;
+					padding-top: 20px;
+					height: 100px;
+
+					a {
+						width: inherit;
+						border: none;
+						font-family: 'learning_curve_proregular';
+						font-size: $c-this-page-font-size;
+						padding: 1px;
+
+					}
+
+					a:hover {
+					    text-decoration: underline;
+
+					}
+				}
+			}
 		}
 	}
 
@@ -1287,8 +1368,6 @@ nav {
 	$name-words-width: $name-words-width;
 	$name-margin: 40px;
 	$title-font-size: $title-font-size;
-
-
 
 	/******** media query *********/
 	/******************************/
