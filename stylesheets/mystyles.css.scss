@@ -903,6 +903,7 @@ nav {
 							margin: $project-hor-item-margin;
 							width: $project-hor-item-width;
 							height: $project-pic-height;
+							color: $best-grey-blue;
 
 							div.background {
 								width: $project-hor-item-width;
@@ -924,7 +925,7 @@ nav {
 							a:link {
 								color: $best-grey-blue;
 							}
-							
+
 							a:visited {
 							    text-decoration: none;
 							    color: $best-grey-blue;
