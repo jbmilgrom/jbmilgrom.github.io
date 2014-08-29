@@ -907,7 +907,11 @@ nav {
 							li.body {
 								line-height: 130%;
 								font-size: $proj-body-font-size;
-;
+
+							}
+							a:visited {
+							    text-decoration: none;
+							    color: $best-grey-blue;
 							}
 						}
 					}
