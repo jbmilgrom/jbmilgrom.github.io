@@ -74,7 +74,7 @@ $project-hor-item-width: $project-pic-width;
 $project-pic-height: $project-pic-width * 1/2;
 $project-hor-item-margin: 30px;
 $proj-image-border: 4px;
-$proj-desc-font-size: $name-font-size * 28/100;
+$proj-body-font-size: $name-font-size * 28/100;
 
 /******** Blog ***********/
 /*************************/
@@ -284,14 +284,14 @@ div#contentContainer {
 					}
 
 					li.title {
-						font-size: $name-font-size/2;
+						font-size: $name-font-size / 2;
 						margin-bottom: 20px;
 						font-family: "open_sanssemibold";
 					}
 
 					li.body {
 						line-height: 130%;
-						font-size: $proj-desc-font-size;
+						font-size: $proj-body-font-size;
 					}
 
 				}
@@ -587,7 +587,7 @@ nav {
 	$project-pic-height: $project-pic-width * 1/2;
 	$project-hor-item-margin: $project-hor-item-margin * 2/3;
 	$proj-image-border: 4px;
-/*	$proj-desc-font-size: $proj-desc-font-size *4/5;*/
+	$proj-body-font-size: $proj-body-font-size;
 
 	/******** Blog ***********/
 	/*************************/
@@ -653,7 +653,7 @@ nav {
 
 							li.body {
 								line-height: 130%;
-								font-size: $proj-desc-font-size;
+								font-size: $proj-body-font-size;
 							}
 						}
 					}
@@ -749,7 +749,7 @@ nav {
 
 	/******* Intro ***********/
 	/*************************/
-	$intro-height: 550px;
+	$intro-height: 500px;
 
 	$name-font-size: $name-font-size * 4/5;
 	$name-words-width: $name-words-width * 4/5;
@@ -765,19 +765,21 @@ nav {
 		div#contentContainer {
 
 			#introduction {
+
+				height: $intro-height;
 				
 				#name {
 
 					ul {
 
-						width: $name-words-width + $name-slashes-width;
+						width: $name-words-width + $name-slashes-width * 4/5;
 						height: $name-font-size;
 
 						#offCenter{
 
 							width: $name-words-width + $name-slashes-width;
 							height: $name-font-size;
-							margin-left: -25px;
+							margin-left: -30px;
 
 							li {
 
@@ -904,7 +906,8 @@ nav {
 
 							li.body {
 								line-height: 130%;
-								font-size: $name-font-size/3;
+								font-size: $proj-body-font-size;
+;
 							}
 						}
 					}
@@ -1011,7 +1014,89 @@ nav {
 /******* @Media (max-width: 700px) ***********/
 /*********************************************/
 
+	/******* Intro ***********/
+	/*************************/
+	$intro-height: 450px;
+
+	$name-font-size: $title-font-size * 4/3;
+	$name-slashes-width: $name-words-width * 19/100;
+	$name-words-width: $name-words-width * 8/10;
+	$name-margin: 40px;
+	$title-font-size: $title-font-size;
+
+
+	/******** media query *********/
+	/******************************/
 	@media (max-width: 700px) {
+
+		div#contentContainer {
+
+			#introduction {
+
+				height: $intro-height;
+				
+				#name {
+
+					ul {
+
+						width: $name-words-width + $name-slashes-width;
+						height: $name-font-size;
+
+						#offCenter{
+
+							width: $name-words-width + $name-slashes-width;
+							height: $name-font-size;
+							margin-left: -30px;
+
+							li {
+
+								font-size: $name-font-size;
+								height: $name-font-size;
+
+							}
+							
+							li#slashes {
+								width: $name-slashes-width;
+								font-size: $name-font-size * 4/3;
+								height: $name-font-size * 4/3;
+								margin-right: -15px;
+								margin-top: -5px;
+
+							}
+
+							li#words {
+								width: $name-words-width;
+							}
+						}
+					}
+				}
+
+				#description {
+
+					ul {
+						width: $name-words-width + $name-slashes-width;
+						height: $name-font-size;
+						list-style: none;
+
+						li {
+							margin: 65px;
+						}
+
+						#title {
+							font-size: $title-font-size;
+						}
+
+						#catch {
+							font-size: $name-font-size * 2/5;
+							
+							a:link {
+							    font-size: $title-font-size;
+							}
+						}
+					}
+				}
+			}
+		}
 
 		nav {
 
@@ -1033,7 +1118,8 @@ nav {
 	$proj-image-border: 4px;
 	$proj-centering-height: $project-pic-height + 2 * $project-hor-item-margin + 2 * 1px;
 	$proj-text-block-height: $proj-centering-height / 3;
-	$proj-filler-height: $project-pic-height * 3/5;
+	$proj-filler-height: $project-pic-height * 11/20;
+	$proj-body-font-size: $proj-body-font-size;
 
 
 	/******** media query *********/
@@ -1046,7 +1132,7 @@ nav {
 
 				div#innerProjects {
 					position: relative;
-					margin-top: 20px;
+					margin-top: 0px;
 					margin-bottom: 30px;
 				}
 
@@ -1054,6 +1140,8 @@ nav {
 				ul.projectContainer {
 
 					height: $proj-centering-height;
+					margin-top: 30px;
+
 
 					div.centering {
 
@@ -1076,7 +1164,7 @@ nav {
 							div.background {
 								width: $project-hor-item-width;
 								height: $project-pic-height;
-								background-color: rgba(255,255,255,0.6);
+								background-color: rgba(255, 255, 255, 0.1);
 							}
 
 
@@ -1085,24 +1173,28 @@ nav {
 								margin-bottom: 20px;
 								padding: 5px 5px 5px 10px;
 								margin-bottom: 0;
-  								width: $project-hor-item-width * 1/2;
+  								width: $project-hor-item-width * 9/20;
    								margin-left: 5px;
  								background: rgb(0, 0, 0); /* fallback color */
-   								background: rgb(66, 65, 81);
+   								background: rgba(69, 194, 198, 1);
+/*   								border-top: 2px solid white;
+   								border-left: 2px solid white;
+   								border-right: 2px solid white;*/
+
 
 							}
 
 							li.body {
 								/*line-height: 160%;*/
-								font-size: $name-font-size * 3/10;
+								font-size: $proj-body-font-size * 11/10;
 								/*position: relative;*/
 								padding: 5px 5px 5px 10px;
 								/*height: $proj-text-block-height * 1/2;*/
-								width: $project-hor-item-width * 2/3;
+								width: $project-hor-item-width * 5/6;
    								/*margin-right: -100px;*/
    								margin-left: 5px;
 								background: rgb(0, 0, 0); /* fallback color */
-   								background: rgb(66, 65, 81);   								
+   								background: rgba(69, 194, 198, 1);  								
 							}
 
 							a:visited {
@@ -1112,11 +1204,106 @@ nav {
 
 							a:hover {
 		    					text-decoration: underline;
-		    					color: $slashes-color;
+		    					color: white;
 							}
 
 							li.filler {
 								height: $proj-filler-height;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+/******* @Media (max-width: 600px) ***********/
+/*********************************************/
+
+	/******* Intro ***********/
+	/*************************/
+	$intro-height: 450px;
+
+	$name-font-size: $title-font-size;
+	/*$name-slashes-width: $name-words-width * 19/100;*/
+	$name-words-width: $name-words-width;
+	$name-margin: 40px;
+	$title-font-size: $title-font-size;
+
+
+
+	/******** media query *********/
+	/******************************/
+	@media (max-width: 600px) {
+
+		div#contentContainer {
+
+			#introduction {
+
+				height: $intro-height;
+				
+				#name {
+
+					margin-left: 0;
+					margin-right: 0;
+
+
+					ul {
+
+						width: $name-words-width;
+						height: $name-font-size;
+
+						#offCenter{
+
+							width: $name-words-width;
+							height: $name-font-size;
+							margin-left: 0;
+
+							li {
+
+								font-size: $title-font-size * 6/5;
+								height: $name-font-size;
+								padding-top: 10px;
+								/*border-top: 5px solid $slashes-color;*/
+
+
+							}
+							
+							li#slashes {
+								display: none;
+							}
+
+							li#words {
+								width: $name-words-width;
+							}
+						}
+					}
+				}
+
+				#description {
+
+					ul {
+						width: $name-words-width;
+						height: $name-font-size;
+						list-style: none;
+
+						li {
+							margin: 50px 0 50px 0;
+						}
+
+						#title {
+							/*margin-top: 100px;*/
+							font-size: $title-font-size * 7/8;
+						}
+
+						#catch {
+							font-size: $name-font-size * 2/5;
+							/*color: $slashes-color;*/
+
+							a:link {
+								color: $slashes-color;
+							    font-size: $title-font-size;
 							}
 						}
 					}

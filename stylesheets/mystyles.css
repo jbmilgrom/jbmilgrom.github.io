@@ -392,7 +392,6 @@ nav {
 /*********************************************/
 /******* Project *********/
 /*************************/
-/*	$proj-desc-font-size: $proj-desc-font-size *4/5;*/
 /******** Blog ***********/
 /*************************/
 /*remove height when you have enough blog entries to fill blog section*/
@@ -464,36 +463,38 @@ nav {
 /******** media query *********/
 /******************************/
 @media (max-width: 850px) {
-  div#contentContainer #introduction #name ul {
-    width: 532px;
-    height: 45.6px; }
-    div#contentContainer #introduction #name ul #offCenter {
+  div#contentContainer #introduction {
+    height: 500px; }
+    div#contentContainer #introduction #name ul {
+      width: 516.8px;
+      height: 45.6px; }
+      div#contentContainer #introduction #name ul #offCenter {
+        width: 532px;
+        height: 45.6px;
+        margin-left: -30px; }
+        div#contentContainer #introduction #name ul #offCenter li {
+          font-size: 45.6px;
+          height: 45.6px; }
+        div#contentContainer #introduction #name ul #offCenter li#slashes {
+          width: 76px;
+          font-size: 60.8px;
+          height: 60.8px;
+          margin-right: -15px;
+          margin-top: -5px; }
+        div#contentContainer #introduction #name ul #offCenter li#words {
+          width: 456px; }
+    div#contentContainer #introduction #description ul {
       width: 532px;
       height: 45.6px;
-      margin-left: -25px; }
-      div#contentContainer #introduction #name ul #offCenter li {
-        font-size: 45.6px;
-        height: 45.6px; }
-      div#contentContainer #introduction #name ul #offCenter li#slashes {
-        width: 76px;
-        font-size: 60.8px;
-        height: 60.8px;
-        margin-right: -15px;
-        margin-top: -5px; }
-      div#contentContainer #introduction #name ul #offCenter li#words {
-        width: 456px; }
-  div#contentContainer #introduction #description ul {
-    width: 532px;
-    height: 45.6px;
-    list-style: none; }
-    div#contentContainer #introduction #description ul li {
-      margin: 65px; }
-    div#contentContainer #introduction #description ul #title {
-      font-size: 30.4px; }
-    div#contentContainer #introduction #description ul #catch {
-      font-size: 18.24px; }
-      div#contentContainer #introduction #description ul #catch a:link {
+      list-style: none; }
+      div#contentContainer #introduction #description ul li {
+        margin: 65px; }
+      div#contentContainer #introduction #description ul #title {
         font-size: 30.4px; }
+      div#contentContainer #introduction #description ul #catch {
+        font-size: 18.24px; }
+        div#contentContainer #introduction #description ul #catch a:link {
+          font-size: 30.4px; }
 
   nav ul.image {
     left: 10px; } }
@@ -532,7 +533,7 @@ nav {
           margin-bottom: 20px; }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
           line-height: 130%;
-          font-size: 15.2px; } }
+          font-size: 15.96px; } }
 /******* @Media (max-width: 750px) ***********/
 /*********************************************/
 /******** Contact *********/
@@ -572,7 +573,44 @@ nav {
     width: inherit; } }
 /******* @Media (max-width: 700px) ***********/
 /*********************************************/
+/******* Intro ***********/
+/*************************/
+/******** media query *********/
+/******************************/
 @media (max-width: 700px) {
+  div#contentContainer #introduction {
+    height: 450px; }
+    div#contentContainer #introduction #name ul {
+      width: 451.44px;
+      height: 40.53333px; }
+      div#contentContainer #introduction #name ul #offCenter {
+        width: 451.44px;
+        height: 40.53333px;
+        margin-left: -30px; }
+        div#contentContainer #introduction #name ul #offCenter li {
+          font-size: 40.53333px;
+          height: 40.53333px; }
+        div#contentContainer #introduction #name ul #offCenter li#slashes {
+          width: 86.64px;
+          font-size: 54.04444px;
+          height: 54.04444px;
+          margin-right: -15px;
+          margin-top: -5px; }
+        div#contentContainer #introduction #name ul #offCenter li#words {
+          width: 364.8px; }
+    div#contentContainer #introduction #description ul {
+      width: 451.44px;
+      height: 40.53333px;
+      list-style: none; }
+      div#contentContainer #introduction #description ul li {
+        margin: 65px; }
+      div#contentContainer #introduction #description ul #title {
+        font-size: 30.4px; }
+      div#contentContainer #introduction #description ul #catch {
+        font-size: 16.21333px; }
+        div#contentContainer #introduction #description ul #catch a:link {
+          font-size: 30.4px; }
+
   nav ul.image {
     display: none; } }
 /******* @Media (max-width: 650px) ***********/
@@ -584,10 +622,11 @@ nav {
 @media (max-width: 650px) {
   div#contentContainer #Projects div#innerProjects {
     position: relative;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 30px; }
   div#contentContainer #Projects ul.projectContainer {
-    height: 240.77778px; }
+    height: 240.77778px;
+    margin-top: 30px; }
     div#contentContainer #Projects ul.projectContainer div.centering {
       height: 240.77778px;
       width: 467.77778px; }
@@ -602,34 +641,81 @@ nav {
         div#contentContainer #Projects ul.projectContainer div.centering ul div.background {
           width: 442px;
           height: 221px;
-          background-color: rgba(255, 255, 255, 0.6); }
+          background-color: rgba(255, 255, 255, 0.1); }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.title {
-          font-size: 22.8px;
+          font-size: 20.26667px;
           margin-bottom: 20px;
           padding: 5px 5px 5px 10px;
           margin-bottom: 0;
-          width: 221px;
+          width: 198.9px;
           margin-left: 5px;
           background: black;
           /* fallback color */
-          background: #424151; }
+          background: #45c2c6;
+          /*   								border-top: 2px solid white;
+             								border-left: 2px solid white;
+             								border-right: 2px solid white;*/ }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
           /*line-height: 160%;*/
-          font-size: 13.68px;
+          font-size: 17.556px;
           /*position: relative;*/
           padding: 5px 5px 5px 10px;
           /*height: $proj-text-block-height * 1/2;*/
-          width: 294.66667px;
+          width: 368.33333px;
           /*margin-right: -100px;*/
           margin-left: 5px;
           background: black;
           /* fallback color */
-          background: #424151; }
+          background: #45c2c6; }
         div#contentContainer #Projects ul.projectContainer div.centering ul a:visited {
           text-decoration: none;
           color: white; }
         div#contentContainer #Projects ul.projectContainer div.centering ul a:hover {
           text-decoration: underline;
-          color: #45c2c6; }
+          color: white; }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.filler {
-          height: 132.6px; } }
+          height: 121.55px; } }
+/******* @Media (max-width: 600px) ***********/
+/*********************************************/
+/******* Intro ***********/
+/*************************/
+/*$name-slashes-width: $name-words-width * 19/100;*/
+/******** media query *********/
+/******************************/
+@media (max-width: 600px) {
+  div#contentContainer #introduction {
+    height: 450px; }
+    div#contentContainer #introduction #name {
+      margin-left: 0;
+      margin-right: 0; }
+      div#contentContainer #introduction #name ul {
+        width: 364.8px;
+        height: 30.4px; }
+        div#contentContainer #introduction #name ul #offCenter {
+          width: 364.8px;
+          height: 30.4px;
+          margin-left: 0; }
+          div#contentContainer #introduction #name ul #offCenter li {
+            font-size: 36.48px;
+            height: 30.4px;
+            padding-top: 10px;
+            /*border-top: 5px solid $slashes-color;*/ }
+          div#contentContainer #introduction #name ul #offCenter li#slashes {
+            display: none; }
+          div#contentContainer #introduction #name ul #offCenter li#words {
+            width: 364.8px; }
+    div#contentContainer #introduction #description ul {
+      width: 364.8px;
+      height: 30.4px;
+      list-style: none; }
+      div#contentContainer #introduction #description ul li {
+        margin: 50px 0 50px 0; }
+      div#contentContainer #introduction #description ul #title {
+        /*margin-top: 100px;*/
+        font-size: 26.6px; }
+      div#contentContainer #introduction #description ul #catch {
+        font-size: 12.16px;
+        /*color: $slashes-color;*/ }
+        div#contentContainer #introduction #description ul #catch a:link {
+          color: #45c2c6;
+          font-size: 30.4px; } }
