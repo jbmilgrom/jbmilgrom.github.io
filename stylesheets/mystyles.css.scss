@@ -1121,6 +1121,16 @@ nav {
 	$proj-filler-height: $project-pic-height * 11/20;
 	$proj-body-font-size: $proj-body-font-size;
 
+	/******** Blog ***********/
+	/*************************/
+	/*remove height when you have enough blog entries to fill blog section*/
+	$blog-height: $intro-height;
+	$blog-title-width: $blog-title-width;
+	$blog-title-font-size: $blog-title-font-size;
+	$blog-subheader-font-size: $blog-subheader-font-size;
+	$blog-item-height: $blog-title-width * 1/4;
+	$blog-item-margin: 25px;
+
 
 	/******** media query *********/
 	/******************************/
@@ -1213,6 +1223,53 @@ nav {
 						}
 					}
 				}
+			}
+
+
+
+			#Blog{
+
+				div#innerBlog {
+					height: 500px;	
+				}
+
+				div.blogCentering {
+
+					height: $blog-item-height + 2 * $blog-item-margin + 2 * 1px;
+					width: $blog-title-width + 2 * $blog-item-margin;
+
+					ul.blogContainer {
+
+						height: $blog-item-height + 2 * $blog-item-margin + 2 * 1px;
+
+						ul {
+
+							margin: $blog-item-margin;
+							font-size: $blog-title-font-size;
+						}
+
+						ul.date {
+							display: none;
+						}
+
+						ul.title {
+							width: $blog-title-width;
+							min-height: $blog-item-height;
+
+
+							li.header {
+								padding-bottom: 7px;
+								border-bottom: 1px solid white;
+							}
+
+							li.subheader {
+								font-size: $blog-subheader-font-size;
+								line-height: 130%;
+
+							}
+						}
+					}
+				}		
 			}
 		}
 	}

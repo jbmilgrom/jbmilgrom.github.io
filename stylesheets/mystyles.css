@@ -617,6 +617,9 @@ nav {
 /*********************************************/
 /******* Project *********/
 /*************************/
+/******** Blog ***********/
+/*************************/
+/*remove height when you have enough blog entries to fill blog section*/
 /******** media query *********/
 /******************************/
 @media (max-width: 650px) {
@@ -674,7 +677,28 @@ nav {
           text-decoration: underline;
           color: white; }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.filler {
-          height: 121.55px; } }
+          height: 121.55px; }
+  div#contentContainer #Blog div#innerBlog {
+    height: 500px; }
+  div#contentContainer #Blog div.blogCentering {
+    height: 140px;
+    width: 402px; }
+    div#contentContainer #Blog div.blogCentering ul.blogContainer {
+      height: 140px; }
+      div#contentContainer #Blog div.blogCentering ul.blogContainer ul {
+        margin: 25px;
+        font-size: 25.33333px; }
+      div#contentContainer #Blog div.blogCentering ul.blogContainer ul.date {
+        display: none; }
+      div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title {
+        width: 352px;
+        min-height: 88px; }
+        div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title li.header {
+          padding-bottom: 7px;
+          border-bottom: 1px solid white; }
+        div#contentContainer #Blog div.blogCentering ul.blogContainer ul.title li.subheader {
+          font-size: 15.96px;
+          line-height: 130%; } }
 /******* @Media (max-width: 600px) ***********/
 /*********************************************/
 /******* Intro ***********/
