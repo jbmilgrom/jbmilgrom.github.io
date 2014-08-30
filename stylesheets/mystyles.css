@@ -802,7 +802,7 @@ nav {
 /*************************/
 /******** media query *********/
 /******************************/
-@media (max-width: 500px) {
+@media (max-width: 500px) and (min-width: 480px) {
   div#contentContainer #Projects div#innerProjects {
     position: relative;
     margin-top: 0px;
