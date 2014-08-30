@@ -300,6 +300,7 @@ div#contentContainer {
 
 		a:link {
 		    text-decoration: none;
+		    color: $best-grey-blue;
 		}
 
 		a:visited {
@@ -657,7 +658,7 @@ nav {
 								line-height: 130%;
 								font-size: $proj-body-font-size;
 							}
-
+/*
 							a:link {
 								color: $best-grey-blue;
 							}
@@ -665,7 +666,7 @@ nav {
 							a:visited {
 							    text-decoration: none;
 							    color: $best-grey-blue;
-							}
+							}*/
 						}
 					}
 				}	
@@ -922,14 +923,14 @@ nav {
 
 							}
 
-							a:link {
+/*							a:link {
 								color: $best-grey-blue;
 							}
 
 							a:visited {
 							    text-decoration: none;
 							    color: $best-grey-blue;
-							}
+							}*/
 						}
 					}
 				}
@@ -1237,6 +1238,11 @@ nav {
    								margin-left: 5px;
 								background: rgb(0, 0, 0); /* fallback color */
    								background: rgba(69, 194, 198, 1);  								
+							}
+
+							a:link {
+		    					text-decoration: none;
+		    					color: white;
 							}
 
 							a:visited {
