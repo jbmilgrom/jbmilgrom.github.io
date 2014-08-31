@@ -396,7 +396,7 @@ nav {
 /******** Blog ***********/
 /*************************/
 /*remove height when you have enough blog entries to fill blog section*/
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   div#contentContainer #Projects div#innerProjects {
     position: relative;
     margin-top: 20px;
@@ -459,7 +459,7 @@ nav {
 /*********************************************/
 /******** Contact *********/
 /**************************/
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   div#contentContainer #contact ul {
     width: 709px; }
     div#contentContainer #contact ul a {
@@ -473,7 +473,7 @@ nav {
 /*************************/
 /******** media query *********/
 /******************************/
-@media (max-width: 850px) {
+@media only screen and (max-width: 850px) {
   div#contentContainer #introduction {
     height: 500px; }
     div#contentContainer #introduction #name ul {
@@ -515,7 +515,7 @@ nav {
 /*************************/
 /******** media query *********/
 /******************************/
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   div#contentContainer #Projects div#innerProjects {
     position: relative;
     margin-top: 20px;
@@ -561,7 +561,7 @@ nav {
 /******** Blog ***********/
 /*************************/
 /*remove height when you have enough blog entries to fill blog section*/
-@media (max-width: 750px) {
+@media only screen and (max-width: 750px) {
   div#contentContainer #Blog div#innerBlog {
     height: 500px; }
   div#contentContainer #Blog div.blogCentering {
@@ -597,7 +597,7 @@ nav {
 /*************************/
 /******** media query *********/
 /******************************/
-@media (max-width: 700px) {
+@media only screen and (max-width: 700px) {
   div#contentContainer #introduction {
     height: 450px; }
     div#contentContainer #introduction #name ul {
@@ -645,7 +645,7 @@ nav {
 /*$c-ul-width: ($c-li-width * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-margin + $c-li-border) + $c-ul-padding;*/
 /******** media query *********/
 /******************************/
-@media (max-width: 650px) {
+@media only screen and (max-width: 650px) {
   div#contentContainer #Projects div#innerProjects {
     position: relative;
     margin-top: 0px;
@@ -759,7 +759,7 @@ nav {
 /*$name-slashes-width: $name-words-width * 19/100;*/
 /******** media query *********/
 /******************************/
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   div#contentContainer #introduction {
     height: 450px; }
     div#contentContainer #introduction #name {
@@ -802,7 +802,7 @@ nav {
 /*************************/
 /******** media query *********/
 /******************************/
-@media (max-width: 500px) and (min-width: 480px) {
+@media only screen and (max-width: 500px) {
   div#contentContainer #Projects div#innerProjects {
     position: relative;
     margin-top: 0px;
@@ -832,20 +832,14 @@ nav {
           padding: 5px 5px 5px 10px;
           margin-bottom: 0;
           width: 194.48px;
-          margin-left: 5px;
-          /* 								background: rgb(0, 0, 0);
-             								background: rgba(69, 194, 198, 1);*/ }
+          margin-left: 5px; }
         div#contentContainer #Projects ul.projectContainer div.centering ul li.body {
           /*line-height: 160%;*/
           font-size: 14.364px;
           /*position: relative;*/
           padding: 5px 5px 5px 10px;
           /*height: $proj-text-block-height * 1/2;*/
-          width: 294.66667px;
-          /*margin-right: -100px;*/
-          /*   								margin-left: 5px;
-          								background: rgb(0, 0, 0); 
-             								background: rgba(69, 194, 198, 1);  */ }
+          width: 294.66667px; }
         div#contentContainer #Projects ul.projectContainer div.centering ul a:visited {
           text-decoration: none;
           color: white; }

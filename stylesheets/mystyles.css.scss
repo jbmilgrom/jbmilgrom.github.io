@@ -602,7 +602,7 @@ nav {
 	$blog-item-height: $blog-title-width * 1/4;
 	$blog-item-margin: 25px;
 
-	@media (max-width: 1000px) {
+	@media only screen and (max-width: 1000px) {
 
 		div#contentContainer {
 
@@ -727,7 +727,7 @@ nav {
 	$c-li-font-size: $c-li-font-size * 4/5;
 	$c-ul-width: ($c-li-width * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-margin + $c-li-border) + $c-ul-padding;
 
-	@media (max-width: 900px) {
+	@media only screen and (max-width: 900px) {
 
 		div#contentContainer {
 
@@ -772,7 +772,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media (max-width: 850px) {
+	@media only screen and (max-width: 850px) {
 
 		div#contentContainer {
 
@@ -867,7 +867,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media (max-width: 800px) {
+	@media only screen and (max-width: 800px) {
 		div#contentContainer {
 
 			#Projects {
@@ -960,7 +960,7 @@ nav {
 	$blog-item-height: $blog-title-width * 1/4;
 	$blog-item-margin: 25px;
 
-	@media (max-width: 750px) {
+	@media only screen and (max-width: 750px) {
 
 		div#contentContainer {
 
@@ -1049,7 +1049,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media (max-width: 700px) {
+	@media only screen and (max-width: 700px) {
 
 		div#contentContainer {
 
@@ -1167,7 +1167,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media (max-width: 650px) {
+	@media only screen and (max-width: 650px) {
 
 		div#contentContainer {
 
@@ -1371,7 +1371,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media (max-width: 600px) {
+	@media only screen and (max-width: 600px) {
 
 		div#contentContainer {
 
@@ -1465,7 +1465,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media (max-width: 500px) and  (min-width: 480px) {
+	@media only screen and (max-width: 500px) {
 
 		div#contentContainer {
 
@@ -1516,8 +1516,6 @@ nav {
 								margin-bottom: 0;
   								width: $project-hor-item-width * 11/20;
    								margin-left: 5px;
-/* 								background: rgb(0, 0, 0);
-   								background: rgba(69, 194, 198, 1);*/
 
 
 							}
@@ -1528,11 +1526,7 @@ nav {
 								/*position: relative;*/
 								padding: 5px 5px 5px 10px;
 								/*height: $proj-text-block-height * 1/2;*/
-								width: $project-hor-item-width * 5/6;
-   								/*margin-right: -100px;*/
-/*   								margin-left: 5px;
-								background: rgb(0, 0, 0); 
-   								background: rgba(69, 194, 198, 1);  */								
+								width: $project-hor-item-width * 5/6;								
 							}
 
 							a:visited {
