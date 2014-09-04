@@ -1,11 +1,3 @@
-// var clicked = function($object){
-// 	var $currentValues = $object.css(["background-color", "color"]);
-// 	$object.css({"background-color": $currentValues["color"], "color": $currentValues["background-color"] });
-// }
-
-// var unclicked = function($object, index){
-// 	$object.css({"background-color": defaultValues[index]["background-color"], "color": defaultValues[index]["color"] });
-// }
 
 var inOrOut = function($object){
 	var $currentValues = $object.css(["background-color", "color"]);
