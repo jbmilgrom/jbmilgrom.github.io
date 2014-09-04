@@ -602,7 +602,7 @@ nav {
 	$blog-item-height: $blog-title-width * 1/4;
 	$blog-item-margin: 25px;
 
-	@media only screen and (max-width: 1000px) {
+	@media (max-width: 1000px) {
 
 		div#contentContainer {
 
@@ -658,15 +658,6 @@ nav {
 								line-height: 130%;
 								font-size: $proj-body-font-size;
 							}
-/*
-							a:link {
-								color: $best-grey-blue;
-							}
-
-							a:visited {
-							    text-decoration: none;
-							    color: $best-grey-blue;
-							}*/
 						}
 					}
 				}	
@@ -727,7 +718,7 @@ nav {
 	$c-li-font-size: $c-li-font-size * 4/5;
 	$c-ul-width: ($c-li-width * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-margin + $c-li-border) + $c-ul-padding;
 
-	@media only screen and (max-width: 900px) {
+	@media (max-width: 900px) {
 
 		div#contentContainer {
 
@@ -772,7 +763,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media only screen and (max-width: 850px) {
+	@media (max-width: 850px) {
 
 		div#contentContainer {
 
@@ -867,7 +858,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media only screen and (max-width: 800px) {
+	@media (max-width: 800px) {
 		div#contentContainer {
 
 			#Projects {
@@ -960,7 +951,7 @@ nav {
 	$blog-item-height: $blog-title-width * 1/4;
 	$blog-item-margin: 25px;
 
-	@media only screen and (max-width: 750px) {
+	@media and (max-width: 750px) {
 
 		div#contentContainer {
 
@@ -1049,7 +1040,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media only screen and (max-width: 700px) {
+	@media (max-width: 700px) {
 
 		div#contentContainer {
 
@@ -1167,7 +1158,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media only screen and (max-width: 650px) {
+	@media (max-width: 650px) {
 
 		div#contentContainer {
 
@@ -1371,7 +1362,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media only screen and (max-width: 600px) {
+	@media (max-width: 600px) {
 
 		div#contentContainer {
 
@@ -1465,7 +1456,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media only screen and (max-width: 500px) {
+	@media (max-width: 500px) {
 
 		div#contentContainer {
 
