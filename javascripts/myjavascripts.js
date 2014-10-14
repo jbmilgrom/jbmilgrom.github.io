@@ -1,44 +1,35 @@
 
 var inOrOut = function($object){
-	var $currentValues = $object.css(["background-color", "color"]);
-	$object.css({"background-color": $currentValues["color"], "color": $currentValues["background-color"] });
-}
+		var $currentValues = $object.css(["background-color", "color"]);
+		$object.css({"background-color": $currentValues["color"], "color": $currentValues["background-color"] });
+	},
 
-var changeAttribute = function($object, attribute, newValue){
-	var obj = {};
-	obj[attribute] = newValue; 
-	$object.css(obj);
-}
+	changeAttribute = function($object, attribute, newValue){
+		var obj = {};
+		obj[attribute] = newValue; 
+		$object.css(obj);
+	},
 
-var switcheroo = function($object, attribute, valueOne, valueTwo){
-	var currentValue = $object.css(attribute);
+	switcheroo = function($object, attribute, valueOne, valueTwo){
+		var currentValue = $object.css(attribute);
 
-	if (currentValue === valueOne) {
-		changeAttribute($object, attribute, valueTwo);
-	} else {
-		changeAttribute($object, attribute, valueOne);
-	}
+		if (currentValue === valueOne) {
+			changeAttribute($object, attribute, valueTwo);
+		} else {
+			changeAttribute($object, attribute, valueOne);
+		}
+	},
 
-}
+	domPosition = function(idText){
+		return $("#" + idText).offset().top - $intro.offset().top;
+	},
 
-var domPosition = function(idText){
-	return $("#" + idText).offset().top - $intro.offset().top;
-}
+	scrollToAnim = function(idText){
+		$('html, body').animate({
+			scrollTop: domPosition(idText)
+		}, 800);
+	};
 
-var scrollToAnim = function(idText){
-	$('html, body').animate({
-		scrollTop: domPosition(idText)
-	}, 800);
-}
-
-var whichParent = function($object, num){
-	// write function that appends ".parent()" calls
-}
-
-
-// var scrollRange = function($scrollObject, $object){
-// 	return ( $scrollObject === $object.scrollTop() || $scrollObject === ($object.scrollTop() + $object.innerHeight()) )
-// }
 
 $(function(){
 
