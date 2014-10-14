@@ -100,7 +100,7 @@ $(function(){
 
 	// automatic scroll for "Me" Icon
 	$meIcon.on("click", function(e){
-		var data = $(this).attr("data")
+		var data = $(this).attr("data");
 		
 		// switch data value so meIcon is aware of its position
 		if (data === "down") {
