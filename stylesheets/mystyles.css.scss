@@ -951,7 +951,7 @@ nav {
 	$blog-item-height: $blog-title-width * 1/4;
 	$blog-item-margin: 25px;
 
-	@media and (max-width: 750px) {
+	@media (max-width: 750px) {
 
 		div#contentContainer {
 
@@ -1158,7 +1158,7 @@ nav {
 
 	/******** media query *********/
 	/******************************/
-	@media (max-width: 650px) {
+	@media (max-width: 700px) {
 
 		div#contentContainer {
 
@@ -1439,7 +1439,7 @@ nav {
 		}
 	}
 
-/******* @Media (max-width: 500px) ***********/
+/******* @Media (max-width: 600px) ***********/
 /*********************************************/
 
 	/******* Project *********/

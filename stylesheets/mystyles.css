@@ -396,7 +396,7 @@ nav {
 /******** Blog ***********/
 /*************************/
 /*remove height when you have enough blog entries to fill blog section*/
-@media only screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
   div#contentContainer #Projects div#innerProjects {
     position: relative;
     margin-top: 20px;
@@ -417,16 +417,7 @@ nav {
         margin: 20px;
         width: 340px;
         height: 170px;
-        color: #424151;
-        /*
-        							a:link {
-        								color: $best-grey-blue;
-        							}
-        
-        							a:visited {
-        							    text-decoration: none;
-        							    color: $best-grey-blue;
-        							}*/ }
+        color: #424151; }
         div#contentContainer #Projects ul.projectContainer div.centering ul div.background {
           width: 340px;
           height: 170px; }
@@ -459,7 +450,7 @@ nav {
 /*********************************************/
 /******** Contact *********/
 /**************************/
-@media only screen and (max-width: 900px) {
+@media (max-width: 900px) {
   div#contentContainer #contact ul {
     width: 709px; }
     div#contentContainer #contact ul a {
@@ -473,7 +464,7 @@ nav {
 /*************************/
 /******** media query *********/
 /******************************/
-@media only screen and (max-width: 850px) {
+@media (max-width: 850px) {
   div#contentContainer #introduction {
     height: 500px; }
     div#contentContainer #introduction #name ul {
@@ -515,7 +506,7 @@ nav {
 /*************************/
 /******** media query *********/
 /******************************/
-@media only screen and (max-width: 800px) {
+@media (max-width: 800px) {
   div#contentContainer #Projects div#innerProjects {
     position: relative;
     margin-top: 20px;
@@ -561,7 +552,7 @@ nav {
 /******** Blog ***********/
 /*************************/
 /*remove height when you have enough blog entries to fill blog section*/
-@media only screen and (max-width: 750px) {
+@media (max-width: 750px) {
   div#contentContainer #Blog div#innerBlog {
     height: 500px; }
   div#contentContainer #Blog div.blogCentering {
@@ -597,7 +588,7 @@ nav {
 /*************************/
 /******** media query *********/
 /******************************/
-@media only screen and (max-width: 700px) {
+@media (max-width: 700px) {
   div#contentContainer #introduction {
     height: 450px; }
     div#contentContainer #introduction #name ul {
@@ -645,7 +636,7 @@ nav {
 /*$c-ul-width: ($c-li-width * $c-LIs) + ($c-LIs * 2) * ($c-li-padding + $c-li-margin + $c-li-border) + $c-ul-padding;*/
 /******** media query *********/
 /******************************/
-@media only screen and (max-width: 650px) {
+@media (max-width: 700px) {
   div#contentContainer #Projects div#innerProjects {
     position: relative;
     margin-top: 0px;
@@ -759,7 +750,7 @@ nav {
 /*$name-slashes-width: $name-words-width * 19/100;*/
 /******** media query *********/
 /******************************/
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   div#contentContainer #introduction {
     height: 450px; }
     div#contentContainer #introduction #name {
@@ -802,7 +793,7 @@ nav {
 /*************************/
 /******** media query *********/
 /******************************/
-@media only screen and (max-width: 500px) {
+@media (max-width: 500px) {
   div#contentContainer #Projects div#innerProjects {
     position: relative;
     margin-top: 0px;
