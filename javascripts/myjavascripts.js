@@ -136,7 +136,7 @@ $(function(){
 	$(window).resize(function(){
 		
 		// if window width is resixed to less than 650px
-		if ( $(this).width() < 650 ) {
+		if ( $(this).width() < 700 ) {
 
 			$projectImages.each(function(index){
 				// taking sibling image and making it background image of each "ul"
@@ -148,7 +148,7 @@ $(function(){
 		}
 		
 		// if window is resized to greater than 650px  
-		if ( $(this).width() > 650 ) {
+		if ( $(this).width() > 700 ) {
 
 			$projectImages.each(function(index){
 				// removing image
@@ -159,7 +159,7 @@ $(function(){
 	});
 
 	// if window width is less than 650px
-	if ( $(window).width() < 650 ) {
+	if ( $(window).width() < 700 ) {
 
 		$projectImages.each(function(index){
 			// taking sibling image and making it background image of each "ul"
