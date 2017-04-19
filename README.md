@@ -1,6 +1,6 @@
 jbmilgrom.github.io
 ===================
-**-- See it hosted [here](http://jonathanmilgrom.com).**
+<s>**-- See it hosted [here](http://jonathanmilgrom.com).**</s>
 
 This site was built from scratch using sass and jQuery. 
 
